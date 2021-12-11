@@ -1,0 +1,34 @@
+
+:root{
+
+    --color-cool: rgba(0,136,169,0.7);
+}
+
+.contenedor_login{
+    margin: 6em 25em 6em 25em;
+    border: 1px solid rgb(228, 227, 227);
+    text-align: center;
+    box-shadow: 1px 6px 8px rgb(216, 212, 212);
+    border-radius: 12px;
+}
+.contenedor_login_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 10px;
+}
+.olvidar{
+    color:var(--color-cool);
+}
+.btn-login{
+    border: none;
+    /* border-radius: 12px; */
+    color:var(--color-cool);
+}
+.card_head{
+    margin-bottom: 1em;
+    background-color: rgba(201, 207, 209, 0.7);
+}
+.btn-login{
+    border: black;
+}

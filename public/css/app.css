@@ -1,0 +1,163 @@
+:root{
+    --color-letra: rgb(95, 94, 94);
+    --color-botn: #fff;
+    --color-cool: rgba(0,136,169,0.7);
+    --color3: rgba(17, 21, 248, 0.66);
+    --color-borde-input:rgba(121, 15, 25, 0.823);
+    --color-fondo-contenedor:#ffffff9f;
+    /* --color-header:  #27d027; */
+    --colorfooter:rgb(95, 94, 94);
+    /* --color-header: linear-gradient(180deg, rgba(44,44,48,1) 0%, rgba(120,127,133,1) 77%); */
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #242524; */
+}
+li ,a , button{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    /*  arriba y abajo, 10px de padding */
+    /* izquierda y derecha, 20px de padding */
+    background: url(../images/navbar1.jpg);
+    background-position-y: -201px;
+    background-position-x: -20px;
+    background-repeat: no-repeat;
+}
+footer{
+    padding: 30px 10%;
+    background-color: var(--colorfooter);
+    
+}
+
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+     /*  arriba    1em  padding  */
+    /*  derecha  3px  padding  */
+    /*  abajo 30px padding  */
+    /*  izquierda   5px  padding*/
+}
+.nav__links li a {
+   transition:  all 0.3s ease 0s; 
+}
+.nav__links li a:hover {
+    color: #0088a0 ;
+ }
+ .btn-header{
+     padding: 3px 25px;
+     background-color: rgba(0,136,169,1);
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition:  all 0.3s ease 0s;
+ }
+.btn-header:hover{
+    background-color: rgba(0,136,169,0.7);
+}
+/* cuerpo contenido */
+body{
+    color: var(--color-letra);
+    
+}
+
+
+h2, b{
+    background-color: transparent;
+    color: var(--color-cool);
+    
+}
+
+.guardar_continuar{
+    
+    background-color: #4CAF50; /* Green */
+    float: right;
+    color: var(--color-botn);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 7em;
+    margin-bottom: 4em;
+    cursor: pointer;
+    border: 1px solid rgb(170, 168, 168);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgb(186, 182, 182);
+}
+
+.gurardar_continuar:hover{
+    /* box-shadow: 0 12px 16px 0 rgba(23, 197, 0, 0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
+    transform: scale(.75);
+    
+}
+/* https://www.youtube.com/watch?v=FlxxLULt3Ao&ab_channel=TruzzBlogg */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&display=swap');
+h3{
+    padding: 1.1em;
+    color: rgb(102, 98, 98);
+    background: #E5E5E5;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+h4{
+    padding: .9em 2em;
+    background: rgba(254, 205, 7, 0.59);
+}
+
+label{
+    padding-left: 25px;
+    /* padding-bottom: 5px; */
+}
+/* selector por atributo
+un em = 16px
+
+
+*/
+/* 
+
+input[type="number"]{
+    width: 6em;
+} */
+
+.contenedor{
+    padding: 30px 7em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 0;
+    
+}
+.contenedor_2{
+    padding: 30px 7em;
+    display: flex;
+    flex-direction: row;
+}  
+input,select{
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+    border-color: none;
+    background: #EAEAEA;
+}
+h5{
+    margin: 1em 0;
+    padding: .9em 2em;
+    background: rgba(228, 213, 153, 0.59);
+}
+input[type="checkbox"]{
+    margin: 2px 5px;
+}
