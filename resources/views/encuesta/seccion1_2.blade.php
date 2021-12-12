@@ -69,28 +69,30 @@
     <div class="contenedor">
         
         <label for="">Tipo de administrador</label>
-        <input type="text" name="administrador" id="administrador">
+        <input type="text" name="administrador" id="administrador" required>
         <label for="">nombre del administrador</label>
-        <input type="text" name="nombre_admin" id="nombre_admin">
+        <input type="text" name="nombre_admin" id="nombre_admin" required>
         <label for="">nombre institucion</label>
-        <input type="text" name="nombre_institucion" id="nombre_institucion">
+        <input type="text" name="nombre_institucion" id="nombre_institucion" required>
         <label for="">cargo</label>
-        <input type="text" name="cargo" id="cargo">
+        <input type="text" name="cargo" id="cargo" required>
         <label for="">email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <label for="">celular</label>
-        <input type="text" name="celular" id="celular">
+        <input type="text" name="celular" id="celular" required>
         <label for="">observaciones</label>
-        <input type="text" name="observaciones" id="observaciones">
+        <input type="text" name="observaciones" id="observaciones" required>
     </div>
     
-
+    <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.home')}}` " >
+        <i class="fas fa-arrow-left"></i>
+        Atras
+    </button>
 
     {{-- <button type="submit" class="guardar_continuar" onclick="location.href = {{route('encuesta.seccion3')}} " >Guardar y Continuar</button> --}}
     {{-- <button type="submit" class="guardar_continuar" onclick="location.href = 'http://127.0.0.1:8000/encuesta/seccion3' " >Guardar y Continuar</button> --}}
     <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}` " >Guardar y Continuar</button>
 
-    
     
     <script src="{{asset('js/selectDinamico.js')}}"></script>
    

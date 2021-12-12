@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
+    
+    <!-- Latest compiled Font Awesome -->
+    <script src="https://kit.fontawesome.com/8b6b495fb3.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="{{asset('/css/app.css')}}">
     @yield('head')
     
