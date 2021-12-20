@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/8b6b495fb3.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+    
     @yield('head')
     
 </head>
@@ -22,42 +23,55 @@
             
             <ul class='nav__links'>
                 
-                <li ><a href="{{route('encuesta.home')}}">Inicio</a> </li>
-                <li ><a href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li>
-                <li ><a href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
+                <li ><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li>
+                <li ><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li>
+                <li ><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
                 
                 
                 {{-- autentificacion --}}
 
                 @guest
                     @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <li>
+                            <a class='anchor' href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <li>
+                            <a  class='anchor' href="{{ route('register') }}">{{ __('Registrar') }}</a>
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <li class="desplegable">
+                        <a class='menu anchor' href="#" >
                             {{ Auth::user()->name }}
+                            <i class="fas fa-caret-down"></i>
                         </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
+                        <ul class="menu_vertical">
+                            <li class="auxiliar_li"><a href="#">Configuracion</a></li>
+                            <li class="auxiliar_li">
+                                <a  href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                {{ __('Salir.') }}
+                                </a>
+                            </li>
+                            
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-                        </div>
+                        </ul>
+                        {{-- <div class="menu_vertical" id="" >
+                            <a class="anchor" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                {{ __('Salir.') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div> --}}
                     </li>
                 @endguest
 
@@ -77,7 +91,30 @@
     <div style='padding: 3em;'> </div>
     {{-- footer --}}
     <footer>
-        <img class='logox' src="{{asset('images/logox.jpeg')}}" alt="LogoMinTur" width="35%" height="45%">
+        <div class='col_footer'>
+            <strong>Direccion y Contactos</strong>
+            <ul class='col_footer_1'>
+                <li>Calle Briceño E1-24 y Guayaquil</li>
+                <li>Código Postal: 1704/ Quito-Ecuador</li>
+                <li>Teléfonos 3-999-333</li>
+                <li>Contactenos</li>
+                
+            </ul>
+         </div>
+        <div class='col_footer'>
+            <strong>ARTÍCULOS RECIENTES</strong>
+            <ul class='col_footer_2'>
+                <li>Entradas y Salidas Internacionales</li>
+                <li>Conectividad Maritima</li>
+                <li>Examén Guías de Turismo</li>
+            </ul>
+        </div>
+        <div class="col_footer?3">
+            <strong>UTPL</strong> 
+            <br>
+            <strong>Levantamiento de datos Turisticos</strong>
+            
+        </div>
     </footer>
 </body>
 </html>

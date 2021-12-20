@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.plantilla')
 
 @section('content')
 <div class="container">
@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                        <h2>
+                            {{ __('¡Has iniciado sesión!') }}
+                        </h2>
+                    
                 </div>
             </div>
         </div>

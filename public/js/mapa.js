@@ -1,9 +1,20 @@
 
+var map = L.map('map').setView([-1.548, -78.027], 7);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiZGF2aWRhYWMiLCJhIjoiY2t4M2drMnUwMXNicjJ2cDI1ZDV1a2ZjdSJ9.OoOsKzUxYpr96qjCNu6uZw'
+    }).addTo(map);
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRhYWMiLCJhIjoiY2t3eG5tc3Y4MDA2MzJybDRlbzJoejBqNCJ9.4uAVHSCqxmlH-oppark5EA';
-const map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-3.9720775375463497, -79.20375129557661], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-});
+    //  -1.548,-78.027  -3.9878,-79.1989 -3.097, -78.998
+
+    L.marker([-3.9878,-79.1989]).addTo(map)
+        .bindPopup('UTPL')
+        .openPopup();
+
+    L.marker([-3.097, -78.998]).addTo(map)
+        .bindPopup('Cualquier punto')
+        .openPopup();

@@ -5,7 +5,7 @@
 }
 
 .contenedor_login{
-    margin: 6em 25em 6em 25em;
+    margin: 14vh 23vw 6.5vh 23vw;
     border: 1px solid rgb(228, 227, 227);
     text-align: center;
     box-shadow: 1px 6px 8px rgb(216, 212, 212);
@@ -13,9 +13,13 @@
 }
 .contenedor_login_2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* flex-direction: column; */
+    grid-template-columns:  1fr 50%;
     gap: 4px;
-    padding: 10px;
+    margin: 10px 20px;
+}
+.col{
+    margin: 0 2em;
 }
 .olvidar{
     color:var(--color-cool);
@@ -27,8 +31,32 @@
 }
 .card_head{
     margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 9px 0;
     background-color: rgba(201, 207, 209, 0.7);
 }
 .btn-login{
-    border: black;
+    background: rgba(201, 207, 209, 0.7);
+    padding: 1vh 1vw;
+    border-radius: 12px;
+}
+.btn-registrar{
+    background: rgba(201, 207, 209, 0.7);
+    padding: 1vh 1vw;
+    border-radius: 12px;
+    border: none;
+    color: var(--color-cool);
+}
+#email, #password{
+    margin-right: 7vw;
+}
+
+label[for="password"], label[for="email"]{
+    text-align: center;
+    margin-right: 1vw;
+    margin-left: 5vw;
+
+}
+.form-check{
+    margin: 10px 20px;
 }

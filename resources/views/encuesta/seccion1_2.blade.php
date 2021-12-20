@@ -91,7 +91,10 @@
 
     {{-- <button type="submit" class="guardar_continuar" onclick="location.href = {{route('encuesta.seccion3')}} " >Guardar y Continuar</button> --}}
     {{-- <button type="submit" class="guardar_continuar" onclick="location.href = 'http://127.0.0.1:8000/encuesta/seccion3' " >Guardar y Continuar</button> --}}
-    <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}` " >Guardar y Continuar</button>
+    <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
+        Guardar y Continuar
+        <i class="fas fa-arrow-right"></i>
+    </button>
 
     
     <script src="{{asset('js/selectDinamico.js')}}"></script>

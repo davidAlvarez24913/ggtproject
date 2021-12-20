@@ -1,3 +1,5 @@
+ALTER TABLE users ADD CHECK (rol in ('admin','gad','normal'));
+
 INSERT INTO provincias VALUES 
   (1, 'Azuay'),
   (2, 'Bolívar'),
