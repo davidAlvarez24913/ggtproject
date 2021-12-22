@@ -8,6 +8,7 @@ use App\Models\Encuesta;
 use App\Models\Parroquia;
 use Illuminate\Http\Request;
 use App\Models\Provincia;
+use Illuminate\Support\Facades\Auth;
 
 class EncuestaController extends Controller
 {
@@ -69,6 +70,24 @@ class EncuestaController extends Controller
     public function seccion3(){
         
         return view('encuesta.seccion3');
+    }
+    public function store(Request $request, Encuesta $encuesta){
+        // esta funcion esta totalmente mal hecha por que debe recojer los datos de 7 vistas
+
+        // validacion
+        $request->validate(['nombre' => 'required']);
+        
+        $encuesta->pregunta1 = $request->nombre;
+        $encuesta->id_usuario = Auth::user()->id;
+        // $encuesta->pregunta2 = strval($request->provincia). 
+        //                         strval($request->canton) .
+        //                         strval($request->parroquia) ;
+        $encuesta->pregunta2 = 'loja'.'saraguro'.'xxx';
+        $encuesta->pregunta3 = 'prueba';
+        $encuesta->save();
+        return redirect()->route('encuesta.seccion3');
+        // musica chingona
+        // https://www.youtube.com/watch?v=QYU18mrBB54&list=RDLUwWxWDaFj8&index=16&ab_channel=JABBAWOCKEEZOFFICIAL
     }
 }
 // https://www.youtube.com/watch?v=lckWgdguzeE&list=WL&index=1&t=332s&ab_channel=Codea

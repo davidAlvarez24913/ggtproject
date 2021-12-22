@@ -1,5 +1,9 @@
+
+.mapa{
+    margin: 5vh 10vw 0vh 10vw;
+}
 #map{
-    
+    height: 500px;
       width: 100%; 
       border-radius: 10px;
       border-color: #aca8a8;

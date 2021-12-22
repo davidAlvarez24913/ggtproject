@@ -23,9 +23,9 @@
             
             <ul class='nav__links'>
                 
-                <li ><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li>
-                <li ><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li>
-                <li ><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
+                <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li>
+                <li><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li>
+                <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
                 
                 
                 {{-- autentificacion --}}
@@ -62,16 +62,7 @@
                                 @csrf
                             </form>
                         </ul>
-                        {{-- <div class="menu_vertical" id="" >
-                            <a class="anchor" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                {{ __('Salir.') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div> --}}
+                        
                     </li>
                 @endguest
 
@@ -87,33 +78,34 @@
         @yield('content')
     </main>
     
-
-    <div style='padding: 3em;'> </div>
+    <div style='padding: 2em 0;'> </div>
     {{-- footer --}}
     <footer>
-        <div class='col_footer'>
-            <strong>Direccion y Contactos</strong>
-            <ul class='col_footer_1'>
-                <li>Calle Briceño E1-24 y Guayaquil</li>
-                <li>Código Postal: 1704/ Quito-Ecuador</li>
-                <li>Teléfonos 3-999-333</li>
-                <li>Contactenos</li>
+        <div class="contenedor_footer">
+            <div class='col_footer col_1'>
+                <strong>Direccion y Contactos</strong>
+                <ul>
+                    <li>Calle Briceño E1-24 y Guayaquil</li>
+                    <li>Código Postal: 1704/ Quito-Ecuador</li>
+                    <li>Teléfonos 3-999-333</li>
+                    <li>Contactenos</li>
+                    
+                </ul>
+            </div>
+            <div class='col_footer col_2'>
+                <strong>ARTÍCULOS RECIENTES</strong>
+                <ul>
+                    <li>Entradas y Salidas Internacionales</li>
+                    <li>Conectividad Maritima</li>
+                    <li>Examén Guías de Turismo</li>
+                </ul>
+            </div>
+            <div class="col_footer col_3">
+                <h2 class="_title">UTPL</h2> 
+                <hr class="separador">
+                <strong>Observatorio Turístico<br>Región Sur del Ecuador</strong>
                 
-            </ul>
-         </div>
-        <div class='col_footer'>
-            <strong>ARTÍCULOS RECIENTES</strong>
-            <ul class='col_footer_2'>
-                <li>Entradas y Salidas Internacionales</li>
-                <li>Conectividad Maritima</li>
-                <li>Examén Guías de Turismo</li>
-            </ul>
-        </div>
-        <div class="col_footer?3">
-            <strong>UTPL</strong> 
-            <br>
-            <strong>Levantamiento de datos Turisticos</strong>
-            
+            </div>
         </div>
     </footer>
 </body>

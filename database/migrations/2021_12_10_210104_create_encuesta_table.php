@@ -13,10 +13,12 @@ class CreateEncuestaTable extends Migration
      */
     public function up()
     {
-        Schema::create('encuesta', function (Blueprint $table) {
+        Schema::create('encuestas', function (Blueprint $table) {
             $table->id();
-            $table->string('pregunta1');
-            $table->bigInteger('cedula')->nullable();
+            $table->integer('id_usuario');
+            $table->text('pregunta1');
+            $table->text('pregunta2');
+            $table->text('pregunta3');
             $table->timestamps();
         });
     }

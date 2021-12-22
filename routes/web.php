@@ -23,6 +23,8 @@ Route::post('/encuesta/seccion1_2/cantones', [EncuestaController::class, 'canton
 Route::post('/encuesta/seccion1_2/parroquias', [EncuestaController::class, 'parroquias']);
 
 Route::get('/encuesta/seccion3', [EncuestaController::class, 'seccion3'])->name('encuesta.seccion3');
+Route::post('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
+// la ruta de la linea 26 falta corregir y verificar 
 // Características 
 
 Route::get('/visualizador', [VisualizadorController::class, 'index'])->name('visualizador');

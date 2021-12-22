@@ -2,6 +2,7 @@
 :root{
 
     --color-cool: rgba(0,136,169,0.7);
+    --color-letra-btn:white;
 }
 
 .contenedor_login{
@@ -11,52 +12,47 @@
     box-shadow: 1px 6px 8px rgb(216, 212, 212);
     border-radius: 12px;
 }
-.contenedor_login_2{
-    display: grid;
-    /* flex-direction: column; */
-    grid-template-columns:  1fr 50%;
-    gap: 4px;
+/* .contenedor_login_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     margin: 10px 20px;
-}
+} */
 .col{
-    margin: 0 2em;
+    /* margin: 0 2em; */
+    display: flex;
+    flex-direction: column;
+    margin: 7px 0;
 }
 .olvidar{
-    color:var(--color-cool);
+    color: rgb(0, 0, 0);
 }
-.btn-login{
-    border: none;
-    /* border-radius: 12px; */
-    color:var(--color-cool);
-}
+
 .card_head{
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 9px 0;
     background-color: rgba(201, 207, 209, 0.7);
 }
-.btn-login{
-    background: rgba(201, 207, 209, 0.7);
+.btn-login, .btn-registrar{
+    background: rgba(37, 116, 30, 0.7);
     padding: 1vh 1vw;
-    border-radius: 12px;
-}
-.btn-registrar{
-    background: rgba(201, 207, 209, 0.7);
-    padding: 1vh 1vw;
-    border-radius: 12px;
+    border-radius: 9px;
     border: none;
-    color: var(--color-cool);
+    color: var(--color-letra-btn);
+    cursor: pointer;
 }
-#email, #password{
-    margin-right: 7vw;
+.contenedor_registrar{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 25vw;
+    align-items: center;
 }
-
-label[for="password"], label[for="email"]{
-    text-align: center;
-    margin-right: 1vw;
-    margin-left: 5vw;
-
+.contenedor_registrar  input,#select,.btn-registrar,.btn-login, input[type="password"],input[type="email"]{
+    height: 35px;
+    width: 164px;
 }
-.form-check{
-    margin: 10px 20px;
+.btn-registrar, .btn-login{
+    margin: 1em 0 1em 18px;
 }
