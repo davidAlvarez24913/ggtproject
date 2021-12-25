@@ -4,30 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    
-    <!-- Latest compiled Font Awesome -->
-    <script src="https://kit.fontawesome.com/8b6b495fb3.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="{{asset('/css/app.css')}}">
-    
-    @yield('head')
-    
+    <title>GGTOURISTIC</title>
+
+    <link rel="stylesheet" href="{{asset('/css/inicio.css')}}">
 </head>
 <body>
-    {{-- navbar --}}
-    {{-- <img class='img_fondo' src="{{asset('images/navbar.jpg')}}" alt="logo"> --}}
     <header>
         
         <nav >
             
             <ul class='nav__links'>
                 
-                {{-- <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li> --}}
                 <li><a class='anchor'  href="{{route('inicio')}}">Inicio</a> </li>
-                {{-- <li><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li> --}}
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
-
                 <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
                 
                 
@@ -73,15 +62,25 @@
             
         </nav>
     </header>
-    
-
-
-    {{-- contenido --}}
     <main>
-        @yield('content')
+        <div class="contenedor">
+            <h1>ECUADOR EL MEJOR LUGAR DEL MUNDO</h1>
+            <p>Elige a Ecuador como el destino de tus vacaciones!. <br>
+                Este bello pais es un paraiso por donde lo mires <br>
+                Dejate deslumbrar por si cultura expresada majestuosamente <br>
+                 en sus iglesias, edificaciones y cuidades patrimoniales.
+                <br><br>
+                Vive una experiencia unica, vive Ecuador
+            </p>
+        </div>
     </main>
-    
+
+
+
     <div style='padding: 2em 0;'> </div>
+
+
+
     {{-- footer --}}
     <footer>
         <div class="contenedor_footer">

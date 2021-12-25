@@ -17,6 +17,12 @@ class EncuestaController extends Controller
         
         return view('encuesta.home');
     }
+
+    public function accesibilidad(){
+        
+        return view('encuesta.accesibilidad');
+    }
+
     public function seccion1_2(){
         
 
@@ -66,13 +72,33 @@ class EncuestaController extends Controller
             ]);
         }
     }
-    
     public function seccion3(){
         
         return view('encuesta.seccion3');
     }
+    public function seccion4(){
+        
+        return view('encuesta.seccion4');
+    }
+    public function seccion5(){
+        
+        return view('encuesta.seccion5');
+    }
+    
+    public function seccion6(){
+        
+        return view('encuesta.seccion6');
+    }
+    
+    public function seccion7(){
+        
+        return view('encuesta.seccion7');
+    }
+    
+    
+
     public function store(Request $request, Encuesta $encuesta){
-        // esta funcion esta totalmente mal hecha por que debe recojer los datos de 7 vistas
+        // esta funcion esta totalmente mal hecha por que debe recoger los datos de 7 vistas
 
         // validacion
         $request->validate(['nombre' => 'required']);
@@ -86,6 +112,7 @@ class EncuestaController extends Controller
         $encuesta->pregunta3 = 'prueba';
         $encuesta->save();
         return redirect()->route('encuesta.seccion3');
+        
         // musica chingona
         // https://www.youtube.com/watch?v=QYU18mrBB54&list=RDLUwWxWDaFj8&index=16&ab_channel=JABBAWOCKEEZOFFICIAL
     }

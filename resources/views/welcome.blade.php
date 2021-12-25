@@ -19,18 +19,20 @@
 
 @section('content')
 
-<div class="contenedor">
-    <div class="card-header">{{ __('Dashboard') }}</div>
+<div >
 
-        <div class="card-body">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            {{ __('You are logged in! / ¡Has iniciado sesión!') }}
-        </div>
+    <div>
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+         mensaje de bienvenida:
+        <h2>Bienvenido {{ Auth::user()->name }}</h2>
+        <h2>Bienvenido a la pagina de levantamiento de informacion de entidaes turisticas.</h2>
+        <h2>Encuesta tecnica de atractivos turistico</h2>
+        
+    </div>
 </div>
 @endsection
 

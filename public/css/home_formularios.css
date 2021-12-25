@@ -1,0 +1,18 @@
+.contenedor_formularios{
+    padding: 3em;
+    text-align: center;
+}
+
+.tarjeta{
+    background: rgba(254, 205, 7, 0.59);
+    margin: 2em;
+    border-radius: 10px;
+    height: 29px;
+    /* width: 1000px; */
+    text-align: center;
+    align-items: center;
+}
+.titulo a{
+    color: black;
+
+}

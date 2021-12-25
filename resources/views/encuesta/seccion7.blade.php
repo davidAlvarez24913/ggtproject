@@ -57,12 +57,12 @@
     <input type="checkbox" name="urbano" id="urbano">
 </div>
 
-<button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion1_2')}}` " >
+<button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion6')}}` " >
     <i class="fas fa-arrow-left"></i>
     Atras
 </button>
 
-<button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion4')}} `" >
+<button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion7')}}` " >
     Guardar y Continuar 
     <i class="fas fa-arrow-right"></i>
 </button>

@@ -51,7 +51,7 @@
 }
 .contenedor_registrar  input,#select,.btn-registrar,.btn-login, input[type="password"],input[type="email"]{
     height: 35px;
-    width: 164px;
+    width: 250px;
 }
 .btn-registrar, .btn-login{
     margin: 1em 0 1em 18px;
