@@ -8,7 +8,9 @@ use App\Models\Encuesta;
 use App\Models\Parroquia;
 use Illuminate\Http\Request;
 use App\Models\Provincia;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
+
 
 class EncuestaController extends Controller
 {
@@ -94,27 +96,126 @@ class EncuestaController extends Controller
         
         return view('encuesta.seccion7');
     }
+    public function guardar(){
+        
+        return view('encuesta.guardarDatos1');
+    }
     
     
+    // musica chingona
+    // https://www.youtube.com/watch?v=QYU18mrBB54&list=RDLUwWxWDaFj8&index=16&ab_channel=JABBAWOCKEEZOFFICIAL
 
-    public function store(Request $request, Encuesta $encuesta){
-        // esta funcion esta totalmente mal hecha por que debe recoger los datos de 7 vistas
+    public function store(Encuesta $encuesta,Request $request){
+        dd(session()->get('data'));
+        // $pregunta1 =[
+        //     "nombre" =>$request->nombre,
+        //     "categoria" =>$request->categoria,
+        //     "tipo" => $request->tipo,
+        //     "subtipo" => $request->subtipo,
+        //     "provincia" => $request->provincia,
+        //     "canton" => $request->canton,
+        //     "parroquia" => $request->parroquia,
+            
+        //     ];
+        // $encuesta->pregunta1 = $pregunta1['nombre'];
+        // $encuesta->id_usuario = Auth::user()->id;
+        // $encuesta->pregunta2 = "id_provincia:".(string)$pregunta1['provincia']. 
+        //                         'id_canton:'.(string)$pregunta1['canton'].
+        //                         'id_parroquia:'.(string)$pregunta1['parroquia'] ;
+        // $encuesta->pregunta3 = 'nombre_institucion'.$request->nombre_institucion;
+        // $encuesta->save();
+        // return redirect()->route('encuesta.seccion3');
 
-        // validacion
-        $request->validate(['nombre' => 'required']);
-        
-        $encuesta->pregunta1 = $request->nombre;
-        $encuesta->id_usuario = Auth::user()->id;
-        // $encuesta->pregunta2 = strval($request->provincia). 
-        //                         strval($request->canton) .
-        //                         strval($request->parroquia) ;
-        $encuesta->pregunta2 = 'loja'.'saraguro'.'xxx';
-        $encuesta->pregunta3 = 'prueba';
-        $encuesta->save();
-        return redirect()->route('encuesta.seccion3');
-        
-        // musica chingona
-        // https://www.youtube.com/watch?v=QYU18mrBB54&list=RDLUwWxWDaFj8&index=16&ab_channel=JABBAWOCKEEZOFFICIAL
+    }
+
+    public function retrieve_1_2(Request $request){
+        $data_1_2 = [
+            "nombre" =>$request->nombre,
+            "categoria" =>$request->categoria,
+            "tipo" => $request->tipo,
+            "subtipo" => $request->subtipo,
+            "provincia" => $request->provincia,
+            "canton" => $request->canton,
+            "parroquia" => $request->parroquia,
+            "barrio" => $request->barrio,
+            "c_principal" => $request->c_principal,
+            "numero" => $request->numero,
+            "transversal" => $request->transversal,
+            "latitud" => $request->latitud,
+            "longitud"  => $request->longitud,
+            "altura" => $request->altura,
+            "administrador" => $request->administrador,
+            "nombre_admin" => $request->nombre_admin,
+            "nombre_institucion"=> $request->nombre_institucion,
+            "cargo" => $request->cargo,
+            "email" => $request->email,
+            "celular" => $request->celular,
+            "observaciones" => $request->observaciones,
+
+            ];
+            $data = json_encode($data_1_2);
+            // dd($data);
+            // return $data;
+            // session(['data'=>'hola david']);
+            // dd(session()->get('data'));
+            // return view('encuesta.seccion1_2');
+
+
+            $request->session()->flash('data', $data);
+            return view('encuesta.seccion1_2');
+            
+            
+            // return view('encuesta.seccion1_2',compact('data'));
+
+
+            // return redirect()->action([EncuestaController::class,'store'],['data1_2' => $data]);
+            // se puede hacer mediante localStorage
+            // Se puede hacer mediante cookies
+            // Se puede hacer mediante sesiones
+    }
+    public function retrieve_3(Request $request){
+        $data_3 = [
+            "carac_clima"=> $request -> carac_clima,
+           "clima" => $request->clima,
+           "temperatura" => $request ->temperatura ,
+           "precipitacion" => $request ->precipitacion ,
+           "linea_producto" => $request ->linea_producto ,
+           "cultura" => $request ->cultura ,
+           "naturaleza" => $request ->naturaleza ,
+           "aventura" => $request ->aventura ,
+           "escenario_entidad" => $request ->escenario_entidad ,
+           "pristino" => $request ->pristino ,
+           "rustico" => $request ->rustico ,
+           "rural" => $request ->rural ,
+           "urbano" => $request ->urbano ,
+           "primitivo" => $request -> primitivo,
+           "ingreso_atractivo" => $request -> ingreso_atractivo,
+           "tipo_ingreso" => $request -> tipo_ingreso,
+           "ingreso" => $request -> ingreso,
+           "salida" => $request -> salida,
+           "todos_los_dias" => $request ->todos_los_dias ,
+           "fin_de_semana" => $request ->fin_de_semana ,
+           "dias_habiles" => $request ->dias_habiles , 
+           "reservas" => $request -> reservas, 
+           "minimo" => $request -> minimo, 
+           "maximo" => $request ->maximo , 
+           "formas_pago"=> $request-> formas_pago,
+           "efectivo"=> $request-> efectivo,
+           "dinero_electronico"=> $request-> dinero_electronico,
+           "tarjeta_debito"=> $request->tarjeta_debito ,
+           "tarjeta_credito"=> $request-> tarjeta_credito,
+           "transferencia_bancaria"=> $request->transferencia_bancaria ,
+           "cheque"=> $request->cheque ,
+           "deposito_bancario"=> $request->deposito_bancario ,
+           "meses"=> $request-> meses,
+           "observaciones"=> $request-> observaciones,
+        ];
+        $data3 = json_encode($data_3);
+        return view('encuesta.seccion4',compact('data3'));
+    }
+    public function retrieve_4(Request $request){
+        $data_4 = json_encode($request->all());
+        return view('encuesta.seccion5',compact('data_4'));
     }
 }
 // https://www.youtube.com/watch?v=lckWgdguzeE&list=WL&index=1&t=332s&ab_channel=Codea

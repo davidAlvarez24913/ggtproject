@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GGTOURISTIC</title>
-
+    <!-- Latest compiled Font Awesome -->
+    <script src="https://kit.fontawesome.com/8b6b495fb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('/css/inicio.css')}}">
 </head>
 <body>
@@ -15,7 +16,7 @@
             
             <ul class='nav__links'>
                 
-                <li><a class='anchor'  href="{{route('inicio')}}">Inicio</a> </li>
+                <li><a class='anchor'  href="{{route('inicio')}}" title="Inicio"><i class="fas fa-home"></i></a> </li>
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
                 <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
                 
@@ -41,11 +42,16 @@
                             <i class="fas fa-caret-down"></i>
                         </a>
                         <ul class="menu_vertical">
-                            <li class="auxiliar_li"><a href="#">Configuracion</a></li>
+                            <li class="auxiliar_li"><a href="#">
+                                <i class="fas fa-cog"></i>
+                                Configuracion</a>
+                            </li>
                             <li class="auxiliar_li">
                                 <a  href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i>
+
                                 {{ __('Salir.') }}
                                 </a>
                             </li>

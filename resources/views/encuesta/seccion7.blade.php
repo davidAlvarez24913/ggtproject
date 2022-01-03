@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title','Seccion 3')
+@section('title','Seccion 7')
 
 @section('content')
 <h4>3. Características  del Atractivo</h4>
@@ -62,7 +62,7 @@
     Atras
 </button>
 
-<button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion7')}}` " >
+<button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.guardar')}}` " >
     Guardar y Continuar 
     <i class="fas fa-arrow-right"></i>
 </button>

@@ -18,3 +18,8 @@ var map = L.map('map').setView([-1.548, -78.027], 7);
     L.marker([-3.097, -78.998]).addTo(map)
         .bindPopup('Cualquier punto')
         .openPopup();
+
+map.on('click', function(e) {
+    alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+});
+// https://gis.stackexchange.com/questions/39055/getting-lat-long-of-clicked-location-using-leaflet-api

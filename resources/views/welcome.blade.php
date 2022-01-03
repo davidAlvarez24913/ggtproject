@@ -29,7 +29,7 @@
         @endif
          mensaje de bienvenida:
         <h2>Bienvenido {{ Auth::user()->name }}</h2>
-        <h2>Bienvenido a la pagina de levantamiento de informacion de entidaes turisticas.</h2>
+        <h2>Bienvenido a la pagina de levantamiento de informacion de entidades turisticas.</h2>
         <h2>Encuesta tecnica de atractivos turistico</h2>
         
     </div>

@@ -3,8 +3,14 @@
 @section('title','Seccion1-2')
     
 @section('head')
-<meta name="csrf-token" content="{{ csrf_token()}}">
-    
+    <meta name="csrf-token" content="{{ csrf_token()}}">
+    {{-- Sweet Alert CDN --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- CSS --}}
+    <link rel="stylesheet" href="{{asset('/css/seccion1_2.css')}}">
+    {{-- cdn leaflet --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 @endsection
 
 @section('content')
@@ -12,25 +18,28 @@
     @include("encuesta.titulo")
 
     <h4>1. Datos Generales</h4>
-    <form action="{{route('encuesta.store')}}" method="POST">
+    <form action="{{route('encuesta.retrieve_1_2')}}" method="POST">
         @csrf
     
         <div class="contenedor">
-            <label for="">Nombre del Atractivo turistico:</label>
-            <input type="text" name="nombre" class="in-name" required>
+            <label for="nombre">Nombre del Atractivo turistico:</label>
+            <input type="text" name="nombre" class="in-name"  >
         
-            <label for="">Categoria:</label>
-            <select name="categoria" id="categoria">
-                <option value="">selcciona categoria</option>
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria"  >
+                <option default>selcciona categoria</option>
+                <option value="categoriaprueba">categoriaprueba</option>
             </select>
-            <label for="">tipo:</label>
-            <select name="tipo" id="tipo">
-                <option value="">selcciona tipo</option>
+            <label for="tipo" >tipo:</label>
+            <select name="tipo" id="tipo"  >
+                <option default>selcciona tipo</option>
+                <option value="pruebatipo">prueba</option>
             </select>
         
-            <label for="">Subtipo:</label>
-            <select name="subtipo" id="subtipo">
-                <option value="">selcciona subtipo</option>
+            <label for="subtipo">Subtipo:</label>
+            <select name="subtipo" id="subtipo"  >
+                <option default>selcciona subtipo</option>
+                <option value="pruebasubtipo">pruebasubtipo</option>
             </select>
             
         </div>
@@ -38,36 +47,42 @@
         <h4>2. Ubicacion del Atractivo</h4>
         <div class="contenedor">
             <label for="provincia">Provincia:</label>
-            <select name="provincia" id="provincia">
-            <option diasble>==Provincia==</option>
-
-            @foreach ($provincias as $pro)
+            <select name="provincia" id="provincia"  >
+            <option default>==Provincia==</option>
+            @if (isset($provincias))
+                @foreach ($provincias as $pro)
                 <option value="{{$pro->id}}">{{$pro->provincia}}</option>
-            @endforeach
+                @endforeach
+            @endif
+            
             
             </select>
-            <label for="">Canton:</label>
-            <select name="canton" id="canton">
-                <option diasble>== Canton ==</option>
+            <label for="canton">Canton:</label>
+            <select name="canton" id="canton"  >
+                <option default>== Canton ==</option>
             </select>
-            <label for="">Parroquia:</label>
-            <select name="parroquia" id="parroquia">
-                <option diasble>==Parroquia==</option>
+            <label for="parroquia">Parroquia:</label>
+            <select name="parroquia" id="parroquia"  >
+                <option default>==Parroquia==</option>
             </select>
-            <label for="">Barrio, sector o comuna</label>
+            <label for="barrio">Barrio, sector o comuna</label>
             <input type="text" name="barrio" class="barrio">
-            <label for="">Calle principal</label>
-            <input type="text" name="c_principal" class="inp-">
+            <label for="c_principal">Calle principal</label>
+            <input type="text" name="c_principal" class="inp-c_principal">
             <label for="">Numero</label>
             <input type="number" name="numero" class="inp-numero">
-            <label for="">Transversal</label>
+            <label for="transversal">Transversal</label>
             <input type="text" name="transversal" class="inp-transversal">
-            <label for="">latitud</label>
+            <label for="latitud">Latitud</label>
             <input type="number" name="latitud" class="inp-latitud">
-            <label for="">longuitud</label>
-            <input type="number" name="longuitud" class="inp-longuitud">
-            <label for="">Altura</label>
-            <input type="number" name="altura" class="inp-altura">
+            <label for="longitud">Longitud</label>
+            <input type="number" name="longitud" class="inp-longuitud">
+
+            <button class="lat_long">
+                Ver Latitud y Longuitud
+            </button>
+            
+
         </div>
         <h4>Informacion del administrador</h4>
 
@@ -88,22 +103,30 @@
             <label for="">observaciones</label>
             <input type="text" name="observaciones" id="observaciones">
         </div>
-        {{-- botones atras guardar y continuar --}}
-        <div>
-            <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.home')}}` " >
-                <i class="fas fa-arrow-left"></i>
-                Atras
-            </button>
-    
-            {{-- <button type="submit" class="guardar_continuar" onclick="location.href = {{route('encuesta.seccion3')}} " >Guardar y Continuar</button> --}}
-            {{-- <button type="submit" class="guardar_continuar" onclick="location.href = 'http://127.0.0.1:8000/encuesta/seccion3' " >Guardar y Continuar</button> --}}
-            <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
-                Guardar y Continuar
-                <i class="fas fa-arrow-right"></i>
-                {{-- <input type="submit" hidden> --}}
-            </button>
-        </div>
-    
     </form>
+    
+    {{-- botones atras guardar y continuar --}}
+    <div>
+        <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.home')}}`; " >
+            <i class="fas fa-arrow-left"></i>
+            Atras
+        </button>
+
+
+        <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}`" >
+            Guardar y Continuar
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        
+        {{-- <button type="submit" class="guardar_continuar" >
+            Guardar y Continuar
+            <i class="fas fa-arrow-right"></i>
+        </button> --}}
+    </div>
+    
     <script src="{{asset('js/selectDinamico.js')}}"></script>
+    <script src="{{asset('/js/swal_map.js')}}"></script>
+    <script src="{{asset('/js/botoncontinuar.js')}}"></script>
+    <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
+
 @endsection

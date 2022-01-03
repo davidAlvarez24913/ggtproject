@@ -1,62 +1,71 @@
 @extends('layouts.plantilla')
 
 @section('title','Seccion 3')
-
+@section('head')
+<meta name="csrf-token" content="{{ csrf_token()}}">
+    
+@endsection
 @section('content')
-<h4>3. Características  del Atractivo</h4>
-<h5>
-    <label for="carac_clima">Características  Climatológicas
-        <input type="checkbox" name="carac_clima" id="carac_clima" required>
-    </label>
-</h5>
-<div class="contenedor_2" id='cont2_clima'>
-    <label for="">Clima</label>
-    <input type="text" name="clima" id="clima">
-    <label for="">Temperatura(°C)</label>
-    <input type="number" name='temperatura' id='temperatura'>
-    <label for="">Precipitacion Pluviometrica</label>
-    <input type="number" name='precipitacion' id='precipitacion'>
-</div>   
-<h5>
-    <label for="pregunta_3_2" class='nombre_pregunta'>Linea de producto al que pertenece el atractivo
-        <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
-    </label>
-</h5>
-<div class="contenedor_2" id='cont2_lineaProducto'>
-    
-    <label for="cultura">cultura</label>
-    <input type="checkbox" name="cultura" id="cultura">
+<h4>5. Planta Turistica / Complementarios</h4>
+<form action="" method="post">
+    <h5>
+        <label for="5planta_turistica" class='nombre_pregunta'>Planta turistica
+            <input type="checkbox" name="5planta_turistica" id="5planta_turistica">
+        </label>
+    </h5>
+    <div class="contenedor_2">
+        <label for="atractivo">En el atractivo</label>
+        <input type="checkbox" name="atractivo" id="atractivo">
+        <label for="5_1_b">En la cuidad o poblado mas cercano</label>
+        <input type="checkbox" name="5_1_b" id="5_1_b">
+        
+    </div>  
+    <div class="contenedor_2">
+        <label for="hotel">Hotel</label>
+        <input type="checkbox" name="hotel" id="hotel">
+        <label for="hostal">hostal</label>
+        <input type="checkbox" name="hostal" id="hostal">
+        <label for="hosteria">hosteria</label>
+        <input type="checkbox" name="hosteria" id="hosteria">
+        <label for="hacienda_turistica">Hacienda Turistica</label>
+        <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica">
+        <label for="lodge">Lodge</label>
+        <input type="checkbox" name="lodge" id="lodge">
+        <label for="resort">Resort</label>
+        <input type="checkbox" name="resort" id="resort">
+        <label for="refugio">Refugio</label>
+        <input type="checkbox" name="refugio" id="refugio">
+        <label for="campamento_turistico">Campamento Turistico</label>
+        <input type="checkbox" name="campamento_turistico" id="campamento_turistico">
+        <label for="casa_huespedes">Casa de Huespedes</label>
+        <input type="checkbox" name="casa_huespedes" id="casa_huespedes">
+    </div> 
+    <h5>
+        <label for="pregunta_3_2" class='nombre_pregunta'>Facilidades en el entorno al atractivo
+            <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+    <div class="contenedor_2" >
+        
+        
+    </div>
+    <h5>
+        <label for="pregunta_3-2">Complementarios a la actividad turistica
+            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
+        </label>
+    </h5>
 
-    <label for="naturaleza">naturaleza</label>
-    <input type="checkbox" name="naturaleza" id="naturaleza">
-
-    <label for="aventura">aventura</label>
-    <input type="checkbox" name="aventura" id="aventura">
-    
+    <div class="contenedor_2" >
+        <label for="pristino">a. Prístino</label>
+        
+    </div>
+</form>
+<div>
+    {{-- {{$data_4}} --}}
+    {{-- @foreach ($data_4 as $d_4)
+    {{$d_4}}
+    @endforeach --}}
 </div>
-<h5>
-    <label for="pregunta_3-2">Escenario donde se localiza el atractivo Turistico
-        <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
-    </label>
-</h5>
-
-<div class="contenedor_2" >
-    <label for="pristino">a. Prístino</label>
-    <input type="checkbox" name="pristino" id="pristino">
-
-    <label for="primitivo">b. Primitivo</label>
-    <input type="checkbox" name="primitivo" id="primitivo">
-
-    <label for="rustico">c. Rústico Natural</label>
-    <input type="checkbox" name="rustico" id="rustico">
-
-    <label for="rural">d. Rural</label>
-    <input type="checkbox" name="rural" id="rural">
-    
-    <label for="urbano">e. Urbano</label>
-    <input type="checkbox" name="urbano" id="urbano">
-</div>
-
 <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion4')}}` " >
     <i class="fas fa-arrow-left"></i>
     Atras

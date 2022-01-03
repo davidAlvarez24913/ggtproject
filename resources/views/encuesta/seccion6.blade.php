@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title','Seccion 3')
+@section('title','Seccion 6')
 
 @section('content')
 <h4>3. Características  del Atractivo</h4>

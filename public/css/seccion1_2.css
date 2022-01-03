@@ -1,0 +1,26 @@
+
+.lat_long{
+    /* text-decoration: underline; */
+    /* color: rgb(28, 142, 150); */
+    font-size: 14px;
+    text-align: center;
+    margin: 0px 1em ;
+    color: #e0e3e8;
+    background-color: #0762da;
+    border-radius: 5px;
+    border: none;
+}
+#map{
+    height: 400px;
+    width: 100%; 
+    border-radius: 10px;
+    border-color: #aca8a8;
+}
+.label_title{
+    color: #066ff8;
+
+}
+.label_lat_long{
+    color: rgb(24, 25, 26);
+
+}

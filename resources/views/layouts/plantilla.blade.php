@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="{{asset('/css/app.css')}}">
     
+    
     @yield('head')
     
 </head>
@@ -24,10 +25,10 @@
             <ul class='nav__links'>
                 
                 {{-- <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li> --}}
-                <li><a class='anchor'  href="{{route('inicio')}}">Inicio</a> </li>
+                <li><a class='anchor'  href="{{route('inicio')}}" title="Inicio"><i class="fas fa-home"></i></a> </li>
                 {{-- <li><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li> --}}
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
-
+                
                 <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
                 
                 
@@ -47,16 +48,19 @@
                     @endif
                 @else
                     <li class="desplegable">
-                        <a class='menu anchor' href="#" >
+                        <a class='menu anchor' href="{{route('encuesta.home')}}" >
                             {{ Auth::user()->name }}
                             <i class="fas fa-caret-down"></i>
                         </a>
                         <ul class="menu_vertical">
-                            <li class="auxiliar_li"><a href="#">Configuracion</a></li>
+                            <li class="auxiliar_li"><a href="#">
+                                <i class="fas fa-cog"></i>
+                                Configuracion</a></li>
                             <li class="auxiliar_li">
                                 <a  href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i>
                                 {{ __('Salir.') }}
                                 </a>
                             </li>

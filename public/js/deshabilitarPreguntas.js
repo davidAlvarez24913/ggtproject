@@ -1,5 +1,5 @@
 // alert('hola');s
-
+// Seccion 1 y 2
 document.querySelector('#carac_clima').addEventListener('click',()=>{
     let enunciado = document.querySelector('#carac_clima');
     let deshabilitar =document.getElementById('cont2_clima').getElementsByTagName('input');
@@ -38,7 +38,7 @@ var validar = (element, content_element) => {
         } 
     });
 };
-
+// Preguntas seccion 3
 let pregunta3_2 ='pregunta_3_2';
 let contenid_pregunta3_2 ='cont2_lineaProducto';
 

@@ -1,71 +1,192 @@
 @extends('layouts.plantilla')
 
-@section('title','Seccion 3')
+@section('title','Seccion 4')
 
+@section('head')
+<link rel="stylesheet" href="{{asset('/css/seccion4.css')}}">   
+<meta name="csrf-token" content="{{ csrf_token()}}">
+
+@endsection
 @section('content')
-<h4>3. Características  del Atractivo</h4>
-<h5>
-    <label for="carac_clima">Características  Climatológicas
-        <input type="checkbox" name="carac_clima" id="carac_clima" required>
-    </label>
-</h5>
-<div class="contenedor_2" id='cont2_clima'>
-    <label for="">Clima</label>
-    <input type="text" name="clima" id="clima">
-    <label for="">Temperatura(°C)</label>
-    <input type="number" name='temperatura' id='temperatura'>
-    <label for="">Precipitacion Pluviometrica</label>
-    <input type="number" name='precipitacion' id='precipitacion'>
-</div>   
-<h5>
-    <label for="pregunta_3_2" class='nombre_pregunta'>Linea de producto al que pertenece el atractivo
-        <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
-    </label>
-</h5>
-<div class="contenedor_2" id='cont2_lineaProducto'>
-    
-    <label for="cultura">cultura</label>
-    <input type="checkbox" name="cultura" id="cultura">
+<h4>4. Accesibilidad y Connectividad al atractivo</h4>
+{{-- <form action="{{route('encuesta.retrieve_4')}}" method="post"> --}}
+    <form action="">
 
-    <label for="naturaleza">naturaleza</label>
-    <input type="checkbox" name="naturaleza" id="naturaleza">
+    @csrf
+    <div class="contenedor_seccion4">
+        <label for="poblado_cercano">a. Nombre de la cuidad o pobaldo mas cercano (que presente condiciones minimas de servicios)</label>
+        <input type="text" name="poblado_cercano" id="poblado_cercano">
+    </div>
 
-    <label for="aventura">aventura</label>
-    <input type="checkbox" name="aventura" id="aventura">
-    
-</div>
-<h5>
-    <label for="pregunta_3-2">Escenario donde se localiza el atractivo Turistico
-        <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
-    </label>
-</h5>
+    <div class="contenedor_seccion4">
+        <label for="distancia_km">Distancia desde la cuidad o poblado mas cercano</label>
+        <input type="number" name="distancia_km" id="distancia_km">
+        <label for="tiempo_en_auto">Tiempo estimado de desplazamiento en auto</label>
+        <input type="datetime" name="tiempo_en_auto" id="tiempo_en_auto">
+    </div>
+    <h5>
+        <label for="pregunta_4_2" class='nombre_pregunta'>Vias de Acceso (M)
+            <input type="checkbox" name="pregunta_4_2" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+    <div class="contenedor_seccion4_3">
+        <div class="contenedor_seccion4_2">
+            <div class='titulo_seccion4_subpregunta'>
+                <label for="terrestre">Terrestre</label>
+                <input type="checkbox" name="terrestre" id="terrestre">
+            </div>
 
-<div class="contenedor_2" >
-    <label for="pristino">a. Prístino</label>
-    <input type="checkbox" name="pristino" id="pristino">
+            <label for="tipo_via">tipo de via</label>
+            <select name="tipo_via" id="tipo_via">
+                <option default disabled>Selecione orden de via</option>
+                <option value="primer_orden">Primer orden</option>
+                <option value="segundo_orden">Segundo orden</option>
+                <option value="tercer_orden"> Terer orden</option>
+            </select>
+            <label for="coordenada_inicio">Coordenada de inicio</label>
+            <input type="text" name="coordenada_inicio" id="coordenada_inicio">
 
-    <label for="primitivo">b. Primitivo</label>
-    <input type="checkbox" name="primitivo" id="primitivo">
+            <label for="coordenada_fin">Coordenada de fin</label>
+            <input type="text" name="coordenada_fin" id="coordenada_fin">
+            <label for="distancia">Distancia (km)</label>
+            <input type="number" name="distancia" id="distancia">
+            <label for="tipo_material">Tipo de material</label>
+            <input type="text" name="tipo_material" id="tipo_material">
+            <label for="estado">Estado</label>
+            <input type="text" name="estado" id="estado">
+        </div>
+        <div class="contenedor_seccion4_2">
+            <div class='titulo_seccion4_subpregunta'>
+                <label for="acuatico">Acuatico</label>
+                <input type="checkbox" name="acuatico" id="acuatico">
+            </div>
+            
+            <label for="subtipo_acuatico">subtipo acuatico</label>
+            <select name="subtipo_acuatico" id="subtipo_acuatico">
+                <option disable default>subtipo</option>
+                <option value="maritimo">maritimo</option>
+                <option value="lacustre">lacustre</option>
+                <option value="fluvial">fluvial</option>
 
-    <label for="rustico">c. Rústico Natural</label>
-    <input type="checkbox" name="rustico" id="rustico">
+            </select>
+            <label for="puerto_muelle_partida">Puerto/Muelle de partida</label>
+            <input type="text" name="puerto_muelle_partida" id="puerto_muelle_partida">
 
-    <label for="rural">d. Rural</label>
-    <input type="checkbox" name="rural" id="rural">
-    
-    <label for="urbano">e. Urbano</label>
-    <input type="checkbox" name="urbano" id="urbano">
-</div>
+            <label for="estado_puerto_partida">estado_puerto_partida</label>
+            <input type="text" name="estado_puerto_partida" id="estado_puerto_partida">
 
-<button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
-    <i class="fas fa-arrow-left"></i>
-    Atras
-</button>
+            <label for="puerto_muelle_llegada">Puerto/Muelle de llegada</label>
+            <input type="text" name="puerto_muelle_llegada" id="puerto_muelle_llegada">
 
-<button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion5')}}` " >
-    Guardar y Continuar 
-    <i class="fas fa-arrow-right"></i>
-</button>
+            <label for="estado_puerto_llegada">estado_puerto_llegada</label>
+            <input type="text" name="estado_puerto_llegada" id="estado_puerto_llegada">
+
+            <label for="observaciones_acuatico">observaciones</label>
+            <input type="text" name="observaciones_acuatico" id="observaciones_acuatico">
+        </div>
+        
+        <div class="contenedor_seccion4_2">
+            <div class='titulo_seccion4_subpregunta'>
+                <label for="aereo">Aereo</label>
+                <input type="checkbox" name="aereo" id="aereo">
+            </div>
+            <div class="seccion4_row">
+                <label for="nacional"> Nacional </label>
+                <input type="checkbox" name="nacional" id="nacional">
+
+        
+                <label for="Internacional">Internacional</label>
+                <input type="checkbox" name="Internacional" id="Internacional">
+
+            </div>
+            
+
+            <label for="observaciones_aereo">observaciones</label>
+            <input type="text" name="observaciones_aereo" id="observaciones_aereo">
+        </div>
+        
+    </div>
+    <h5>
+        <label for="pregunta_4_3" class='nombre_pregunta'> Servicio de Transporte (M)
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+    <div class="contenedor_seccion4">
+        <label for="bus">bus</label>
+        <input type="checkbox" name="bus" id="bus">
+        <label for="buseta">buseta</label>
+        <input type="checkbox" name="buseta" id="buseta">
+        <label for="tranporte_4x4">tranporte_4x4</label>
+        <input type="checkbox" name="tranporte_4x4" id="tranporte_4x4">
+        <label for="taxi">taxi</label>
+        <input type="checkbox" name="taxi" id="taxi">
+        <label for="mototaxi">mototaxi</label>
+        <input type="checkbox" name="mototaxi" id="mototaxi">
+        <label for="teleferico">teleferico</label>
+        <input type="checkbox" name="teleferico" id="teleferico">
+        <label for="barco">barco</label>
+        <input type="checkbox" name="barco" id="barco">
+        <label for="lancha">lancha</label>
+        <input type="checkbox" name="lancha" id="lancha">
+    </div>
+    <div class="contenedor_seccion4">
+        <label for="bote">bote</label>
+        <input type="checkbox" name="bote" id="bote">
+        <label for="canoa">canoa</label>
+        <input type="checkbox" name="canoa" id="canoa">
+        <label for="avion">avion</label>
+        <input type="checkbox" name="avion" id="avion">
+        <label for="avioneta">avioneta</label>
+        <input type="checkbox" name="avioneta" id="avioneta">
+        <label for="helicoptero">helicoptero</label>
+        <input type="checkbox" name="helicoptero" id="helicoptero">
+        <label for="otro">otro</label>
+        <input type="checkbox" name="otro" id="otro">
+        
+    </div>
+    <h5>
+        <label for="pregunta_4_3" class='nombre_pregunta'> Detalle de transporte hacia el atractivo (M)
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+
+    <h5>
+        <label for="pregunta_4_3" class='nombre_pregunta'> Condicciones de Accesibilidad del atractivo turistico al medio fisico para personas con discapacidad (M)
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+    <h5>
+        <label for="pregunta_4_3" class='nombre_pregunta'> Señalización (M)
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+        </label>
+    </h5>
+
+    <div>
+        {{-- @foreach ($data_1_2 as $de)
+        Retrive 3: {{$de}}
+        @endforeach --}}
+        {{-- @if (isset($data_3))
+            <div>
+                {{$data_3["carac_clima"]}}
+
+            </div>
+        @endif --}}
+        
+            {{$data3}}
+
+    </div>
+
+    <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
+        <i class="fas fa-arrow-left"></i>
+        Atras
+    </button>
+
+    <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion5')}}` " >
+        Guardar y Continuar 
+        <i class="fas fa-arrow-right"></i>
+    </button>
+</form>
+
 <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 @endsection
     

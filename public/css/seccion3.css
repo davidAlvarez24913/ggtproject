@@ -1,0 +1,52 @@
+.contenedor_2{
+    padding: 30px 7em;
+    display: flex;
+    flex-direction: row;
+}  
+.contenedor_2 input[type="checkbox"]{
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 30px;   
+}
+.contenedor_2 input[type="text"], input[type="number"], input[type="datetime"]{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.contenedor_2 label{
+    margin-top: 4px;
+    /* margin-right: 10px; */
+}  
+.contenedor_tarjetas{
+    display: flex;
+    margin: 1em 2em 0 2em;
+
+}
+.tarjeta{
+    /* padding-left:7em; */
+    margin: 1em 1em 0 1em;
+    border: 2px solid rgba(199, 195, 195, 0.631);
+    border-radius: 5px;
+}
+.titulo{
+    background-color: #efe6c1a4;
+    display: flex;
+}
+.pregunta{
+    margin: 1em 0;
+    display: flex;
+}
+#minimo, #maximo{
+    width: 60px;
+    margin: 0 3px;
+}
+.titulo label, .formas_pago label{
+    padding-top: 4px;
+    margin-left: 10px;
+
+}
+#efectivo, #dinero_electronico, #tarjeta_debito,#tarjeta_credito, #cheque , #deposito_bancario, #transferencia_bancaria{
+    margin-right: 12px;
+    margin-left: 3px;
+    margin-top: -4px;
+}
