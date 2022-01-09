@@ -12,7 +12,7 @@
 @section('content')
 <div class="contenedor_formularios">
     <div class="titulo">
-        <h2><b class ="homeencuesta"> Encuesta tecnica de atractivos turistico</b></h2>
+        <h2><b class ="homeencuesta"> Formularios de atractivos turisticos</b></h2>
 
         <div class="tarjeta">
             <div class="titulo">
@@ -27,7 +27,6 @@
             
         </div>
     </div>
-    
     <script>
         
 
@@ -35,15 +34,12 @@
             title: 'Bienvenido {{ Auth::user()->name }}',
             text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }} !',
             confirmButtonColor:'#26ae31',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'gracias'
         
         });
     </script>
-    @if (session('status'))
-        <span class="alert" role="alert">
-            {{ session('status') }}
-        </span>
-    @endif
+        
+    {{session('status')}}
 
 </div>
     

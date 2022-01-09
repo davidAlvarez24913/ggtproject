@@ -77,10 +77,12 @@ return [
     | The application locale determines the default locale that will be used
     | by the translation service provider. You are free to set this value
     | to any of the locales which will be supported by the application.
-    |
+    
+    ==> Observación aquí modifica por la carpeta es / para los mensajes de error!!
+    ==> originalmente es:  'locale' => 'en',
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------

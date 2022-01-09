@@ -90,12 +90,53 @@ body{
     color: var(--color-letra);
     
 }
+h1{
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
 
 
 h2, b{
     background-color: transparent;
     color: var(--color-cool);
     
+}
+h3{
+    padding: 1.1em;
+    color: rgb(102, 98, 98);
+    background: #E5E5E5;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+h4{
+    padding: .9em 2em;
+    background: rgba(254, 205, 7, 0.59);
+    font-family: 'Cairo', sans-serif;
+}
+h5{
+    /* margin: 1em 0; */
+    padding: .9em 2em;
+    background: rgba(228, 213, 153, 0.59);
+    font-family: 'Cairo', sans-serif;
+}
+input,select{
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+    border-color: none;
+    background: #EAEAEA;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+.nombre_pregunta{
+    display: flex;
+    flex-direction: row;
+}
+h5 label input[type="checkbox"]{
+    margin-left: 7px;
+    width: 20px;
+    height: 25px;
 }
 
 .guardar_continuar{
@@ -140,96 +181,6 @@ h2, b{
 }
 
 
-h3{
-    padding: 1.1em;
-    color: rgb(102, 98, 98);
-    background: #E5E5E5;
-    text-align: center;
-    font-family: 'Cairo', sans-serif;
-}
-h4{
-    padding: .9em 2em;
-    background: rgba(254, 205, 7, 0.59);
-    font-family: 'Cairo', sans-serif;
-}
-
-.contenedor{
-    padding: 30px 7em;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 1em;
-    column-gap: 0;
-    
-}
-
-.contenedor_3{
-    padding: 10px 7em 5px 7em;
-    display: flex;
-    flex-direction: row;
-}
-.contenedor_3 input{
-    margin: 4px 30px 0px 5px;
-}
-.contenedor_5{
-    padding: 8vh 10vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10vw;
-}
-.contenedor_4{
-    display: flex;
-    flex-direction: column;
-}
-.contenedor_4 input, label{
-    text-align: center;
-}
-#distancia_km, #tiempo_en_auto{
-    margin-left: 5px;
-    width: 19vw;
-    height: 30px;
-}
-#poblado_cercano{
-    margin-left: 5px;
-    width: 40vw;
-    height: 30px;
-
-}
-input[type="radio"]{
-    margin-left: 10px;
-    width: 1.5em;
-    height: 2.5em;
-}
-input,select{
-    border-radius: 4px;
-    text-align: center;
-    border: none;
-    border-color: none;
-    background: #EAEAEA;
-    font-family: 'Cairo', sans-serif;
-}
-h5{
-    /* margin: 1em 0; */
-    padding: .9em 2em;
-    background: rgba(228, 213, 153, 0.59);
-    font-family: 'Cairo', sans-serif;
-}
-.nombre_pregunta{
-    display: flex;
-    flex-direction: row;
-}
-
-/* para estilo de preguntas con checkbo */
-input[type="checkbox"]{
-    margin-left: 7px;
-    width: 20px;
-    height: 25px;
-}
-
-h1{
-    color: white;
-    font-family: 'Cairo', sans-serif;
-}
-
 /* footer */
 footer{
     box-sizing: border-box;
@@ -267,11 +218,11 @@ footer{
 }
 ._title{
     padding: 0;
-    margin: 0;
+    margin: -8px 0 0 0;
     font-size: 45px;
     color: #fff;
 }
 .separador{
-    height: 55px;
+    height: 55px !important;
     margin: .5em;
 }

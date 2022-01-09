@@ -16,6 +16,18 @@
 @section('content')
 
     @include("encuesta.titulo")
+    <div class="botonera1">
+        <button class="btn_secccion"> Seccion 1 y 2 </button>
+        <button class="btn_secccion"> Seccion 3 </button>
+        <button class="btn_secccion"> Seccion 4 </button>
+        <button class="btn_secccion"> Seccion 5 </button>
+        <button class="btn_secccion"> Seccion 7 </button>
+        <button class="btn_secccion"> Seccion 8 </button>
+    </div>
+    <div class="menu_lateral">
+        <label class="texto_menu"> Menu de secciones</label>
+        <i class="fas fa-bars"></i>
+    </div>
 
     <h4>1. Datos Generales</h4>
     <form action="{{route('encuesta.retrieve_1_2')}}" method="POST">
@@ -76,7 +88,7 @@
             <label for="latitud">Latitud</label>
             <input type="number" name="latitud" class="inp-latitud">
             <label for="longitud">Longitud</label>
-            <input type="number" name="longitud" class="inp-longuitud">
+            <input type="number" name="longitud" class="inp-longitud">
 
             <button class="lat_long">
                 Ver Latitud y Longuitud
@@ -118,10 +130,6 @@
             <i class="fas fa-arrow-right"></i>
         </button>
         
-        {{-- <button type="submit" class="guardar_continuar" >
-            Guardar y Continuar
-            <i class="fas fa-arrow-right"></i>
-        </button> --}}
     </div>
     
     <script src="{{asset('js/selectDinamico.js')}}"></script>

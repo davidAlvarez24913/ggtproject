@@ -1,4 +1,7 @@
 
+:root{
+    --color-letra: rgb(95, 94, 94);
+}
 .lat_long{
     /* text-decoration: underline; */
     /* color: rgb(28, 142, 150); */
@@ -22,5 +25,109 @@
 }
 .label_lat_long{
     color: rgb(24, 25, 26);
+
+}
+
+
+/* separador */
+
+
+
+.contenedor{
+    padding: 30px 7em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 0;
+    
+}
+
+.contenedor_3{
+    padding: 10px 7em 5px 7em;
+    display: flex;
+    flex-direction: row;
+}
+.contenedor_3 input{
+    margin: 4px 30px 0px 5px;
+}
+.contenedor_5{
+    padding: 8vh 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10vw;
+}
+.contenedor_4{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor_4 input, label{
+    text-align: center;
+}
+#distancia_km, #tiempo_en_auto{
+    margin-left: 5px;
+    width: 19vw;
+    height: 30px;
+}
+#poblado_cercano{
+    margin-left: 5px;
+    width: 40vw;
+    height: 30px;
+
+}
+
+/* botonera1 */
+.menu_lateral{
+    background-color: rgba(44, 43, 40, 0.748);
+    position: fixed;
+    border-radius: 50%;
+    /* z-index: 100; */
+    margin-left: 1em;
+    padding: 1em;
+    color: #fff;
+}
+
+
+.menu_lateral label {
+ display: none;
+}
+
+.menu_lateral:hover {
+    color: rgb(255, 254, 254);
+    transition: all .4s;
+    background-color: rgba(247, 213, 75, 0.748);
+
+}
+/* .aparece{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    color: rgb(255, 254, 254);
+    transition: all .4s;
+    position: absolute;
+    text-align: center;
+}
+.desaparece{
+    display: none;
+} */
+.botonera1{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0;
+    background-color: rgba(254, 205, 7, 0.59);
+
+}
+.btn_secccion{
+    border: none;
+    width: 9vw;
+    background: none;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 20px;
+}
+.btn_secccion:hover{
+    cursor: pointer;
+    background: #066ff8;
+    color: #fff;
+    border-radius: 15px;
 
 }

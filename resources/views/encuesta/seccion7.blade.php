@@ -1,61 +1,316 @@
 @extends('layouts.plantilla')
 
 @section('title','Seccion 7')
+@section('head')
+    <link rel="stylesheet" href="{{asset('/css/seccion7.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token()}}">
+    
+@endsection
 
 @section('content')
-<h4>3. Características  del Atractivo</h4>
+<h4>7. Higiene y Seguridad Turística</h4>
 <h5>
-    <label for="carac_clima">Características  Climatológicas
-        <input type="checkbox" name="carac_clima" id="carac_clima" required>
+    <label for="" class='nombre_pregunta'>Servicios Básicos
+        <input type="checkbox" name="" id="" required>
     </label>
 </h5>
-<div class="contenedor_2" id='cont2_clima'>
-    <label for="">Clima</label>
-    <input type="text" name="clima" id="clima">
-    <label for="">Temperatura(°C)</label>
-    <input type="number" name='temperatura' id='temperatura'>
-    <label for="">Precipitacion Pluviometrica</label>
-    <input type="number" name='precipitacion' id='precipitacion'>
-</div>   
+<div class='contenedor_seccion7'>
+    <div class="col_1">
+        <label for="">Agua:</label>
+        <label for="">Energía eléctrica:</label>
+        <label for="">Saneamiento:</label>
+        <label for="">Disposición de desechos</label>
+
+
+    </div>
+    <div class="col_2">
+        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="">
+
+    </div>
+    <div class="col_3_aux">
+        <label for="">
+            Especifique
+            <input type="text" name="" id="">
+        </label>
+        <label for="">
+            Especifique
+            <input type="text" name="" id="">
+        </label>
+        <label for="">
+            Especifique
+            <input type="text" name="" id="">
+        </label>
+        <label for="">
+            Especifique
+            <input type="text" name="" id="">
+        </label>
+    </div>
+    
+    <div class="fila">
+        <label for="observaciones">Observaciones:</label>
+        <input type="text" name="observaciones">
+    </div>
+    
+    
+</div>
+  
 <h5>
-    <label for="pregunta_3_2" class='nombre_pregunta'>Linea de producto al que pertenece el atractivo
+    <label for="pregunta_3_2" class='nombre_pregunta'>Señaléctica en el atractivo
         <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
     </label>
 </h5>
-<div class="contenedor_2" id='cont2_lineaProducto'>
-    
-    <label for="cultura">cultura</label>
-    <input type="checkbox" name="cultura" id="cultura">
+<div class="contenedor_5filas">
+    {{--  --}}
+    <div class="fila_1">
+        <label for="">Ambiente</label>
+        <label for="">Tipo</label>
+        <div class="subtitulos_materiales">
+            <label for="">Materiales</label>
+            <div class="subtitulos_materiales_3cols">
+                <label for="">  Madera</label>
+                <label for="">Aluminio</label>
+                <label for="">Otro</label>
+            </div>
 
-    <label for="naturaleza">naturaleza</label>
-    <input type="checkbox" name="naturaleza" id="naturaleza">
+        </div>
+        <label for="">Estado</label>
 
-    <label for="aventura">aventura</label>
-    <input type="checkbox" name="aventura" id="aventura">
+    </div>
+
+    {{-- EEn áreas urbanas --}}
+
+    <div class="fila_2">
+        <label class='label_ambiente'>En áreas urbanas</label>
+        <div class="fila2_col">
+            <div class='col2_fila2'>   
+                <label for="">Pictograma de atractivos naturales</label>
+                <label for="">Pictograma de atractivos culturales</label>
+                <label for="">Pictograma de actividades turísticas</label>
+                <label for="">Pictograma de servicios de apoyo</label>
+                <label for="">Pictogramas de restricción</label>
+                <label for="">Tótems de atractivos turísticos</label>
+                <label for="">Tótems de sitio</label>
+                <label for="">Tótems direccionales</label>
+
+            </div>
+
+            <div class="fila2_col3">
+                <div class="fila2_col4_col-1">  
+                    <script>
+                        let count = document.querySelector('.col2_fila2').childElementCount;
+                        for (var i = 0; i < count; i++) {
+                            document.write('<input type="number" name="'+'au_madera_inp_'+String(i)+'" >') ;
+                        }
+                    </script>
+                    
+                </div>
+                <div class="fila2_col4_col-2">
+                    <script>
+                        let count2 = document.querySelector('.col2_fila2').childElementCount;
+                        for (var i = 0; i < count2; i++) {
+                            document.write('<input type="number" name="'+'au_aluminio_inp_'+String(i)+'" >') ;
+                        }
+                    </script>
+                </div>
+                <div class="fila2_col4_col-3">
+                    <script>
+                        let count3 = document.querySelector('.col2_fila2').childElementCount;
+                        for (var i = 0; i < count3; i++) {
+                            document.write('<input type="text" name="'+'au_otro_inp_'+String(i)+'" placeholder="Especifique">') ;
+                        }
+                    </script>
+
+                </div>
+            </div>
+            <div class="fila_2_col4">
+                <script>
+                    let count4 = document.querySelector('.col2_fila2').childElementCount;
+                    for (var i = 0; i < count3; i++) {
+                        document.write(`
+                                        <select name="select_estado_`+String(i)+`">
+                                            <option value="">Seleccione estado</option>
+                                            <option value="bueno">Bueno</option>
+                                            <option value="regular">Regular</option>
+                                            <option value="malo">Malo</option>
+                                        </select>`) ;
+                    }
+                </script>
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    {{-- En áreas naturales --}}
+    <div class="fila_2">
+        <label class='label_ambiente'>En áreas naturales</label>
+        <div class="fila2_col">
+            <div class="col2_fila2 aux1">
+                <label for="">En áreas naturales</label>
     
+                <label for="">Pictograma de atractivos naturales</label>
+                <label for="">Pictograma de atractivos culturales</label>
+                <label for="">Pictograma de actividades turísticas</label>
+                <label for="">Pictograma de servicios de apoyo</label>
+                <label for="">Pictogramas de restricción</label>
+                <label for="">Señales turísticas de aproximación</label>
+                <label for="">Tótems de sitio</label>
+                <label for="">Tótems direccionamientos</label>
+                <label for="">Panel informativo de atractivos</label>
+                <label for="">Mesas interpretativas</label>
+                <label for="">Paneles de direccionamiento hacia  atractivos</label>
+                <label for="">Panel informativo de direccionamiento hacia atractivos, servicios y actividades</label>
+
+            </div>
+            <div class="fila2_col3">
+                <div class="fila2_col4_col-1">
+                    <script>
+                        let count5 = document.querySelector('.aux1').childElementCount;
+                        for (var i = 0; i < count5; i++) {
+                            document.write('<input type="number" name="'+'an_madera_inp_'+String(i)+'" >') ;
+                        }
+                    </script>
+                </div>
+                <div class="fila2_col4_col-2">
+                    {{-- an significa area natural --}}
+                    <script>
+                        let count6 = document.querySelector('.aux1').childElementCount;
+                        for (var i = 0; i < count6; i++) {
+                            document.write('<input type="number" name="'+'an_madera_inp_'+String(i)+'" >') ;
+                        }
+                    </script>
+                </div>
+                <div class="fila2_col4_col-3">
+                    <script>
+                        let count7 = document.querySelector('.aux1').childElementCount;
+                        for (var i = 0; i < count7; i++) {
+                            document.write('<input type="text" name="'+'au_otro_inp_'+String(i)+'" placeholder="Especifique">') ;
+                        }
+                    </script>
+                    
+                </div>
+            </div>
+            <div class="fila_2_col4">
+                <script>
+                    let count8 = document.querySelector('.aux1').childElementCount;
+                    for (var i = 0; i < count8; i++) {
+                        document.write(`
+                                        <select name="an_select_estado_`+String(i)+`">
+                                            <option value="">Seleccione estado</option>
+                                            <option value="bueno">Bueno</option>
+                                            <option value="regular">Regular</option>
+                                            <option value="malo">Malo</option>
+                                        </select>`) ;
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    {{-- Letreros informativos --}}
+    <div class="fila_2">
+        <label class="label_ambiente">Letreros informativos</label>
+        <div class="fila2_col">
+            <div class="col2_fila2">
+                <label for="">De información botánica</label>
+                <label for="">Normativos de concienciación</label>
+            </div>
+            <div class="fila2_col3">
+                <div class="fila2_col4_col-1">
+                    <input type="number" name="" >
+                    <input type="number" name="" >
+
+                </div>
+                <div class="fila2_col4_col-2">
+                    <input type="number" name="" >
+                    <input type="number" name="" >
+
+                </div>
+                <div class="fila2_col4_col-3">
+                    <input type="text" name=""  placeholder="Especifique">
+                    <input type="text" name=""  placeholder="Especifique">
+
+                </div>
+
+            </div>
+            <div class="fila_2_col4">
+                <select name="" id="">
+                    <option value="">Seleccione estado</option>
+                    <option value="">Bueno</option>
+                    <option value="">Regular</option>
+                    <option value="">Malo</option>
+    
+                </select>
+                <select name="" id="">
+                    <option value="">Seleccione estado</option>
+                    <option value="">Bueno</option>
+                    <option value="">Regular</option>
+                    <option value="">Malo</option>
+    
+                </select>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    {{-- Señalética interna de seguridad --}}
+    <div class="fila_2">
+        <label class="label_ambiente" >Señalética interna de seguridad</label>
+        <div class="fila2_col">
+            <div class="col2_fila2">
+                <label for="">Protección de los elementos del atractivo</label>
+            </div>
+            <div class="fila2_col3">
+                <div class="fila2_col4_col-1">
+                    <input type="number" name="" id="">
+                </div>
+                <div class="fila2_col4_col-2">
+                    <input type="number" name="" id="">
+                </div>
+                <div class="fila2_col4_col-3">
+                    <input type="text" name="" id="" placeholder="Especifique">
+                </div>
+                
+            </div>
+            <div class="fila_2_col4">
+                <select name="" id="">
+                    <option value="">Seleccione estado</option>
+                    <option value="">Bueno</option>
+                    <option value="">Regular</option>
+                    <option value="">Malo</option>
+    
+                </select>
+            </div>
+        </div>
+
+    </div>
+    
+    
+    {{-- Otros --}}
+    <label for="">Otros</label>
+
 </div>
 <h5>
-    <label for="pregunta_3-2">Escenario donde se localiza el atractivo Turistico
+    <label for="pregunta_3-2" class='nombre_pregunta'>Salud ( Más Cercano )
         <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
     </label>
 </h5>
-
-<div class="contenedor_2" >
-    <label for="pristino">a. Prístino</label>
-    <input type="checkbox" name="pristino" id="pristino">
-
-    <label for="primitivo">b. Primitivo</label>
-    <input type="checkbox" name="primitivo" id="primitivo">
-
-    <label for="rustico">c. Rústico Natural</label>
-    <input type="checkbox" name="rustico" id="rustico">
-
-    <label for="rural">d. Rural</label>
-    <input type="checkbox" name="rural" id="rural">
-    
-    <label for="urbano">e. Urbano</label>
-    <input type="checkbox" name="urbano" id="urbano">
-</div>
+<h5>
+    <label for="pregunta_3-2" class='nombre_pregunta'>Seguridad (M)
+        <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
+    </label>
+</h5>
+<h5>
+    <label for="pregunta_3-2" class='nombre_pregunta'>Servicio de comuncación de uso público
+        <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
+    </label>
+</h5>
 
 <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion6')}}` " >
     <i class="fas fa-arrow-left"></i>

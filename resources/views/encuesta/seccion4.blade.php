@@ -149,32 +149,100 @@
             <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
         </label>
     </h5>
+    <div>
+        <label for="">Nombre de la cooperatia o asociacion que presta el servicio</label>
+        <input type="text">
+        <label for="">Estacion - Terminal</label>
+        <input type="text">
+        <label for="">Frecuencia</label>
+        <label for="">diaria</label>
+        <input type="checkbox" name="diaria" id="diaria">
+        <label for="">semanal</label>
+        <input type="checkbox" name="semanal" id="semanal">
+        <label for="">Mensual</label>
+        <input type="checkbox" name="mensual" id="mensual">
+        <label for="">eventual</label>
+        <input type="checkbox" name="eventual" id="eventual">
+        <label for="">Detalle</label>
+        <input type="text" name="detalle" id="detalle" placeholder="Traslado origen - destino">
+        
+    </div>
 
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Condicciones de Accesibilidad del atractivo turistico al medio fisico para personas con discapacidad (M)
             <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
         </label>
     </h5>
+    <div>
+        <label for="">general</label>
+        <input type="checkbox" name="general" id="general">
+        <label for="">discapacidad_fisica</label>
+        <input type="checkbox" name="discapacidad_fisica" id="discapacidad_fisica">
+        <label for="">discapacidad_visual</label>
+        <input type="checkbox" name="discapacidad_visual" id="discapacidad_visual">
+        <label for="">discapacidad_auditiva</label>
+        <input type="checkbox" name="discapacidad_auditiva" id="discapacidad_auditiva">
+        <label for=""> Discapcidad intelectual psicosocial</label>
+        <input type="checkbox" name="intelectual_psicosocial" id="intelectual_psicosocial">
+        <label for="">no_accesible</label>
+        <input type="checkbox" name="no_accesible" id="no_accesible">
+    </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Señalización (M)
             <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
         </label>
     </h5>
+    <div>
+        <label for="">Señalizacion de aproximacion al atractivo</label>
+        <input type="checkbox" name="" id="">
+        <label for="">Estado</label>
+        
+        <label for="estado_4-5">bueno</label>
+        <input type="checkbox" name="estado_4-5" id="bueno">
+        <label for="">regular</label>
+        <input type="checkbox" name="estado_4-5" id="regular">
+        <label for="">malo</label>
+        <input type="checkbox" name="estado_4-5" id="malo">
+    </div>
 
     <div>
-        {{-- @foreach ($data_1_2 as $de)
+        {{-- @foreach ($data3 as $de)
         Retrive 3: {{$de}}
-        @endforeach --}}
-        {{-- @if (isset($data_3))
+        @endforeach 
+        @if (isset($data_3))
             <div>
                 {{$data_3["carac_clima"]}}
 
             </div>
-        @endif --}}
-        
-            {{$data3}}
+        @endif--}}
+        {{-- {{$data3}} --}}
+        {{-- {{!!$data3!!}} --}}
 
+        
     </div>
+    <script>
+        var x = "{{$data3}}";
+        
+        // var respuesta3 = x.replace(/&quot;/g, '\"');
+        // console.log(respuesta3);
+        // console.log(typeof respuesta3);
+        // console.log(typeof(JSON.parse(respuesta3)));
+        // console.log(JSON.parse(respuesta3));
+        // sessionStorage.setItem('prueba3',respuesta3);
+        
+        // console.log(x.slice(1, -1));
+        // console.log(typeof x);
+        // console.log(JSON.parse(x.slice(1, -1)));
+        // var y = JSON.parse(x.slice(1, -1));
+        // sessionStorage.setItem('prueba4',x);
+        
+        console.log( x);
+        console.log(typeof x);
+        console.log(JSON.parse(x));
+        sessionStorage.setItem('prueba5',x);
+
+
+    </script>
 
     <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
         <i class="fas fa-arrow-left"></i>

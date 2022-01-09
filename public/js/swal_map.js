@@ -6,9 +6,11 @@ document.querySelector('.lat_long').addEventListener('click',(e)=>{
         title: 'Mapa Provisional',
         text: 'Pulse click para ver la longitud y latitud',
         showConfirmButton: false,
+        // confirmButtonText: 'Completar Campos',
         html: `<b>Pulse click para ver la longitud y latitud</b> <div id="map"></div>`,
         footer: `<label for="" class='label_title'>Ubicación geográfica:</label><label for="" class='label_lat_long'></label>`
       });
+
     console.log(document.querySelector('#map'));    
 
     var map = L.map('map').setView([-1.548, -78.027], 6.33);
@@ -20,9 +22,14 @@ document.querySelector('.lat_long').addEventListener('click',(e)=>{
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoiZGF2aWRhYWMiLCJhIjoiY2t4M2drMnUwMXNicjJ2cDI1ZDV1a2ZjdSJ9.OoOsKzUxYpr96qjCNu6uZw'
     }).addTo(map);
-    
+
+    let inp_lat = document.querySelector('.inp-latitud');
+    let inp_long = document.querySelector('.inp-longitud');
+
     map.on('click', function(e) {
         document.querySelector('.label_lat_long').innerHTML='Latitud: ' + e.latlng.lat + '<br>Longitud : ' + e.latlng.lng;
+        inp_lat.value = e.latlng.lat;
+        inp_long.value = e.latlng.lng;
     });
 
 });

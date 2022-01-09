@@ -48,19 +48,19 @@
     </h5>
     
     <div class="contenedor_2" >
-        <label for="pristino">a. Prístino</label>
+        <label for="pristino">Prístino</label>
         <input type="checkbox" name="pristino" id="pristino">
     
-        <label for="primitivo">b. Primitivo</label>
+        <label for="primitivo">Primitivo</label>
         <input type="checkbox" name="primitivo" id="primitivo">
     
-        <label for="rustico">c. Rústico Natural</label>
+        <label for="rustico">Rústico Natural</label>
         <input type="checkbox" name="rustico" id="rustico">
     
-        <label for="rural">d. Rural</label>
+        <label for="rural">Rural</label>
         <input type="checkbox" name="rural" id="rural">
         
-        <label for="urbano">e. Urbano</label>
+        <label for="urbano">Urbano</label>
         <input type="checkbox" name="urbano" id="urbano">
     </div>
     <h5>
@@ -69,7 +69,7 @@
         </label>
     </h5>
     <div class="contenedor_2">
-        <label for="ingreso">a. Tipo de Ingreso</label>
+        <label for="ingreso">Tipo de Ingreso</label>
         <select name="tipo_ingreso" id="ingreso">
             <option default>Tipo Ingreso</option>
             <option value="libre">libre</option>
@@ -158,11 +158,11 @@
         {{-- @foreach ($data_1_2 as $d)
         Retrive 1_2: {{$d}}
         @endforeach --}}
-        @if (isset($data))
+        {{-- @if (isset($data))
         <input type="hidden" name="data_1_2" value="{{ json_encode($data) }}">
-        {{$data}}
+        {{$data}} --}}
 
-        @endif
+        {{-- @endif --}}
     </div>
 
     <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion1_2')}}` " >
