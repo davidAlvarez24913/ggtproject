@@ -16,6 +16,22 @@
             <input type="checkbox" name="5planta_turistica" id="5planta_turistica">
         </label>
     </h5>
+    <div class="menu_lateral ">
+        <i class="fas fa-bars _menu"></i>
+        <div class="contenido">
+            <label for="">Menu Secciones</label>
+            <hr>
+            <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+            <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+            <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
+            {{-- <a href="{{route('encuesta.seccion5')}}">Seccion 5</a> --}}
+            <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+            <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+
+          </div>
+        
+    </div>
     {{-- Pregunta 5 parte a --}}
     <div class="contenedor_padre">
         <div class="contenedor_pregunta5-1 c_a">
@@ -76,7 +92,7 @@
         </div> 
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
-                Etablecimientos Registrados
+                Establecimientos Registrados
                 <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'>
             </label>
     
@@ -534,6 +550,14 @@
                 <input type="checkbox" name="otro" id="otro">
             </label>
         </div>
+        
+    </div>
+    <div>
+        @if (isset($data_4))
+            {{$data_4}}
+        @else
+            {{' No existe data 4'}}
+        @endif
         
     </div>
     

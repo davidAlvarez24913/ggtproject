@@ -3,21 +3,34 @@
 @section('title','Seccion 4')
 
 @section('head')
-<link rel="stylesheet" href="{{asset('/css/seccion4.css')}}">   
 <meta name="csrf-token" content="{{ csrf_token()}}">
+
+<link rel="stylesheet" href="{{asset('/css/seccion4.css')}}">   
 
 @endsection
 @section('content')
 <h4>4. Accesibilidad y Connectividad al atractivo</h4>
-{{-- <form action="{{route('encuesta.retrieve_4')}}" method="post"> --}}
-    <form action="">
 
-    @csrf
+<form action="{{route('encuesta.retrieve_4')}}" method="post">
+     @csrf
     <div class="contenedor_seccion4">
         <label for="poblado_cercano">a. Nombre de la cuidad o pobaldo mas cercano (que presente condiciones minimas de servicios)</label>
         <input type="text" name="poblado_cercano" id="poblado_cercano">
     </div>
-
+    <div class="menu_lateral ">
+        <i class="fas fa-bars _menu"></i>
+        <div class="contenido">
+            <label for="">Menu Secciones</label>
+            <hr>
+            <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+            <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+            <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+            <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+            <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+          </div>
+        
+    </div>
     <div class="contenedor_seccion4">
         <label for="distancia_km">Distancia desde la cuidad o poblado mas cercano</label>
         <input type="number" name="distancia_km" id="distancia_km">
@@ -206,50 +219,26 @@
     </div>
 
     <div>
-        {{-- @foreach ($data3 as $de)
-        Retrive 3: {{$de}}
-        @endforeach 
-        @if (isset($data_3))
-            <div>
-                {{$data_3["carac_clima"]}}
-
-            </div>
-        @endif--}}
-        {{-- {{$data3}} --}}
-        {{-- {{!!$data3!!}} --}}
+        
+        @if (isset($data3))
+            {{$data3}}
+            
+        @else
+            {{' algo malo sucedio'}}        
+        @endif
 
         
     </div>
-    <script>
-        var x = "{{$data3}}";
-        
-        // var respuesta3 = x.replace(/&quot;/g, '\"');
-        // console.log(respuesta3);
-        // console.log(typeof respuesta3);
-        // console.log(typeof(JSON.parse(respuesta3)));
-        // console.log(JSON.parse(respuesta3));
-        // sessionStorage.setItem('prueba3',respuesta3);
-        
-        // console.log(x.slice(1, -1));
-        // console.log(typeof x);
-        // console.log(JSON.parse(x.slice(1, -1)));
-        // var y = JSON.parse(x.slice(1, -1));
-        // sessionStorage.setItem('prueba4',x);
-        
-        console.log( x);
-        console.log(typeof x);
-        console.log(JSON.parse(x));
-        sessionStorage.setItem('prueba5',x);
-
-
-    </script>
+    
 
     <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion3')}}` " >
         <i class="fas fa-arrow-left"></i>
         Atras
     </button>
 
-    <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion5')}}` " >
+    {{-- <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion5')}}` " > --}}
+    <button type="submit" class="guardar_continuar" >
+    
         Guardar y Continuar 
         <i class="fas fa-arrow-right"></i>
     </button>

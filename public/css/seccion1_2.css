@@ -87,47 +87,60 @@
 }
 
 
-.menu_lateral label {
- display: none;
-}
-
-.menu_lateral:hover {
-    color: rgb(255, 254, 254);
-    transition: all .4s;
-    background-color: rgba(247, 213, 75, 0.748);
-
-}
-/* .aparece{
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    color: rgb(255, 254, 254);
-    transition: all .4s;
-    position: absolute;
-    text-align: center;
-}
-.desaparece{
-    display: none;
-} */
-.botonera1{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5px 0;
-    background-color: rgba(254, 205, 7, 0.59);
-
-}
-.btn_secccion{
+/* ////////////////////// */
+/* Dropdown Button */
+._menu {
+    background-color: none;
+    color: white;
+    /* padding: 16px; */
+    font-size: 16px;
     border: none;
-    width: 9vw;
-    background: none;
-    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .menu_lateral {
+    position: fixed;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .contenido {
+    display: none;
+    position: absolute;
+    background-color: #272424a3;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     border-radius: 15px;
-    height: 20px;
-}
-.btn_secccion:hover{
-    cursor: pointer;
-    background: #066ff8;
-    color: #fff;
+  }
+  
+  /* Links inside the dropdown */
+  .contenido a {
+    color: #f3f8f8;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  .contenido label{
+    font-size: 16px;
+    margin: 2em 0 1em 1.5em;
+    
+  }
+  
+  /* Change color of dropdown links on hover */
+  .contenido a:hover {
+    background-color: #FFE26Ddd;
     border-radius: 15px;
-
+    margin: .2em;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .menu_lateral:hover .contenido {
+      display: block;
+    }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .menu_lateral:hover ._menu {
+      background-color: none;
 }

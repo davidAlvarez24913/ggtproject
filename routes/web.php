@@ -35,11 +35,16 @@ Route::get('/encuesta/seccion6', [EncuestaController::class, 'seccion6'])->name(
 Route::get('/encuesta/seccion7', [EncuestaController::class, 'seccion7'])->name('encuesta.seccion7')->middleware('auth');
 
 Route::post('/encuesta/retrieve_1_2', [EncuestaController::class, 'retrieve_1_2'])->name('encuesta.retrieve_1_2')->middleware('auth');
+
+Route::post('/encuesta/ayuda', [EncuestaController::class, 'ayuda']);
+
 Route::post('/encuesta/retrieve_3', [EncuestaController::class, 'retrieve_3'])->name('encuesta.retrieve_3')->middleware('auth');
 Route::post('/encuesta/retrieve_4', [EncuestaController::class, 'retrieve_4'])->name('encuesta.retrieve_4')->middleware('auth');
 Route::post('/encuesta/retrieve_5', [EncuestaController::class, 'retrieve_5'])->name('encuesta.retrieve_5')->middleware('auth');
+Route::post('/encuesta/retrieve_6', [EncuestaController::class, 'retrieve_6'])->name('encuesta.retrieve_6')->middleware('auth');
+Route::post('/encuesta/retrieve_7', [EncuestaController::class, 'retrieve_7'])->name('encuesta.retrieve_7')->middleware('auth');
 
-Route::get('encuesta/guardarDatos1',[EncuestaController::class, 'guardar'])->name('encuesta.guardar')->middleware('auth');
+Route::get('encuesta/guardar',[EncuestaController::class, 'guardar'])->name('encuesta.guardar')->middleware('auth');
 
 Route::get('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
 

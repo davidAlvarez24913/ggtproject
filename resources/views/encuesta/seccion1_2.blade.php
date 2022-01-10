@@ -16,23 +16,26 @@
 @section('content')
 
     @include("encuesta.titulo")
-    <div class="botonera1">
-        <button class="btn_secccion"> Seccion 1 y 2 </button>
-        <button class="btn_secccion"> Seccion 3 </button>
-        <button class="btn_secccion"> Seccion 4 </button>
-        <button class="btn_secccion"> Seccion 5 </button>
-        <button class="btn_secccion"> Seccion 7 </button>
-        <button class="btn_secccion"> Seccion 8 </button>
-    </div>
-    <div class="menu_lateral">
-        <label class="texto_menu"> Menu de secciones</label>
-        <i class="fas fa-bars"></i>
-    </div>
-
-    <h4>1. Datos Generales</h4>
-    <form action="{{route('encuesta.retrieve_1_2')}}" method="POST">
-        @csrf
     
+    <h4>1. Datos Generales</h4>
+    <form action="{{route('encuesta.retrieve_1_2')}}" method="post">
+        @csrf
+        <div class="menu_lateral ">
+            <i class="fas fa-bars _menu"></i>
+            <div class="contenido">
+                <label for="">Menu Secciones</label>
+                <hr>
+                {{-- <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a> --}}
+                <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+                <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
+                <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+                <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+                <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+
+              </div>
+            
+        </div>
         <div class="contenedor">
             <label for="nombre">Nombre del Atractivo turistico:</label>
             <input type="text" name="nombre" class="in-name"  >
@@ -115,11 +118,9 @@
             <label for="">observaciones</label>
             <input type="text" name="observaciones" id="observaciones">
         </div>
-    </form>
     
-    {{-- botones atras guardar y continuar --}}
-    <div>
-        <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.home')}}`; " >
+        {{-- botones atras guardar y continuar --}}
+        <button class="atras" onclick="location.href = `{{route('encuesta.home')}}` " >
             <i class="fas fa-arrow-left"></i>
             Atras
         </button>
@@ -129,8 +130,8 @@
             Guardar y Continuar
             <i class="fas fa-arrow-right"></i>
         </button>
-        
-    </div>
+    </form>
+
     
     <script src="{{asset('js/selectDinamico.js')}}"></script>
     <script src="{{asset('/js/swal_map.js')}}"></script>

@@ -16,9 +16,11 @@ selectProvincia.addEventListener("change",(event)=>{
         }
 
     }).then( response =>{
-        
+        console.log(response);
         return x = response.json();
     }).then( data =>{
+        console.log(data);
+
         var opciones =`<option disabled>==Canton==</option>`;
         for (let i in data.lista) {
             opciones += '<option value="'+data.lista[i].id+'" >'+data.lista[i].canton+'</option>';

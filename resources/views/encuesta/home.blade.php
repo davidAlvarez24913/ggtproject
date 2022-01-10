@@ -28,8 +28,6 @@
         </div>
     </div>
     <script>
-        
-
         Swal.fire({
             title: 'Bienvenido {{ Auth::user()->name }}',
             text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }} !',
@@ -38,8 +36,6 @@
         
         });
     </script>
-        
-    {{session('status')}}
 
 </div>
     

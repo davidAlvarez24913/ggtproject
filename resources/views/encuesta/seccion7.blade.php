@@ -14,49 +14,55 @@
         <input type="checkbox" name="" id="" required>
     </label>
 </h5>
-<div class='contenedor_seccion7'>
-    <div class="col_1">
-        <label for="">Agua:</label>
-        <label for="">Energía eléctrica:</label>
-        <label for="">Saneamiento:</label>
-        <label for="">Disposición de desechos</label>
-
-
-    </div>
-    <div class="col_2">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-
-    </div>
-    <div class="col_3_aux">
-        <label for="">
-            Especifique
-            <input type="text" name="" id="">
-        </label>
-        <label for="">
-            Especifique
-            <input type="text" name="" id="">
-        </label>
-        <label for="">
-            Especifique
-            <input type="text" name="" id="">
-        </label>
-        <label for="">
-            Especifique
-            <input type="text" name="" id="">
-        </label>
-    </div>
+<div class="menu_lateral ">
+    <i class="fas fa-bars _menu"></i>
+    <div class="contenido">
+        <label for="">Menu Secciones</label>
+        <hr>
+        <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+        <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+        <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
+        <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+        <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+        {{-- <a href="{{route('encuesta.seccion7')}}">Seccion 7</a> --}}
+      </div>
     
+</div>
+<div class="contenedor_padre">
+    <div class='contenedor_seccion7'>
+        <div class="col_1">
+            <label for="">Agua:</label>
+            <label for="">Energía eléctrica:</label>
+        </div>
+        <div class="col_2">
+            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="">
+        </div>
+        <div class="col_3_aux">
+            <input type="text" name="" id="" placeholder=" Especifique">
+            <input type="text" name="" id="" placeholder=" Especifique">
+        </div>
+        <div class="col_1">
+            <label for="">Saneamiento:</label>
+            <label for="">Disposición de desechos</label>
+        </div>
+        <div class="col_2">
+            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="">
+    
+        </div>
+        <div class="col_3_aux">
+            <input type="text" name="" id="" placeholder=" Especifique">
+            <input type="text" name="" id="" placeholder=" Especifique">
+        </div>
+    </div>
     <div class="fila">
         <label for="observaciones">Observaciones:</label>
         <input type="text" name="observaciones">
     </div>
-    
-    
+
 </div>
-  
+
 <h5>
     <label for="pregunta_3_2" class='nombre_pregunta'>Señaléctica en el atractivo
         <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
@@ -311,7 +317,13 @@
         <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
     </label>
 </h5>
-
+<div>
+    @if (isset($data_6))
+        {{$data_6}}
+    @else
+        {{' Algo salio mal '}}
+    @endif
+</div>
 <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion6')}}` " >
     <i class="fas fa-arrow-left"></i>
     Atras

@@ -1,8 +1,11 @@
+.contenedor_padre{
+    margin: 2em 4em ;
+    background: rgba(254, 205, 7, 0.19);
+
+}
 .contenedor_seccion7{
     display: grid;
-    grid-template-columns: 240px 20px 290px;
-    margin: 2em 2em;
-    background: rgba(254, 205, 7, 0.19);
+    grid-template-columns: 240px 20px 290px 240px 20px 290px;
 
 }
 .col_3_aux{
@@ -10,7 +13,12 @@
     flex-direction: column;
     margin-left: 2em;
     margin-top: 1em;
-}.col_2{
+}
+.col_3_aux input{
+    height: 25px;
+    margin-top: 4px;
+}
+.col_2{
     margin-top: 1em;
 
 }
@@ -28,25 +36,24 @@
     margin-top: 4px;
 
 }
-.col_3 label{   
-    margin-bottom: 5px;
-    height: 25px; 
-}
-
 .fila{
     display: flex;
-    margin:   0 2em .5em 5em;
+    margin: 1em 7em 0 5em;
+    padding-bottom: 1em;
 }
 .fila label{
-    height: 25px; 
     margin-right: 10px;
+}
+.fila input{
+    width: 100%; 
+
 }
 /* un grid */
 .contenedor_5filas{
     display: grid;
     /* ancho filas */
     grid-template-rows: 55px 240px 390px 65px;
-    margin: 2em 2em;
+    margin: 2em 4em;
     padding: .2em .2em;
     background: rgba(254, 205, 7, 0.19);
 
@@ -65,7 +72,7 @@
 .fila_1{
     display: grid;
     /* ancho columnas titulos */
-    grid-template-columns: 250px 300px 500px 1fr;
+    grid-template-columns: 250px 300px 450px 1fr;
     
 }
 .fila_1 label{
@@ -84,7 +91,8 @@
 }
 .fila2_col3{
     display: grid;
-    grid-template-columns: 120px 120px 240px;
+    /* ancho de columnas madera aluminio otro */
+    grid-template-columns: 110px 110px 180px;
     justify-content: space-evenly;
 }
 
@@ -122,6 +130,6 @@ select{
 
 .fila2_col4_col-3 input[type=text]{
     height: 25px;
-    width: 180px;
+    width: 160px;
     margin: 2px 0;
 }

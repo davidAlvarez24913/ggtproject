@@ -10,11 +10,29 @@
 
 @section('content')
 <h4>6. Estado de conservación e integración del atractivo/entorno</h4>
+<form action="{{ route('encuesta.retrieve_6')}}" method="POST">
+    @csrf
     <h5>
         <label for="subtitulo_seccion" class='nombre_pregunta'>Atractivo
             <input type="checkbox" name="subtitulo_seccion" id="subtitulo_seccion" required>
         </label>
     </h5>
+    <div class="menu_lateral ">
+        <i class="fas fa-bars _menu"></i>
+        <div class="contenido">
+            <label for="">Menu Secciones</label>
+            <hr>
+            <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+            <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+            <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
+            <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+            {{-- <a href="{{route('encuesta.seccion6')}}">Seccion 6</a> --}}
+            <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+
+          </div>
+        
+    </div>
     <div class="contenedor_seccion6_fila" >
         <label for="literales_seccion6">Conservado
             <input type="checkbox" name="literales_seccion6" id="conservado">
@@ -388,8 +406,16 @@
             <input type="text" name="" id="">
         </label>
     </div>
+    <div>
+        @if (isset($data_5))
+        {{$data_5}}
+    @else
+        {{"algo salio mal"}}
+    @endif
+    </div>
+    
 
-    <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion5')}}` " >
+    <button class="atras" onclick="location.href = `{{route('encuesta.seccion5')}}` " >
         <i class="fas fa-arrow-left"></i>
         Atras
     </button>
@@ -398,6 +424,7 @@
         Guardar y Continuar 
         <i class="fas fa-arrow-right"></i>
     </button>
+</form>
 <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 @endsection
     

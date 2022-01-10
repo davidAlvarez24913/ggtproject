@@ -9,13 +9,30 @@
 
 @section('content')
 <h4>3. Características  del Atractivo</h4>
-<form action="{{route('encuesta.retrieve_3')}}" method="POST">
+{{-- action es la ruta que se va encargar de procesar esa informacion es decir recuperarla --}}
+<form action="{{route('encuesta.retrieve_3')}}" method="post">
     @csrf
     <h5>
         <label for="carac_clima" class='nombre_pregunta'>Características  Climatológicas
             <input type="checkbox" name="carac_clima" id="carac_clima"  >
         </label>
     </h5>
+    <div class="menu_lateral ">
+        <i class="fas fa-bars _menu"></i>
+        <div class="contenido">
+            <label for="">Menu Secciones</label>
+            <hr>
+            <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+            {{-- <a href="{{route('encuesta.seccion3')}}">Seccion 3</a> --}}
+            <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
+            <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+            <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+            <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+
+          </div>
+        
+    </div>
     <div class="contenedor_2" id='cont2_clima'>
         <label for="clima">Clima</label>
         <input type="text" name="clima" id="clima">
@@ -155,14 +172,13 @@
         <input type="text" name="observaciones" id="observaciones">
     </div>
     <div>
-        {{-- @foreach ($data_1_2 as $d)
-        Retrive 1_2: {{$d}}
-        @endforeach --}}
-        {{-- @if (isset($data))
-        <input type="hidden" name="data_1_2" value="{{ json_encode($data) }}">
-        {{$data}} --}}
-
-        {{-- @endif --}}
+        @if (isset($data))
+            <input type="hidden" class="data" name="data" value="{{$data}}">
+            {{'almacenado'}}
+            
+        @else
+            {{'la variable no existe'}}
+        @endif
     </div>
 
     <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion1_2')}}` " >
@@ -177,5 +193,7 @@
 </form>
 
 <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
+<script src="{{asset('js/ayuda.js')}}"></script>
+
 @endsection
     
