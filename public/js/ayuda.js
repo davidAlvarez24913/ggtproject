@@ -1,7 +1,13 @@
 
-const data = document.querySelector('.data').value;
-const obj_data = JSON.parse(data);
+if(document.querySelector('.data') !== null){
+    const data = document.querySelector('.data').value;
 
-console.log(sessionStorage.setItem('data',data));
+    const obj_data = JSON.parse(data);
 
-sessionStorage.setItem('data',data); 
+    console.log(sessionStorage.setItem('data',data));
+
+    sessionStorage.setItem('data',data); 
+}else{
+    console.log('Algo salio mal');
+}
+

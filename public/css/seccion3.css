@@ -1,7 +1,10 @@
 .contenedor_2{
-    padding: 30px 7em;
+    padding: 15px 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2em 4em;
+    background: rgba(254, 205, 7, 0.19);
 }  
 .contenedor_2 input[type="checkbox"]{
     margin-left: 5px;
@@ -13,6 +16,8 @@
 .contenedor_2 input[type="text"], input[type="number"], input[type="datetime"]{
     margin-left: 5px;
     margin-right: 10px;
+    width: 120px;
+
 }
 .contenedor_2 label{
     margin-top: 4px;

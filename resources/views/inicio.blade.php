@@ -67,10 +67,20 @@
             </ul>
             
         </nav>
+        <div class="quilotoa">
+            <h1>Laguna Quilitoa</h1><br>
+            <p>El Quilotoa es el volcán más occidental de los Andes ecuatorianos, 
+                dentro de su cráter se ha formado una caldera con un diámetro de casi 9 km. 
+                Este es el producto del colapso del volcán, ocurrido hace unos 800 años. 
+                Según estudios, el flujo volcánico logró alcanzar el Océano Pacífico.
+            </p>
+            <a href=""><p> Descubre mas..!</p></a>
+        </div>
     </header>
     <main>
         <div class="contenedor">
-            <h1>ECUADOR EL MEJOR LUGAR DEL MUNDO</h1>
+            <h1 class ="lin">ECUADOR EL MEJOR LUGAR DEL MUNDO</h1>
+            <h1>ECUADOR EL MEJOR LUGAR DEL MUNDO</h1><br>
             <p>Elige a Ecuador como el destino de tus vacaciones!. <br>
                 Este bello pais es un paraiso por donde lo mires <br>
                 Dejate deslumbrar por si cultura expresada majestuosamente <br>
@@ -79,7 +89,41 @@
                 Vive una experiencia unica, vive Ecuador
             </p>
         </div>
+        <div class="contenedor1">
+            <h1>Actividades Destacadas</h1>
+            <div class="atrac1">
+                <div class="dif"></div>
+                <h3>Buceo</h3>
+                <p>Ecuador es uno de los mejores 
+                    destinos en el mundo para explorar bajo el agua, 
+                    pues la belleza de todo el Pacífico Sur se 
+                    concentra en su colorida fauna marina, 
+                    en sus acantilados submarinos,
+                    corales y más. La Reserva Marina…
+                </p>
+            </div>
+            <div class="atrac2">
+                <div class="dif1"></div>
+                <div class="uni"></div>
+                <h3>Parapente</h3>
+                <p>Vuelos en parapente frente al mar es un vuelo 
+                    dinámico que se realiza desplazándose por los cielos 
+                    aprovechando la ladera de la montaña el viento del mar nos permite 
+                    poder sustentarnos en el aire y volar como los pájaros.</p>
+
+            </div>
+            <div class="atrac3">
+                <div class="dif2"></div>
+                <h3>Trekking</h3>
+            </div>
+            <div class="atrac4">
+                <div class="dif2"></div>
+                <h3>Rafting</h3>
+            </div>
+        </div>
     </main>
+
+
 
 
 

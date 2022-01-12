@@ -36,8 +36,6 @@ Route::get('/encuesta/seccion7', [EncuestaController::class, 'seccion7'])->name(
 
 Route::post('/encuesta/retrieve_1_2', [EncuestaController::class, 'retrieve_1_2'])->name('encuesta.retrieve_1_2')->middleware('auth');
 
-Route::post('/encuesta/ayuda', [EncuestaController::class, 'ayuda']);
-
 Route::post('/encuesta/retrieve_3', [EncuestaController::class, 'retrieve_3'])->name('encuesta.retrieve_3')->middleware('auth');
 Route::post('/encuesta/retrieve_4', [EncuestaController::class, 'retrieve_4'])->name('encuesta.retrieve_4')->middleware('auth');
 Route::post('/encuesta/retrieve_5', [EncuestaController::class, 'retrieve_5'])->name('encuesta.retrieve_5')->middleware('auth');

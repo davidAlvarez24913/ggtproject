@@ -14,28 +14,38 @@
     <div class="contenedor_guardar">
         <p> Se guardaran los datos de las 7 primeras secciones del formulario.</p>
         Se debe guardar en inputs para hacer un save
-        <form action="{{route('encuesta.store')}}" method="POST">
+        <form id="form7" action="{{route('encuesta.store')}}" method="POST">
             @csrf
             <div >
                 Seccion 7:
                 @if (isset($data_7))
                     {{$data_7}}
+                    <script>
+                        var data7 = '{{!!$data_7!!}}'.slice(1,-1);
+                        console.log(data7);
+                        sessionStorage.setItem('data7__',data7);
+                    </script>
                     
                 @else
-                    {{'algo salio mal'}} 
-                    <br>           
+                        <script> console.error("Algo muy malo ocurrio!"); </script>
                 @endif
                 
             </div>
             <button type="submit">Guardar </button>
-            <script >
-                // document.write(sessionStorage.getItem('data'));
-                // document.querySelector('#respuesta3').value = sessionStorage.getItem('prueba3');
-                // console.console.log(typeof(sessionStorage.getItem('prueba3') ) );
-                // document.write( sessionStorage.getItem('prueba3') );
-            </script>
+            
         </form>
     </div>
     
 
 @endsection
+@section('scripts')
+    <script>
+        var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
+        console.log(errores);
+        
+        
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+    </script>
+    
+@endsection
+    

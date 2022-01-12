@@ -9,7 +9,7 @@
 
 @section('content')
 <h4>5. Planta Turistica / Complementarios</h4>
-<form action="{{route('encuesta.retrieve_5')}}" method="post">
+<form id="form4" action="{{route('encuesta.retrieve_5')}}" method="post">
     @csrf
     <h5>
         <label for="5planta_turistica" class='nombre_pregunta'>Planta turistica
@@ -45,46 +45,46 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="hotel">
                 Hotel
-                <input type="checkbox" name="hotel" id="hotel">
+                <input type="checkbox" name="hotel" id="hotel" required>
     
             </label>
             <label for="hostal">
                 hostal
-                <input type="checkbox" name="hostal" id="hostal">
+                <input type="checkbox" name="hostal" id="hostal" required>
                 
             </label>
             <label for="hosteria">
                 hosteria
-                <input type="checkbox" name="hosteria" id="hosteria">
+                <input type="checkbox" name="hosteria" id="hosteria" required>
                 
             </label>
             <label for="hacienda_turistica">
                 Hacienda Turistica
-                <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica">
+                <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica" required>
                 
             </label>
             <label for="lodge">
                 Lodge
-                <input type="checkbox" name="lodge" id="lodge">
+                <input type="checkbox" name="lodge" id="lodge" required>
                 
             </label>
             <label for="resort">
                 Resort
-            <input type="checkbox" name="resort" id="resort">
+            <input type="checkbox" name="resort" id="resort" required>
                 
             </label>
             <label for="refugio">
                 Refugio
-                <input type="checkbox" name="refugio" id="refugio">
+                <input type="checkbox" name="refugio" id="refugio" required>
                 
             </label>
             <label for="campamento_turistico">
                 Campamento Turistico
-                <input type="checkbox" name="campamento_turistico" id="campamento_turistico">
+                <input type="checkbox" name="campamento_turistico" id="campamento_turistico" required>
             </label>
             <label for="casa_huespedes">
                 Casa de Huespedes
-                <input type="checkbox" name="casa_huespedes" id="casa_huespedes">
+                <input type="checkbox" name="casa_huespedes" id="casa_huespedes" required>
                 
             </label>
             
@@ -93,17 +93,17 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos Registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'>
+                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados' required>
             </label>
     
             <label for="numero_habitaciones">
                 Número de habitaciones 
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'>
+                <input type="number" name='numero_habitaciones' id ='numero_habitaciones' required>
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'>
+                <input type="number" name='numero_plazas' id ='numero_plazas' required>
             </label>
     
         </div>
@@ -113,41 +113,41 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="alimentos_bebidas" class='nombre_pregunta'>
                 Alimentos y bebidas
-                <input type="checkbox" name="alimentos_bebidas" id="alimentos_bebidas">
+                <input type="checkbox" name="alimentos_bebidas" id="alimentos_bebidas" required>
             </label>
         </div>
         <div class="contenedor_pregunta5-1 c_a">
             <label for="">
                 Restaurantes
-                <input type="checkbox" name="restaurantres" id="restaurantres">
+                <input type="checkbox" name="restaurantres" id="restaurantres" required>
             </label>
             <label for="cafeterias">cafeterias
-                <input type="checkbox" name="cafeterias" id="cafeterias">
+                <input type="checkbox" name="cafeterias" id="cafeterias" required>
             </label>
             <label for="bares">bares
-                <input type="checkbox" name="bares" id="bares">
+                <input type="checkbox" name="bares" id="bares" required>
             </label>
             <label for="fuentes_soda">fuentes_soda
-                <input type="checkbox" name="fuentes_soda" id="fuentes_soda">
+                <input type="checkbox" name="fuentes_soda" id="fuentes_soda" required>
             </label>
             <label for="observaciones_alim_bebi">observaciones
-                <input type="text" name="observaciones_alim_bebi" id="observaciones_alim_bebi">
+                <input type="text" name="observaciones_alim_bebi" id="observaciones_alim_bebi" required>
             </label>
         </div>
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'>
+                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados' required>
             </label>
     
             <label for="numero_habitaciones">
                 Número de mesas
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'>
+                <input type="number" name='numero_habitaciones' id ='numero_habitaciones' required>
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'>
+                <input type="number" name='numero_plazas' id ='numero_plazas' required>
             </label>
     
         </div>
@@ -161,20 +161,20 @@
         </div>
         
         <div class="contenedor_pregunta5-1 c_a">
-            <label for="mayoristas">mayoristas
-                <input type="checkbox" name="mayoristas" id="mayoristas">
+            <label for="mayoristas">Mayoristas
+                <input type="checkbox" name="mayoristas" id="mayoristas" required>
             </label>
         
-            <label for="internacionales">internacionales
-                <input type="checkbox" name="internacionales" id="internacionales">
+            <label for="internacionales">Internacionales
+                <input type="checkbox" name="internacionales" id="internacionales" required>
             </label>
             
             <label for="operadores">operadores
-                <input type="checkbox" name="operadores" id="operadores">
+                <input type="checkbox" name="operadores" id="operadores" required>
             </label>
 
             <label for="agencias_establecimientos_registrados">Establecimientos registrados
-                <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados">
+                <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados" required>
             </label>
         </div>
        
@@ -187,7 +187,7 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="5_1_b">
                 En la cuidad o poblado mas cercano Alojamiento
-                <input type="checkbox" name="5_1_b" id="5_1_b">
+                <input type="checkbox" name="5_1_b" id="5_1_b" required>
     
             </label>
             
@@ -195,46 +195,46 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="hotel">
                 Hotel
-                <input type="checkbox" name="hotel" id="hotel">
+                <input type="checkbox" name="hotel" id="hotel" required>
     
             </label>
             <label for="hostal">
                 hostal
-                <input type="checkbox" name="hostal" id="hostal">
+                <input type="checkbox" name="hostal" id="hostal" required>
                 
             </label>
             <label for="hosteria">
                 hosteria
-                <input type="checkbox" name="hosteria" id="hosteria">
+                <input type="checkbox" name="hosteria" id="hosteria" required>
                 
             </label>
             <label for="hacienda_turistica">
                 Hacienda Turistica
-                <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica">
+                <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica" required>
                 
             </label>
             <label for="lodge">
                 Lodge
-                <input type="checkbox" name="lodge" id="lodge">
+                <input type="checkbox" name="lodge" id="lodge" required>
                 
             </label>
             <label for="resort">
                 Resort
-            <input type="checkbox" name="resort" id="resort">
+            <input type="checkbox" name="resort" id="resort" required>
                 
             </label>
             <label for="refugio">
                 Refugio
-                <input type="checkbox" name="refugio" id="refugio">
+                <input type="checkbox" name="refugio" id="refugio" required>
                 
             </label>
             <label for="campamento_turistico">
                 Campamento Turistico
-                <input type="checkbox" name="campamento_turistico" id="campamento_turistico">
+                <input type="checkbox" name="campamento_turistico" id="campamento_turistico" required>
             </label>
             <label for="casa_huespedes">
                 Casa de Huespedes
-                <input type="checkbox" name="casa_huespedes" id="casa_huespedes">
+                <input type="checkbox" name="casa_huespedes" id="casa_huespedes" required>
                 
             </label>
             
@@ -243,17 +243,17 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'>
+                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados' required>
             </label>
     
             <label for="numero_habitaciones">
                 Número de habitaciones
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'>
+                <input type="number" name='numero_habitaciones' id ='numero_habitaciones' required>
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'>
+                <input type="number" name='numero_plazas' id ='numero_plazas' required>
             </label>
     
         </div>
@@ -263,41 +263,41 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="alimentos_bebidas" class='nombre_pregunta'>
                 Alimentos y bebidas
-                <input type="checkbox" name="alimentos_bebidas" id="alimentos_bebidas">
+                <input type="checkbox" name="alimentos_bebidas" id="alimentos_bebidas" required>
             </label>
         </div>
         <div class="contenedor_pregunta5-1 c_a">
             <label for="">
                 Restaurantes
-                <input type="checkbox" name="restaurantres" id="restaurantres">
+                <input type="checkbox" name="restaurantres" id="restaurantres" required>
             </label>
             <label for="cafeterias">cafeterias
-                <input type="checkbox" name="cafeterias" id="cafeterias">
+                <input type="checkbox" name="cafeterias" id="cafeterias" required>
             </label>
             <label for="bares">bares
-                <input type="checkbox" name="bares" id="bares">
+                <input type="checkbox" name="bares" id="bares" required>
             </label>
             <label for="fuentes_soda">fuentes_soda
-                <input type="checkbox" name="fuentes_soda" id="fuentes_soda">
+                <input type="checkbox" name="fuentes_soda" id="fuentes_soda" required>
             </label>
             <label for="observaciones_alim_bebi">observaciones
-                <input type="text" name="observaciones_alim_bebi" id="observaciones_alim_bebi">
+                <input type="text" name="observaciones_alim_bebi" id="observaciones_alim_bebi" required>
             </label>
         </div>
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'>
+                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados' required>
             </label>
     
             <label for="numero_habitaciones">
                 Número de Mesas
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'>
+                <input type="number" name='numero_habitaciones' id ='numero_habitaciones' required>
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'>
+                <input type="number" name='numero_plazas' id ='numero_plazas' required>
             </label>
     
         </div>
@@ -306,24 +306,24 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="agencias">
                 Agencias de viaje
-                <input type="checkbox" name="agencias" id="agencias">
+                <input type="checkbox" name="agencias" id="agencias" required>
             </label>
         </div>
         
         <div class="contenedor_pregunta5-1 c_a">
             <label for="mayoristas">mayoristas
-                <input type="checkbox" name="mayoristas" id="mayoristas">
+                <input type="checkbox" name="mayoristas" id="mayoristas" required>
             </label>
 
             <label for="internacionales">internacionales
-                <input type="checkbox" name="internacionales" id="internacionales">
+                <input type="checkbox" name="internacionales" id="internacionales" required>
             </label>
             
             <label for="operadores">operadores
-                <input type="checkbox" name="operadores" id="operadores">
+                <input type="checkbox" name="operadores" id="operadores" required>
             </label>
             <label for="agencias_establecimientos_registrados">Establecimientos registrados
-                <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados">
+                <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados" required>
 
             </label>
         </div>
@@ -554,25 +554,41 @@
     </div>
     <div>
         @if (isset($data_4))
-            {{$data_4}}
+            <script>
+                var data4 = '{{!!$data_4!!}}'.slice(1,-1);
+                console.log(data4);
+                sessionStorage.setItem('data4__',data4);
+            </script>
         @else
-            {{' No existe data 4'}}
+            <script> console.error("Algo muy malo ocurrio!"); </script>
+
         @endif
         
     </div>
-    
-    <button type="submit" class="atras" onclick="location.href = `{{route('encuesta.seccion4')}}` " >
-        <i class="fas fa-arrow-left"></i>
-        Atras
-    </button>
-
-    <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion6')}}` " >
+    <button type="submit" class="guardar_continuar" >
         Guardar y Continuar 
         <i class="fas fa-arrow-right"></i>
     </button>
 </form>
+    
+    <button class="atras" onclick="location.href = `{{route('encuesta.seccion4')}}` " >
+        <i class="fas fa-arrow-left"></i>
+        Atras
+    </button>
 
 <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 <script src="{{asset('js/retrieve5.js')}}"></script>
 @endsection
+@section('scripts')
+    <script>
+        var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
+        console.log(errores);
+        document.querySelector('#form4').addEventListener('submit',(e)=>{
+            if(errores.length >0){
+                e.preventDefault();
+            }
+        });
+        
+    </script>
     
+@endsection

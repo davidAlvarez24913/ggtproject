@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Retrieve_1_2Encuesta;
 use App\Models\Canton;
 use App\Models\Cantone;
 use App\Models\Encuesta;
@@ -102,24 +103,13 @@ class EncuestaController extends Controller
         return view('encuesta.guardar');
     }
     
-    public function ayuda(Request $request){
-        // no utilizo esto
-        $sec1_2=  $request->data;
-        if(isset($data)){
-            
-            return response()->json([
-                'lista'=> $sec1_2,
-                'success' => true
-            ]);
-        }else{
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    
     
     public function retrieve_1_2(Request $request){
-
+    // public function retrieve_1_2(Retrieve_1_2Encuesta $request){
+    // formdata me genera un error no pasa los datos al sig vista
+            
+        $request->validate(["email" => 'required|email',]);
         $data = json_encode( $request->except(['_token']) );
         return view('encuesta.seccion3',compact('data'));
 

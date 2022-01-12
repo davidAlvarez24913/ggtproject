@@ -27,7 +27,7 @@ var validar = (element, content_element) => {
     let enunciado = document.getElementById(element);
     let deshabilitar = document.getElementById(content_element).getElementsByTagName('input') ; 
     enunciado.addEventListener('click',()=>{
-        if(enunciado.checked){
+        if(enunciado.checked == false){
             for (let x of deshabilitar) {
                 x.disabled =true;
             }

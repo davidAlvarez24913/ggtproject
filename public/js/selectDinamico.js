@@ -21,7 +21,7 @@ selectProvincia.addEventListener("change",(event)=>{
     }).then( data =>{
         console.log(data);
 
-        var opciones =`<option disabled>==Canton==</option>`;
+        var opciones =`<option >==Canton==</option>`;
         for (let i in data.lista) {
             opciones += '<option value="'+data.lista[i].id+'" >'+data.lista[i].canton+'</option>';
             

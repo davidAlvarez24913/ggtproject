@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="{{asset('/css/app.css')}}">
     
+
     
     @yield('head')
     
@@ -59,7 +60,7 @@
                             <li class="auxiliar_li">
                                 <a  href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit(); sessionStorage.clear();">
                                     <i class="fas fa-sign-out-alt"></i>
                                 {{ __('Salir.') }}
                                 </a>
@@ -84,6 +85,7 @@
     <main>
         @yield('content')
     </main>
+    @yield('scripts')
     
     <div style='padding: 2em 0;'> </div>
     {{-- footer --}}

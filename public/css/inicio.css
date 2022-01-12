@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 :root{
     --color-letra: rgb(95, 94, 94);
     --color-botn: rgb(2, 2, 2);
@@ -72,9 +74,7 @@ header{
     position: absolute;
     text-align: center;
     flex-direction: column;
-    border-radius: 7px;
-    
-    
+    border-radius: 7px;  
 }
 
 .auxiliar_li:hover{
@@ -90,11 +90,264 @@ body{
     
 }
 
+.quilotoa{
+    position: absolute;
+    width: 431px;
+    height: 258px;
+    left: 81px;
+    top: 257px;
+}
+
+.quilotoa h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+.quilotoa p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+.quilotoa a{
+    width: 150px;
+    height: 37px;
+    top: 200px;
+    position: absolute;
+    background: #FFCE00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 10px; 
+}
+.quilotoa a p{
+    position: absolute;
+    left: 15%;
+    right: 2%;
+    top: 15%;
+    bottom: 40.62%;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;  
+}
+
+
 .contenedor{
     margin: 2em;
     padding: 2em;
     text-align: center;
     line-height: 35px;   
+}
+.lin{
+    position: absolute;
+    font-size: 2.5em;
+    opacity: 0.2;
+    top: 640px;
+    left: 250px;
+    font-family: 'Bungee Shade', cursive;
+}
+.contenedor h1{
+        font-family: 'Bungee Shade', cursive;
+}
+.contenedor p{
+    
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 27px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Actividades Interesantes */
+.contenedor1{
+    width: 100%;
+    height: 658px;
+    left: 212px;
+    top: 1262px;    
+}
+
+.contenedor1 h1{
+    position: absolute;
+    left: 32.66%;
+    right: 26.26%;
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+
+    
+    color: #000000;
+}
+.atrac1{
+    position: absolute;
+    background: url(../images/Rectangle\ 10.jpg);
+    width: 731px;
+    height: 247px;
+    left: 130px;
+    top: 1030px;
+    border-radius: 10px;
+}
+.dif{
+    position: absolute;
+    width: 266px;
+    height: 247px;
+    left: 465px;
+    top: 0px;
+    border-radius: 10px;
+    background: linear-gradient(89.45deg, rgba(57, 145, 235, 0.43) 0.51%, rgba(57, 145, 235, 0.3139) 0.52%, rgba(72, 149, 226, 0.43) 20.42%, rgba(77, 150, 223, 0.43) 34%, rgba(94, 153, 214, 0.43) 48.28%, rgba(4, 112, 222, 0.43) 99.56%);
+}
+.atrac1 h3{
+    position: absolute;
+    left: 64.84%;
+    right: 20.79%;
+    top: 4.76%;
+    bottom: 89.74%;
+    color: rgb(255, 255, 255);
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 33px;
+}
+.atrac1 p{
+    position: absolute;
+    left: 64.16%;
+    right: 1.09%;
+    top: 20.51%;
+    bottom: -10.62%;
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 20px;
+    color: #ffffff;
+
+}
+
+.atrac2{
+
+    position: absolute;
+    background: url(../images/parapente.jpg);
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 548px;  
+    left: 940px;
+    top: 1030px;
+    border-radius: 10px;
+}
+.dif1{ 
+    position: absolute; 
+    width: 320px;
+    height: 275px;
+    left: 0px;
+    top: 272px;
+    background: #6687A8;
+    border-radius: 0px 0px 10px 10px;
+}
+.uni{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 44.16%;
+    bottom: 45.07%;
+    background: linear-gradient(180deg, rgba(109, 143, 171, 0.45) 0%, rgba(107, 141, 170, 0.91) 29.48%, 
+    rgba(105, 139, 169, 0.75) 54.48%, #6687A8 100%);
+}
+.atrac2 h3{
+    position: absolute;
+    left: 2.45%;
+    right: 39.14%;
+    top: 54.2%;
+    bottom: 43.25%;
+    
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+
+.atrac2 p{
+    position: absolute;
+    left: 2.45%;
+    right: 4.59%;
+    top: 64.23%;
+    bottom: 7.66%;
+    
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    
+    color: #FFFFFF;
+}
+.atrac3{
+    background: url(../images/Rectangle\ 11.png);
+    position: absolute;
+    width: 326px;
+    height: 247px;
+    left: 130px;
+    top: 1328px;
+    
+}
+.dif2{
+    position: absolute;
+    left: 0%;
+    right: 70.17%;
+    top: 94.22%;
+    bottom: 0%;
+    
+    background: linear-gradient(180deg, rgba(20, 10, 8, 0) 0%, rgba(20, 10, 8, 0.48) 22.19%, rgba(20, 10, 8, 0.94) 69.06%, #140A08 100%);
+    border-radius: 10px;
+}
+.atrac3 h3{
+    position: absolute;
+    left: 42.07%;
+    right: 80.15%;
+    top: 87.43%;
+    bottom: 0%;
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 23px;
+    color: #FFFEFE;
+}
+.atrac4{
+    background: url(../images/raft.jpg);
+    position: absolute;
+    width: 340px;
+    height: 247px;
+    left: 517px;
+    top: 1328px;
+    
+}
+.atrac4 h3{
+    position: absolute;
+    left: 46.4%;
+    right: 44.01%;
+    top: 89.44%;
+    bottom: 0.3%;
+    
+    font-family: Berlin Sans FB;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 23px;
+    
+    color: #FAF3F3;
 }
 /*  
 
@@ -114,7 +367,7 @@ footer{
     background-color: var(--colorfooter);
     font-family: 'Cairo', sans-serif;
     display: inline-flex;
-    width: 98.6vw;
+    width: 100vw;
 }
 .contenedor_footer strong{
     color: white;
