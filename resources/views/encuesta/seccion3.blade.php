@@ -113,54 +113,70 @@
     <h5>
         <label class='nombre_pregunta'>Reservas y Formas de Pago </label>
     </h5>
-    <div class="contenedor_tarjetas">
-        <div class="tarjeta">
+    <div class="contenedor_reservas_formas_pago">
+        <div class="contenedor_reservas">
             <div class="titulo">
-                <label for="reservas">Maneja un sistema de reservas</label>
-                <input type="checkbox" id="reservas" checked>
+                <label for="reservas">Maneja un sistema de reservas
+                    <input type="checkbox" id="reservas" checked>
+
+                </label>
             </div>
-            <div class="pregunta" id="p_reservas">
-                <label for="reservas">Precio:</label>
-                <label for="minimo">minimo</label>
-                <input type="text" name="minimo" id="minimo" required>
+            <div class="p_reservas" id="p_reservas">
+                <label for="minimo"> Precio mínimo:
+                    <input type="text" name="minimo" id="minimo" required>
+                </label>
         
-                <label for="maximo">maximo</label>
-                <input type="text" name="maximo" id="maximo" required>
+                <label for="maximo"> Precio máximo:
+                    <input type="text" name="maximo" id="maximo" required>
+
+                </label>
             </div>
+            <hr>
+
         </div>
         
-        <div class="tarjeta">
+        <div class="conetenedor_seccion_4_formas_de_pago">
+
             <div class="titulo">
-                <label for="formas_pago" >Forma de Pago</label>
-                <input type="checkbox"  id="formas_pago" checked>    
-    
+                <label for="formas_pago" >Forma de Pago
+                    <input type="checkbox"  id="formas_pago" checked>    
+
+                </label>
             </div>
             
-            <div class="pregunta formas_pago" id="formas_pago_div">
-                <label for="efectivo" >Efectivo</label>
-                <input type="checkbox" name="efectivo" id="efectivo" required>
+            <div class="formas_pago" id="formas_pago_div">
+                <label for="efectivo" >Efectivo
+                    <input type="checkbox" name="efectivo" id="efectivo" required>
+                </label>
             
-                <label for="dinero_electronico">Dinero Electronico</label>
-                <input type="checkbox" name="dinero_electronico" id="dinero_electronico" required>
+                <label for="dinero_electronico">Dinero Electronico
+                    <input type="checkbox" name="dinero_electronico" id="dinero_electronico" required>
+                </label>
             
-                <label for="tarjeta_debito">Tarjeta debito</label>
-                <input type="checkbox" name="tarjeta_debito" id="tarjeta_debito" required>
+                <label for="tarjeta_debito">Tarjeta debito
+                    <input type="checkbox" name="tarjeta_debito" id="tarjeta_debito" required>
+                </label>
             
-                <label for="tarjeta_credito">Tarjeta credito</label>
-                <input type="checkbox" name="tarjeta_credito" id="tarjeta_credito" required>
+                <label for="tarjeta_credito">Tarjeta credito
+                    <input type="checkbox" name="tarjeta_credito" id="tarjeta_credito" required>
+                </label>
             
-                <label for="transferencia_bancaria">Transferencia Bancaria</label>
-                <input type="checkbox" name="transferencia_bancaria" id="transferencia_bancaria" required>
+                <label for="transferencia_bancaria">Transferencia Bancaria
+                    <input type="checkbox" name="transferencia_bancaria" id="transferencia_bancaria" required>
+                </label>
                 
-                <label for="cheque">cheque</label>
-                <input type="checkbox" name="cheque" id="cheque" required>
+                <label for="cheque">Cheque
+                    <input type="checkbox" name="cheque" id="cheque" required>
+                </label>
             
-                <label for="deposito_bancario">Deposito bancario</label>
-                <input type="checkbox" name="deposito_bancario" id="deposito_bancario" required>
+                <label for="deposito_bancario">Deposito bancario
+                    <input type="checkbox" name="deposito_bancario" id="deposito_bancario" required>
+                </label>
             
                
             </div>
         </div>
+        
         
     </div>
     

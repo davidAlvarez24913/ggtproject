@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Retrieve_1_2Encuesta;
 use App\Models\Canton;
 use App\Models\Cantone;
 use App\Models\Encuesta;
 use App\Models\Parroquia;
 use Illuminate\Http\Request;
 use App\Models\Provincia;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Js;
-use Nette\Utils\Json;
 
 class EncuestaController extends Controller
 {
@@ -28,6 +24,7 @@ class EncuestaController extends Controller
     }
 
     public function seccion1_2(){
+        // $respuesta1 = Encuesta::all($columns =['pregunta1']);
         
 
         $provincias =  Provincia::all();
@@ -43,6 +40,8 @@ class EncuestaController extends Controller
         // dump(gettype($provincias));
         // dump($provincias);
         return view('encuesta.seccion1_2',compact('provincias')); 
+        // return view('encuesta.seccion1_2',compact('provincias','respuesta1')); 
+
     }
     
     public function cantones(Request $request){
@@ -98,7 +97,7 @@ class EncuestaController extends Controller
         
         return view('encuesta.seccion7');
     }
-    public function guardar( Request $request){  
+    public function guardar(){  
         
         return view('encuesta.guardar');
     }
@@ -147,31 +146,18 @@ class EncuestaController extends Controller
     }
 
 
-
     public function store(Encuesta $encuesta,Request $request){
-        // $res3 = session()->get('pregunta3');
-       
-        // $pregunta1 =[
-        //     "nombre" =>$request->nombre,
-        //     "categoria" =>$request->categoria,
-        //     "tipo" => $request->tipo,
-        //     "subtipo" => $request->subtipo,
-        //     "provincia" => $request->provincia,
-        //     "canton" => $request->canton,
-        //     "parroquia" => $request->parroquia,
-            
-        //     ];
-        // $encuesta->pregunta1 = $pregunta1['nombre'];
-        // $encuesta->id_usuario = Auth::user()->id;
-        // $encuesta->pregunta2 = "id_provincia:".(string)$pregunta1['provincia']. 
-        //                         'id_canton:'.(string)$pregunta1['canton'].
-        //                         'id_parroquia:'.(string)$pregunta1['parroquia'] ;
-        // $encuesta->pregunta3 = 'nombre_institucion'.$request->nombre_institucion;
-        // $encuesta->save();
-        // return redirect()->route('encuesta.seccion3');
-        dd(json_decode(session()->get('prueba3'), true));
-        // dd($request->all());
 
+        $encuesta->pregunta1 = $request->data1__;
+        $encuesta->id_usuario = Auth::user()->id;
+        $encuesta->pregunta3 = $request->data3__;
+        $encuesta->pregunta4 = $request->data4__;
+        $encuesta->pregunta5 = $request->data5__;
+        $encuesta->pregunta6 = $request->data6__;
+        $encuesta->pregunta7 = $request->data7__;
+        $encuesta->save();
+        $respuesta = 'ok';
+        return view('encuesta.guardar',compact('respuesta'));
     }
     
 }

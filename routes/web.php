@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[InicioController::class, 'index'])->name('inicio');
+
 Route::get('/visualizador', [VisualizadorController::class, 'index'])->name('visualizador');
+
+Route::get('/visualizador/coordenadas', [VisualizadorController::class, 'coordenadas']);
 
 Auth::routes();
 
@@ -24,6 +27,8 @@ Route::get('/encuesta/seccion1_2', [EncuestaController::class, 'seccion1_2'])->n
 Route::post('/encuesta/seccion1_2/cantones', [EncuestaController::class, 'cantones']);
 
 Route::post('/encuesta/seccion1_2/parroquias', [EncuestaController::class, 'parroquias']);
+
+
 
 // No pueden existir ambiguedad de rutas es decir lo que tenia antes: /encuesta/seccion1_2/ tenia dos metodos post que accedian al metodo del controlador cantones y parroquias
 // agregar un slash y un nombre no significa que se va a mostrar en la url
@@ -44,7 +49,7 @@ Route::post('/encuesta/retrieve_7', [EncuestaController::class, 'retrieve_7'])->
 
 Route::get('encuesta/guardar',[EncuestaController::class, 'guardar'])->name('encuesta.guardar')->middleware('auth');
 
-Route::get('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
+Route::post('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
 
 
 // composer require laravel/ui --dev

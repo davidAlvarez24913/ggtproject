@@ -52,7 +52,9 @@
 .contenedor_5filas{
     display: grid;
     /* ancho filas */
-    grid-template-rows: 55px 240px 390px 65px;
+    grid-template-rows: 55px 260px 390px 65px;
+    /* grid-template-rows: 55px 240px 390px 65px; */
+
     margin: 2em 4em;
     padding: .2em .2em;
     background: rgba(254, 205, 7, 0.19);

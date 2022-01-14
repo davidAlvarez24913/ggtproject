@@ -39,6 +39,7 @@
               </div>
             
         </div>
+        
         <div class="contenedor">
             <label for="nombre">Nombre del Atractivo turistico:</label>
             <input type="text" name="nombre" class="in-name"  value="{{old('nombre')}}"  required>

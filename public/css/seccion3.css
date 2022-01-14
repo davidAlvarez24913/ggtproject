@@ -23,42 +23,51 @@
     margin-top: 4px;
     /* margin-right: 10px; */
 }  
-.contenedor_tarjetas{
-    display: flex;
-    margin: 0 7em ;
-
-}
-.tarjeta{
-    /* padding-left:7em; */
-    margin: 1em 1em 0 0em;
-    border: 2px solid rgba(199, 195, 195, 0.631);
-    border-radius: 5px;
-}
-/* para estilo de preguntas con checkbox */
-.tarjeta input[type="checkbox"], .formas_pago input[type="checkbox"]{
-    margin-left: 7px;
-    width: 20px;
-    height: 25px;
-}
-.titulo{
-    background-color: #efe6c1a4;
-    display: flex;
-}
-.pregunta{
-    margin: 1em 0;
-    display: flex;
-}
 #minimo, #maximo{
-    width: 60px;
+    width: 10vw;
     margin: 0 3px;
 }
 .titulo label, .formas_pago label{
-    padding-top: 4px;
+    display: flex;
+    /* padding-top: 8px; */
     margin-left: 10px;
+    margin-top: .5em;
+}
+
+
+.formas_pago input, #formas_pago, #reservas{
+    height: 25px;
+    width: 20px;
+    margin-left: 5px;
+    margin-top: -4px;
 
 }
-#efectivo, #dinero_electronico, #tarjeta_debito,#tarjeta_credito, #cheque , #deposito_bancario, #transferencia_bancaria{
-    margin-right: 12px;
-    margin-left: 3px;
-    margin-top: -4px;
+.formas_pago label{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+.titulo{
+    display: flex;
+}
+#formas_pago_div{
+    display: flex;
+    justify-content: space-around;
+}
+.conetenedor_seccion_4_formas_de_pago{
+    /* margin: 2em 4em; */
+}
+.p_reservas{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 2em;
+
+}
+
+.contenedor_reservas_formas_pago{
+    background: rgba(254, 205, 7, 0.19);
+    margin: 2em 4em;
+    display: flex;
+    flex-direction: column;
+
 }

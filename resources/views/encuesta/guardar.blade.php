@@ -12,14 +12,33 @@
         Felicitaciones has llenado el 50% del formulario
     </h4>
     <div class="contenedor_guardar">
-        <p> Se guardaran los datos de las 7 primeras secciones del formulario.</p>
-        Se debe guardar en inputs para hacer un save
         <form id="form7" action="{{route('encuesta.store')}}" method="POST">
             @csrf
+            <div class="menu_lateral ">
+                <i class="fas fa-bars _menu"></i>
+                <div class="contenido">
+                    <label for="">Menu Secciones</label>
+                    <hr>
+                    <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+                    <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+                    <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+                    <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+                    <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+                    <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
+                  </div>
+                
+            </div>
             <div >
-                Seccion 7:
+                <p> Se guardaran los datos de las 7 primeras secciones del formulario.</p>
+                
+                <input type="hidden" name="data1__"  class="data1__">
+                <input type="hidden" name="data3__"  class="data3__">
+                <input type="hidden" name="data4__"  class="data4__">
+                <input type="hidden" name="data5__"  class="data5__">
+                <input type="hidden" name="data6__"  class="data6__">
+                <input type="hidden" name="data7__"  class="data7__">
+
                 @if (isset($data_7))
-                    {{$data_7}}
                     <script>
                         var data7 = '{{!!$data_7!!}}'.slice(1,-1);
                         console.log(data7);
@@ -31,7 +50,7 @@
                 @endif
                 
             </div>
-            <button type="submit">Guardar </button>
+            <button type="submit" class="atras" >Guardar Secciones LLenadas</button>
             
         </form>
     </div>
@@ -40,10 +59,12 @@
 @endsection
 @section('scripts')
     <script>
-        var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
-        console.log(errores);
-        
-        
+        document.querySelector('.data1__').value = sessionStorage.data1__
+        document.querySelector('.data3__').value = sessionStorage.data3__
+        document.querySelector('.data4__').value = sessionStorage.data4__
+        document.querySelector('.data5__').value = sessionStorage.data5__
+        document.querySelector('.data6__').value = sessionStorage.data6__
+        document.querySelector('.data7__').value = sessionStorage.data7__        
         // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
     </script>
     
