@@ -21,11 +21,10 @@ function respondio(nombreContenedor){
     var contenedor = document.querySelector(nombreContenedor);
     var lista = contenedor.querySelectorAll('input[type="checkbox"]');
 
-
     var lista_auxiliar = [];
     for (let i = 0; i < lista.length; i++) {
         lista_auxiliar.push( [lista[i].name , lista[i].checked ]);
-    
+        // lista_auxiliar.push( [lista[i].name , lista[i].value ]);
     }
     let flag = 'No';
     for (let j = 0; j < lista_auxiliar.length; j++) {
@@ -35,3 +34,18 @@ function respondio(nombreContenedor){
     }
     return flag;
 }
+
+var r = document.createElement("input");
+r.type ='hidden';
+r.value = respondio('.fila2_col');
+r.name = 'respuesta7_1a';
+contenedor.appendChild(r);
+
+// Debeo quemar todos los inputs a responder
+
+// no voy a quemar todo, solo voy a verificar si son null o estan seleccionados.
+// solo chequeo los checkbox por que eso me sirven para la calificacion diferenciada, los campos text no tienen puntaje
+// Debo crear un input por pregunta y agregar el valor si respondio o no la pregunta
+// recuperar para cargar a la base de datos.
+// haccer calculo de ponderacion
+// mostrar calificacion

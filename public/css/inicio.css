@@ -367,7 +367,7 @@ footer{
     background-color: var(--colorfooter);
     font-family: 'Cairo', sans-serif;
     display: inline-flex;
-    width: 100vw;
+    width: 98.7vw;
 }
 .contenedor_footer strong{
     color: white;

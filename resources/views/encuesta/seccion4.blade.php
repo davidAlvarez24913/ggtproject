@@ -39,42 +39,44 @@
     </div>
     <h5>
         <label for="pregunta_4_2" class='nombre_pregunta'>Vias de Acceso (M)
-            <input type="checkbox" name="pregunta_4_2" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_4_2" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_seccion4_3">
         <div class="contenedor_seccion4_2">
-            <div class='titulo_seccion4_subpregunta'>
-                <label for="terrestre">Terrestre</label>
-                <input type="checkbox" name="terrestre" id="terrestre">
+            <div class='titulo_seccion4_subpregunta'>   
+                <label for="terrestre">Terrestre
+                    <input type="checkbox" name="terrestre" id="terrestre" value='false'>
+                </label>
             </div>
-
-            <label for="tipo_via">tipo de via</label>
+            <hr>
+            <label for="tipo_via">Tipo de via</label>
             <select name="tipo_via" id="tipo_via">
-                <option default disabled>Selecione orden de via</option>
+                <option default disabled value="">Selecione orden de via</option>
                 <option value="primer_orden">Primer orden</option>
                 <option value="segundo_orden">Segundo orden</option>
                 <option value="tercer_orden"> Terer orden</option>
             </select>
             <label for="coordenada_inicio">Coordenada de inicio</label>
-            <input type="text" name="coordenada_inicio" id="coordenada_inicio" required>
+            <input type="text" name="coordenada_inicio" id="coordenada_inicio" >
 
             <label for="coordenada_fin">Coordenada de fin</label>
-            <input type="text" name="coordenada_fin" id="coordenada_fin" required>
+            <input type="text" name="coordenada_fin" id="coordenada_fin" >
             <label for="distancia">Distancia (km)</label>
-            <input type="number" name="distancia" id="distancia" required>
+            <input type="number" name="distancia" id="distancia" >
             <label for="tipo_material">Tipo de material</label>
-            <input type="text" name="tipo_material" id="tipo_material" required>
+            <input type="text" name="tipo_material" id="tipo_material" >
             <label for="estado">Estado</label>
-            <input type="text" name="estado" id="estado" required>
+            <input type="text" name="estado" id="estado" >
         </div>
         <div class="contenedor_seccion4_2">
             <div class='titulo_seccion4_subpregunta'>
-                <label for="acuatico">Acuatico</label>
-                <input type="checkbox" name="acuatico" id="acuatico" required>
+                <label for="acuatico">Acuatico
+                    <input type="checkbox" name="acuatico" id="acuatico" value='false'>
+                </label>
             </div>
-            
-            <label for="subtipo_acuatico">subtipo acuatico</label>
+            <hr>
+            <label for="subtipo_acuatico">Subtipo acuático</label>
             <select name="subtipo_acuatico" id="subtipo_acuatico">
                 <option disable default>subtipo</option>
                 <option value="maritimo">maritimo</option>
@@ -82,34 +84,36 @@
                 <option value="fluvial">fluvial</option>
 
             </select>
-            <label for="puerto_muelle_partida">Puerto/Muelle de partida</label>
-            <input type="text" name="puerto_muelle_partida" id="puerto_muelle_partida" required>
+            <label for="puerto_muelle_partida">Puerto / Muelle de partida</label>
+            <input type="text" name="puerto_muelle_partida" id="puerto_muelle_partida">
 
-            <label for="estado_puerto_partida">estado_puerto_partida</label>
-            <input type="text" name="estado_puerto_partida" id="estado_puerto_partida" required>
+            <label for="estado_puerto_partida">Estado Puerto Partida</label>
+            <input type="text" name="estado_puerto_partida" id="estado_puerto_partida">
 
-            <label for="puerto_muelle_llegada">Puerto/Muelle de llegada</label>
-            <input type="text" name="puerto_muelle_llegada" id="puerto_muelle_llegada" required>
+            <label for="puerto_muelle_llegada">Puerto / Muelle de llegada</label>
+            <input type="text" name="puerto_muelle_llegada" id="puerto_muelle_llegada">
 
-            <label for="estado_puerto_llegada">estado_puerto_llegada</label>
-            <input type="text" name="estado_puerto_llegada" id="estado_puerto_llegada" required>
+            <label for="estado_puerto_llegada">Estado Puerto Llegada</label>
+            <input type="text" name="estado_puerto_llegada" id="estado_puerto_llegada">
 
-            <label for="observaciones_acuatico">observaciones</label>
-            <input type="text" name="observaciones_acuatico" id="observaciones_acuatico" required>
+            <label for="observaciones_acuatico">Observaciones</label>
+            <input type="text" name="observaciones_acuatico" id="observaciones_acuatico">
         </div>
         
         <div class="contenedor_seccion4_2">
             <div class='titulo_seccion4_subpregunta'>
-                <label for="aereo">Aereo</label>
-                <input type="checkbox" name="aereo" id="aereo">
+                <label for="aereo">Aéreo
+                    <input type="checkbox" name="aereo" id="aereo" value='false'>
+                </label>
             </div>
+            <hr>
             <div class="seccion4_row">
                 <label for="nacional"> Nacional </label>
-                <input type="checkbox" name="nacional" id="nacional">
+                <input type="checkbox" name="nacional" id="nacional" value='false'>
 
         
                 <label for="Internacional">Internacional</label>
-                <input type="checkbox" name="Internacional" id="Internacional">
+                <input type="checkbox" name="Internacional" id="Internacional" value='false'>
 
             </div>
             
@@ -121,45 +125,59 @@
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Servicio de Transporte (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2"  value='false'> 
         </label>
     </h5>
-    <div class="contenedor_seccion4">
-        <label for="bus">bus</label>
-        <input type="checkbox" name="bus" id="bus">
-        <label for="buseta">buseta</label>
-        <input type="checkbox" name="buseta" id="buseta">
-        <label for="tranporte_4x4">tranporte_4x4</label>
-        <input type="checkbox" name="tranporte_4x4" id="tranporte_4x4">
-        <label for="taxi">taxi</label>
-        <input type="checkbox" name="taxi" id="taxi">
-        <label for="mototaxi">mototaxi</label>
-        <input type="checkbox" name="mototaxi" id="mototaxi">
-        <label for="teleferico">teleferico</label>
-        <input type="checkbox" name="teleferico" id="teleferico">
-        <label for="barco">barco</label>
-        <input type="checkbox" name="barco" id="barco">
-        <label for="lancha">lancha</label>
-        <input type="checkbox" name="lancha" id="lancha">
+    <div class="transportes">
+        <label for="bus">Bus
+            <input type="checkbox" name="bus" id="bus"  value='false'>
+        </label>
+        <label for="buseta">Buseta
+            <input type="checkbox" name="buseta" id="buseta" value='false'>
+        </label>
+        <label for="tranporte_4x4">Tranporte 4x4
+            <input type="checkbox" name="tranporte_4x4" id="tranporte_4x4" value='false'>
+        </label>
+        <label for="taxi">Taxi
+            <input type="checkbox" name="taxi" id="taxi" value='false'>
+        </label>
+        <label for="mototaxi">Mototaxi
+            <input type="checkbox" name="mototaxi" id="mototaxi" value='false'>
+        </label>
+        <label for="teleferico">Teleferico
+            <input type="checkbox" name="teleferico" id="teleferico" value='false'>
+        </label>
+        <label for="barco">Barco
+            <input type="checkbox" name="barco" id="barco" value='false'>
+        </label>
+        <label for="lancha">Lancha
+            <input type="checkbox" name="lancha" id="lancha" value='false'>
+        </label>
     </div>
-    <div class="contenedor_seccion4">
-        <label for="bote">bote</label>
-        <input type="checkbox" name="bote" id="bote">
-        <label for="canoa">canoa</label>
-        <input type="checkbox" name="canoa" id="canoa">
-        <label for="avion">avion</label>
-        <input type="checkbox" name="avion" id="avion">
-        <label for="avioneta">avioneta</label>
-        <input type="checkbox" name="avioneta" id="avioneta">
-        <label for="helicoptero">helicoptero</label>
-        <input type="checkbox" name="helicoptero" id="helicoptero">
-        <label for="otro">otro</label>
-        <input type="checkbox" name="otro" id="otro">
+    <div class="transportes2">
+        <label for="bote">Bote
+            <input type="checkbox" name="bote" id="bote" value='false'>
+        </label>
+        <label for="canoa">Canoa
+            <input type="checkbox" name="canoa" id="canoa" value='false'>
+        </label>
+        <label for="avion">Avion
+            <input type="checkbox" name="avion" id="avion" value='false'>
+        </label>
+        <label for="avioneta">Avioneta
+            <input type="checkbox" name="avioneta" id="avioneta" value='false'>
+        </label>
+        <label for="helicoptero">Helicoptero
+            <input type="checkbox" name="helicoptero" id="helicoptero" value='false'>
+        </label>
+        <label for="otro">Otro
+            <input type="checkbox" name="otro" id="otro" value='false'>
+        </label>
         
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Detalle de transporte hacia el atractivo (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_seccion4_3filas">
@@ -172,17 +190,17 @@
         <div class="row row_2 ">
             <label >Frecuencia:</label>
             <label for="diaria" style="display: flex;">Diaria
-                <input type="checkbox" name="diaria" id="diaria" required>
+                <input type="checkbox" name="diaria" id="diaria" value='false'>
 
             </label>
             <label for="semanal" style="display: flex;">Semanal
-                <input type="checkbox" name="semanal" id="semanal" required>
+                <input type="checkbox" name="semanal" id="semanal" value='false'>
             </label>
             <label for="mensual" style="display: flex;">Mensual
-                <input type="checkbox" name="mensual" id="mensual" required>
+                <input type="checkbox" name="mensual" id="mensual" value='false'>
             </label>
             <label for="eventual" style="display: flex;">Eventual
-                <input type="checkbox" name="eventual" id="eventual" required>
+                <input type="checkbox" name="eventual" id="eventual" value='false'>
                 
             </label>
         </div>
@@ -198,42 +216,38 @@
 
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Condicciones de Accesibilidad del atractivo turistico al medio fisico para personas con discapacidad (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
-    <div class="contenedor_seccion4">
-        <label for="">general</label>
-        <input type="checkbox" name="general" id="general" required>
-        <label for="">discapacidad_fisica</label>
-        <input type="checkbox" name="discapacidad_fisica" id="discapacidad_fisica" required>
-        <label for="">discapacidad_visual</label>
-        <input type="checkbox" name="discapacidad_visual" id="discapacidad_visual" required>
-        <label for="">discapacidad_auditiva</label>
-        <input type="checkbox" name="discapacidad_auditiva" id="discapacidad_auditiva" required>
-        <label for=""> Discapcidad intelectual psicosocial</label>
-        <input type="checkbox" name="intelectual_psicosocial" id="intelectual_psicosocial" required>
-        <label for="">no_accesible</label>
-        <input type="checkbox" name="no_accesible" id="no_accesible">
+    <div class="aux condiciones_accesibilidad">
+        <label for="">General</label>
+        <input type="checkbox" name="general" id="general" value='false'>
+        <label for="">Discapacidad fisica</label>
+        <input type="checkbox" name="discapacidad_fisica" id="discapacidad_fisica" value='false'>
+        <label for="">Discapacidad visual</label>
+        <input type="checkbox" name="discapacidad_visual" id="discapacidad_visual" value='false'>
+        <label for="">Discapacidad auditiva</label>
+        <input type="checkbox" name="discapacidad_auditiva" id="discapacidad_auditiva" value='false'>
+        <label for="">Discapcidad intelectual psicosocial</label>
+        <input type="checkbox" name="intelectual_psicosocial" id="intelectual_psicosocial" value='false'>
+        <label for="">No accesible
+            <input type="checkbox" name="no_accesible" id="no_accesible" value='false'>
+        </label>
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Señalización (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
-    <div class="contenedor_seccion4">
+    <div class="aux">
+        <label for="">Estado de la Señalizacion de aproximacion al atractivo:</label>
         
-
-
-        <label for="">Señalizacion de aproximacion al atractivo</label>
-        <input type="checkbox" name="" id="">
-        <label for="">Estado</label>
-        
-        <label for="estado_4-5">bueno</label>
-        <input type="checkbox" name="estado_4-5" id="bueno">
-        <label for="">regular</label>
-        <input type="checkbox" name="estado_4-5" id="regular">
-        <label for="">malo</label>
-        <input type="checkbox" name="estado_4-5" id="malo">
+        <label for="estado_4-5">Bueno</label>
+        <input type="checkbox" name="estado_4-5" id="bueno" value='false'>
+        <label for="">Regular</label>
+        <input type="checkbox" name="estado_4-5" id="regular" value='false'>
+        <label for="">Malo</label>
+        <input type="checkbox" name="estado_4-5" id="malo" value='false'>
     </div>
 
     <div>
@@ -275,7 +289,16 @@
                 e.preventDefault();
             }
         });
-        
+
     </script>
-    
+    <script>
+        chk_to_validate('.contenedor_seccion4_3');
+        chk_to_validate('.contenedor_seccion4');
+        chk_to_validate('.transportes');
+        chk_to_validate('.transportes2');
+        chk_to_validate('.row_2');
+        chk_to_validate('.aux');
+        chk_to_validate('.condiciones_accesibilidad');
+
+    </script>
 @endsection

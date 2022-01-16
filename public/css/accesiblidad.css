@@ -1,0 +1,21 @@
+
+.contenedor_padre{
+    margin:  1em 12em;
+    padding: 1em 4em;
+    background: rgba(254, 205, 7, 0.19);
+}
+.contenedor_filas{
+    display: grid;
+    grid-template-rows: repeat(15, 25px);
+}
+.fila_4cols{
+    display: grid;
+    grid-template-columns: 410px 30px 30px 300px;
+    
+}
+.col-4,.col-3, .col-2{
+    margin-top: 4px;
+}
+.col-4 input{
+    width: 100%;
+}

@@ -33,6 +33,7 @@
     <div class="contenedor_padre ">
         <div class="_titulo_" >En el Alojamiento.</div>
         <hr>
+        {{-- pregunta 7.1-a --}}
         <div class='contenedor_seccion7 pregunta7-1-a'>
             <div class="col_1">
                 <label for="agua">Agua:</label>
@@ -64,6 +65,8 @@
             <label for="observaciones">Observaciones:</label>
             <input type="text" name="observaciones">
         </div>
+        {{-- FIN pregunta 7.1-a --}}
+
 
     </div>
 
@@ -72,29 +75,29 @@
         <hr>
         <div class='contenedor_seccion7 pregunta7-1-b'>
             <div class="col_1">
-                <label for="">Agua:</label>
-                <label for="">Energía eléctrica:</label>
+                <label for="b_agua">Agua:</label>
+                <label for="p7_1-b_energia">Energía eléctrica:</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="p7_1-b_agua" id="p7_1-b_agua">
+                <input type="checkbox" name="p7_1-b_energia" id="p7_1-b_energia">
             </div>
             <div class="col_3_aux">
-                <input type="text" name="" id="" placeholder=" Especifique">
-                <input type="text" name="" id="" placeholder=" Especifique">
+                <input type="text" name="p7_1-b_observacion1" id="p7_1-b_observacion1" placeholder=" Especifique">
+                <input type="text" name="p7_1-b_observacion2" id="p7_1-b_observacion2" placeholder=" Especifique">
             </div>
             <div class="col_1">
-                <label for="">Saneamiento:</label>
-                <label for="">Disposición de desechos</label>
+                <label for="p7_1-b_saneamiento">Saneamiento:</label>
+                <label for="p7_1-b_desechos">Disposición de desechos</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="p7_1-b_saneamiento" id="p7_1-b_saneamiento">
+                <input type="checkbox" name="p7_1-b_desechos" id="p7_1-b_desechos">
         
             </div>
             <div class="col_3_aux">
-                <input type="text" name="" id="" placeholder=" Especifique">
-                <input type="text" name="" id="" placeholder=" Especifique">
+                <input type="text" name="p7_1-b_observacion3" id="p7_1-b_observacion3" placeholder=" Especifique">
+                <input type="text" name="p7_1-b_observacion4" id="p7_1-b_observacion4" placeholder=" Especifique">
             </div>
         </div>
         <div class="fila">
@@ -340,7 +343,7 @@
         
         
         {{-- Otros --}}
-        <label for="">Otros</label>
+        {{-- <label for="">Otros</label> --}}
 
     </div>
     <h5>
@@ -441,11 +444,7 @@
             </div>
         </div>
     </div>
-    <h5>
-        <label for="pregunta_3-2" class='nombre_pregunta'>Seguridad (M)
-            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
-        </label>
-    </h5>
+    
     
     <div>
         @if (isset($data_6))
@@ -484,9 +483,7 @@
         });
         
     </script>
-    <script>
-        
-    </script>
+    <script src="{{asset('/js/respuestas7.js')}}"></script>
     
 @endsection
     

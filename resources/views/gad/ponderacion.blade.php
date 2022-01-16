@@ -21,7 +21,9 @@
    
     
     <h4>Ponderacion Y Jerarquizacion</h4>
-    
+    <div>
+        {{$rec}}
+    </div>
 
 @endsection
 

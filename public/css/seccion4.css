@@ -4,10 +4,14 @@
     flex-direction: row;
     margin: 2em  4em;
     background: rgba(254, 205, 7, 0.19);
+    justify-content: space-between;
+}
+#poblado_cercano{
+    width: 33%;
 }
 .contenedor_seccion4 input{
     margin: 0px 30px 0px 5px;
-    /* height: 35px; */
+    height: 30px;
 
 }
 .contenedor_seccion4 label{
@@ -59,10 +63,28 @@
 
 .titulo_seccion4_subpregunta {
     display: flex;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.1em;
+    justify-content: space-evenly;
 }   
 .titulo_seccion4_subpregunta label, .seccion4_row label{
     margin-top: 4px;
+    /* padding-top: 8px; */
+    display: flex;
+
+}
+.titulo_seccion4_subpregunta input{
+    margin-top: 2px;
+    margin-left: 5px;
+    display: flex;
+    height: 15px;
+    width: 25px;
+}
+.seccion4_row input{
+    margin-top: 4px;
+    margin-left: 5px;
+    display: flex;
+    height: 15px;
+    width: 25px;
 }
 .seccion4_row{
     display: flex;
@@ -70,4 +92,12 @@
 }
 .seccion4_row input{
     margin-right: 10px;
+}
+.aux , .transportes , .transportes2{
+    display: flex;
+    flex-direction: row;
+    margin: 2em  4em;
+    background: rgba(254, 205, 7, 0.19);
+    padding: 2vh 3vw;
+    justify-content: space-evenly;
 }

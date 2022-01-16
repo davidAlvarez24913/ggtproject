@@ -34,7 +34,7 @@
         </div>
         <div class="tarjeta">
             <div class="titulo">
-                <h2> <a href="">Ponderación y Jerarquización</a></h2>
+                <h2> <a href="{{route('gad.ponderacion')}}">Ponderación y Jerarquización</a></h2>
             </div>
             
         </div>
