@@ -28,6 +28,16 @@
                 {{-- <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li> --}}
                 <li><a class='anchor'  href="{{route('inicio')}}" title="Inicio"><i class="fas fa-home"></i></a> </li>
                 {{-- <li><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li> --}}
+                {{-- @if (Auth::user()->rol =='normal')
+                <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
+                @endif
+
+                @if (Auth::user()->rol =='gad')
+                <li><a  class='anchor' href="{{route('gad.home')}}">Formularios</a> </li>
+                @endif
+                @if (Auth::user()->rol =='admin')
+                <li><a  class='anchor' href="{{route('admin.home')}}">Formularios</a> </li>
+                @endif --}}
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
                 
                 <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>

@@ -28,34 +28,34 @@
             <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
             <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
             <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
-            <a href="{{ route('encuesta.guardar')}}">Guaradar Datos</a>
+            <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
 
           </div>
         
     </div>
     <div class="contenedor_2" id='cont2_clima'>
         <label for="clima">Clima</label>
-        <input type="text" name="clima" id="clima" required>
+        <input type="text" name="clima" id="clima" >
         <label for="temperatura">Temperatura(°C)</label>
-        <input type="number" name='temperatura' id='temperatura' required>
+        <input type="number" name='temperatura' id='temperatura' placeholder="0">
         <label for="precipitacion">Precipitacion Pluviometrica</label>
-        <input type="number" name='precipitacion' id='precipitacion' required>
+        <input type="number" name='precipitacion' id='precipitacion' placeholder="0">
     </div>   
     <h5>
         <label for="linea_producto" class='nombre_pregunta'>Linea de producto al que pertenece el atractivo
-            <input type="checkbox" id="linea_producto"  >    
+            <input type="checkbox" id="linea_producto">    
         </label>
     </h5>
     <div class="contenedor_2" id='cont2_lineaProducto'>
         
         <label for="cultura">Cultura</label>
-        <input type="checkbox" name="cultura" id="cultura" required>
+        <input type="checkbox" name="cultura" id="cultura" >
     
         <label for="naturaleza">Naturaleza</label>
-        <input type="checkbox" name="naturaleza" id="naturaleza" required>
+        <input type="checkbox" name="naturaleza" id="naturaleza" >
     
         <label for="aventura">Aventura</label>
-        <input type="checkbox" name="aventura" id="aventura" required>
+        <input type="checkbox" name="aventura" id="aventura" >
         
     </div>
     <h5>
@@ -66,19 +66,19 @@
     
     <div class="contenedor_2" >
         <label for="pristino">Prístino</label>
-        <input type="checkbox" name="pristino" id="pristino" required>
+        <input type="checkbox" name="pristino" id="pristino" >
     
         <label for="primitivo">Primitivo</label>
-        <input type="checkbox" name="primitivo" id="primitivo" required>
+        <input type="checkbox" name="primitivo" id="primitivo" >
     
         <label for="rustico">Rústico Natural</label>
-        <input type="checkbox" name="rustico" id="rustico" required>
+        <input type="checkbox" name="rustico" id="rustico" >
     
         <label for="rural">Rural</label>
-        <input type="checkbox" name="rural" id="rural" required>
+        <input type="checkbox" name="rural" id="rural" >
         
         <label for="urbano">Urbano</label>
-        <input type="checkbox" name="urbano" id="urbano" required>
+        <input type="checkbox" name="urbano" id="urbano" >
     </div>
     <h5>
         <label for="ingreso_atractivo" class='nombre_pregunta'> Ingreso al atractivo(U)
@@ -94,96 +94,81 @@
             <option value="pagado">pagado</option>
     
         </select>
-        <label >Horario de atención</label>
-        <label for='ingreso' >Ingreso</label>
-        <input type="datetime" name="ingreso" id="ingreso" required>
-        <label for='salida' >Salida</label>
-        <input type="datetime" name="salida" id="salida" required>
+        <label for='ingreso' >Horario de Ingreso</label>
+        <input type="time" name="ingreso" id="ingreso" >
+        <label for='salida' >Horario de Salida</label>
+        <input type="time" name="salida" id="salida" >
     
         <label for="">Atención</label>
         <label for="todos_los_dias">Todos los dias</label>
-        <input type="checkbox" name="todos_los_dias" id="todos_los_dias" required>
+        <input type="checkbox" name="todos_los_dias" id="todos_los_dias" >
     
         <label for="fin_de_semana">Fines de semana y feriados</label>
-        <input type="checkbox" name="fin_de_semana" id="fin_de_semana" required>
+        <input type="checkbox" name="fin_de_semana" id="fin_de_semana" >
         <label for="dias_habiles">Solo dias habiles</label>
-        <input type="checkbox" name="dias_habiles" id="dias_habiles" required>
+        <input type="checkbox" name="dias_habiles" id="dias_habiles" >
     </div>    
     
     <h5>
-        <label class='nombre_pregunta'>Reservas y Formas de Pago </label>
+        <label for="reservas"  class='nombre_pregunta'>Maneja un sistema de reservas
+            <input type="checkbox" id="reservas" checked>
+
+        </label>
     </h5>
-    <div class="contenedor_reservas_formas_pago">
-        <div class="contenedor_reservas">
-            <div class="titulo">
-                <label for="reservas">Maneja un sistema de reservas
-                    <input type="checkbox" id="reservas" checked>
-
-                </label>
-            </div>
-            <div class="p_reservas" id="p_reservas">
-                <label for="minimo"> Precio mínimo:
-                    <input type="text" name="minimo" id="minimo" required>
-                </label>
+    <div class="contenedor_reservas">
         
-                <label for="maximo"> Precio máximo:
-                    <input type="text" name="maximo" id="maximo" required>
+        <label for="minimo"> Precio mínimo:
+            <input type="text" name="minimo" id="minimo" placeholder="$0.00">
+        </label>
 
-                </label>
-            </div>
-            <hr>
+        <label for="maximo"> Precio máximo:
+            <input type="text" name="maximo" id="maximo" placeholder="$0.00">
 
-        </div>
-        
-        <div class="conetenedor_seccion_4_formas_de_pago">
-
-            <div class="titulo">
-                <label for="formas_pago" >Forma de Pago
-                    <input type="checkbox"  id="formas_pago" checked>    
-
-                </label>
-            </div>
-            
-            <div class="formas_pago" id="formas_pago_div">
-                <label for="efectivo" >Efectivo
-                    <input type="checkbox" name="efectivo" id="efectivo" required>
-                </label>
-            
-                <label for="dinero_electronico">Dinero Electronico
-                    <input type="checkbox" name="dinero_electronico" id="dinero_electronico" required>
-                </label>
-            
-                <label for="tarjeta_debito">Tarjeta debito
-                    <input type="checkbox" name="tarjeta_debito" id="tarjeta_debito" required>
-                </label>
-            
-                <label for="tarjeta_credito">Tarjeta credito
-                    <input type="checkbox" name="tarjeta_credito" id="tarjeta_credito" required>
-                </label>
-            
-                <label for="transferencia_bancaria">Transferencia Bancaria
-                    <input type="checkbox" name="transferencia_bancaria" id="transferencia_bancaria" required>
-                </label>
-                
-                <label for="cheque">Cheque
-                    <input type="checkbox" name="cheque" id="cheque" required>
-                </label>
-            
-                <label for="deposito_bancario">Deposito bancario
-                    <input type="checkbox" name="deposito_bancario" id="deposito_bancario" required>
-                </label>
-            
-               
-            </div>
-        </div>
-        
-        
+        </label>
     </div>
+    <h5>
+        <label  class='nombre_pregunta' >Forma de Pago
+            <input type="checkbox"  id="formas_pago" checked>    
+        </label>
+    </h5>
+
+    <div class="formas_pago" id="formas_pago_div">
+        <label for="efectivo" >Efectivo
+            <input type="checkbox" name="efectivo" id="efectivo" >
+        </label>
+    
+        <label for="dinero_electronico">Dinero Electronico
+            <input type="checkbox" name="dinero_electronico" id="dinero_electronico" >
+        </label>
+    
+        <label for="tarjeta_debito">Tarjeta debito
+            <input type="checkbox" name="tarjeta_debito" id="tarjeta_debito" >
+        </label>
+    
+        <label for="tarjeta_credito">Tarjeta credito
+            <input type="checkbox" name="tarjeta_credito" id="tarjeta_credito" >
+        </label>
+    
+        <label for="transferencia_bancaria">Transferencia Bancaria
+            <input type="checkbox" name="transferencia_bancaria" id="transferencia_bancaria" >
+        </label>
+        
+        <label for="cheque">Cheque
+            <input type="checkbox" name="cheque" id="cheque" >
+        </label>
+    
+        <label for="deposito_bancario">Deposito bancario
+            <input type="checkbox" name="deposito_bancario" id="deposito_bancario" >
+        </label>
+    
+       
+    </div>
+    
     
     
     <div class="contenedor_2">
         <label for="meses">Meses recomendables de visita:</label>
-        <input type="text" name="meses" id="meses" required>
+        <input type="text" name="meses" id="meses" >
         <label for="observaciones">Observaciones:</label>
         <input type="text" name="observaciones" id="observaciones">
     </div>

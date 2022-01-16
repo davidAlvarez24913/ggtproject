@@ -23,6 +23,10 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                // if(Auth::user()->rol =='normal'){
+                //     dd(Auth::user()->rol );
+                //     return redirect('encuesta.home');
+                // }
                 return redirect(RouteServiceProvider::HOME);
             }
         }

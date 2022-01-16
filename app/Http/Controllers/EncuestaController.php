@@ -12,7 +12,12 @@ use Illuminate\Support\Facades\Auth;
 
 class EncuestaController extends Controller
 {
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('normal',['only'=>['home'] ]);
+        
+    }
     public function home(){
         
         return view('encuesta.home');
@@ -157,6 +162,8 @@ class EncuestaController extends Controller
         $encuesta->pregunta7 = $request->data7__;
         $encuesta->save();
         $respuesta = 'ok';
+        // redirigir al visualizador geografico
+        // al devolver ok , pedir confirmacion y desactivar boton
         return view('encuesta.guardar',compact('respuesta'));
     }
     

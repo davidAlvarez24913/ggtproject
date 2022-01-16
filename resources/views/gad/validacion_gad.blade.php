@@ -20,40 +20,25 @@
 
     @include("encuesta.titulo")
     
-    <h4>1. Datos Generales</h4>
-    <form  id='form1' action="{{route('encuesta.retrieve_1_2')}}" method="post">
+    <h4>VALIDACIÓN DE FICHA  PARA EL LEVANTAMIENTO Y JERARQUIZACIÓN DE ATRACTIVOS TURÍSTICOS</h4>
+    <form  id='' action="" method="post">
         @csrf
-        <div class="menu_lateral ">
-            <i class="fas fa-bars _menu"></i>
-            <div class="contenido">
-                <label for="">Menu Secciones</label>
-                <hr>
-                {{-- <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a> --}}
-                <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
-                <a href="{{route('encuesta.seccion4')}}">Seccion 4</a>
-                <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
-                <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
-                <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
-                <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
-
-              </div>
-            
-        </div>
+        
         
         <div class="contenedor">
             <label for="nombre">Nombre del Atractivo turistico:</label>
             <input type="text" name="nombre" class="in-name"  value="{{old('nombre')}}"  required>
         
             <label for="categoria">Categoría:</label>
-            <select name="categoria" id="categoria"  required >
-                <option default value="">Selcciona categoría</option>
+            <select name="categoria" id="categoria"  >
+                <option default>Selcciona categoría</option>
                 <option value="atracciones_naturales">Atracciones Naturales</option>
                 <option value="manifestaciones_culturales">Manifestaciones Culturales</option>
 
             </select>
             <label for="tipo" >tipo:</label>
-            <select name="tipo" id="tipo" required >
-                <option default value="">Selecione Tipo</option>
+            <select name="tipo" id="tipo"  >
+                <option default>Selecione Tipo</option>
             </select>
             <script>
                 const category = document.querySelector('#categoria');
@@ -154,12 +139,7 @@
             <label for="observaciones">Observaciones</label>
             <input type="text" name="observaciones" id="observaciones" value="{{ old('observaciones')}}">
         </div>
-       
-        {{-- botones atras guardar y continuar --}}
-        {{-- agregar la funcion on clik no me permite validar con required po eso esta comentado
-            YA QUE EL CONTROLADOR RETORNA LA SIG VISTA NO ES NECESARIO ESTA ACCIÓN
-        --}}
-        {{-- <button type="submit" class="guardar_continuar" onclick="location.href = `{{route('encuesta.seccion3')}}`" > --}}
+      
         <button type="submit" class="guardar_continuar" >
 
             Guardar y Continuar
@@ -184,7 +164,7 @@
 @endsection
 
 @section('scripts')
-
+    
     <script src="{{asset('js/selectDinamico.js')}}"></script>
     <script src="{{asset('/js/swal_map.js')}}"></script>
     <script src="{{asset('/js/botoncontinuar.js')}}"></script>

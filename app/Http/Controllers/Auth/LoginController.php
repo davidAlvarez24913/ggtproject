@@ -27,7 +27,8 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-    // esta linea debe cambiarse erro 404 not found
+
+    // esta linea debe cambiarse error 404 not found
 
     /**
      * Create a new controller instance.

@@ -69,7 +69,7 @@
         
 
         {{-- columna 1 --}}
-        <div class='col'>
+        <div class='col col_aux'>
             <div class="subcolumna_par">
                 <label for="">Actividades forestales</label>
                 <input type="checkbox" name="" id="">
@@ -102,7 +102,7 @@
         </div>
 
         {{-- columna 2 --}}
-        <div class='col'>
+        <div class='col col_aux'>
             <div class="sucolumna_par_2">
                 <label for="erocion">Eroción
                 </label>
@@ -246,7 +246,7 @@
         
 
         {{-- columna 1 --}}
-        <div class='col'>
+        <div class='col col_aux'>
             <div class="subcolumna_par">
                 <label for="forestales">Actividades forestales</label>
                 <input type="checkbox" name="forestales" id="forestales">
@@ -279,7 +279,7 @@
         </div>
 
         {{-- columna 2 --}}
-        <div class='col'>
+        <div class='col col_aux'>
             <div class="sucolumna_par_2">
                 <label for="erocion">Eroción
                 </label>

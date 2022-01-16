@@ -13,7 +13,7 @@
     height: 25px;   
 }
 
-.contenedor_2 input[type="text"], input[type="number"], input[type="datetime"]{
+.contenedor_2 input[type="text"], input[type="number"]{
     margin-left: 5px;
     margin-right: 10px;
     width: 120px;
@@ -47,27 +47,19 @@
     flex-direction: row;
     height: 25px;
 }
-.titulo{
-    display: flex;
-}
 #formas_pago_div{
-    display: flex;
-    justify-content: space-around;
-}
-.conetenedor_seccion_4_formas_de_pago{
-    /* margin: 2em 4em; */
-}
-.p_reservas{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5px 2em;
-
-}
-
-.contenedor_reservas_formas_pago{
+    margin: 2em 4em;
     background: rgba(254, 205, 7, 0.19);
     margin: 2em 4em;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+}
 
+
+.contenedor_reservas{
+    background: rgba(254, 205, 7, 0.19);
+    margin: 2em 4em;
+    display: flex;
+    padding: .5em 0;
+    justify-content: space-evenly;
 }

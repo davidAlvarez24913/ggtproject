@@ -30,8 +30,47 @@
         </div>
         
     </div>
+    <div class="contenedor_padre ">
+        <div class="_titulo_" >En el Alojamiento.</div>
+        <hr>
+        <div class='contenedor_seccion7 pregunta7-1-a'>
+            <div class="col_1">
+                <label for="agua">Agua:</label>
+                <label for="energia">Energía eléctrica:</label>
+            </div>
+            <div class="col_2">
+                <input type="checkbox" name="p7_1-a_agua" id="agua">
+                <input type="checkbox" name="p7_1-a_energia" id="energia">
+            </div>
+            <div class="col_3_aux">
+                <input type="text" name="p7_1-a_especifique_agua" placeholder=" Especifique">
+                <input type="text" name="p7_1-a_especifique_energia"  placeholder=" Especifique">
+            </div>
+            <div class="col_1">
+                <label for="">Saneamiento:</label>
+                <label for="">Disposición de desechos</label>
+            </div>
+            <div class="col_2">
+                <input type="checkbox" name="p7_1-a_saneamiento" id="">
+                <input type="checkbox" name="p7_1-a_desechos" id="">
+        
+            </div>
+            <div class="col_3_aux">
+                <input type="text" name="p7_1-a_especifique_saneamieno"  placeholder=" Especifique">
+                <input type="text" name="p7_1-a_especifique_desechos"  placeholder=" Especifique">
+            </div>
+        </div>
+        <div class="fila">
+            <label for="observaciones">Observaciones:</label>
+            <input type="text" name="observaciones">
+        </div>
+
+    </div>
+
     <div class="contenedor_padre">
-        <div class='contenedor_seccion7'>
+        <div class="_titulo_" >En la cuidad o el pueblo mas cercano.</div>
+        <hr>
+        <div class='contenedor_seccion7 pregunta7-1-b'>
             <div class="col_1">
                 <label for="">Agua:</label>
                 <label for="">Energía eléctrica:</label>
@@ -110,7 +149,7 @@
                         <script>
                             let count = document.querySelector('.col2_fila2').childElementCount;
                             for (var i = 0; i < count; i++) {
-                                document.write('<input type="number" name="'+'au_madera_inp_'+String(i)+'" >') ;
+                                document.write('<input type="number" placeholder="0" name="'+'au_madera_inp_'+String(i)+'" >') ;
                             }
                         </script>
                         
@@ -119,7 +158,7 @@
                         <script>
                             let count2 = document.querySelector('.col2_fila2').childElementCount;
                             for (var i = 0; i < count2; i++) {
-                                document.write('<input type="number" name="'+'au_aluminio_inp_'+String(i)+'" >') ;
+                                document.write('<input type="number" placeholder="0" name="'+'au_aluminio_inp_'+String(i)+'" >') ;
                             }
                         </script>
                     </div>
@@ -180,7 +219,7 @@
                         <script>
                             let count5 = document.querySelector('.aux1').childElementCount;
                             for (var i = 0; i < count5; i++) {
-                                document.write('<input type="number" name="'+'an_madera_inp_'+String(i)+'" >') ;
+                                document.write('<input type="number" placeholder="0" name="'+'an_madera_inp_'+String(i)+'" >') ;
                             }
                         </script>
                     </div>
@@ -189,7 +228,7 @@
                         <script>
                             let count6 = document.querySelector('.aux1').childElementCount;
                             for (var i = 0; i < count6; i++) {
-                                document.write('<input type="number" name="'+'an_madera_inp_'+String(i)+'" >') ;
+                                document.write('<input type="number" placeholder="0" name="'+'an_madera_inp_'+String(i)+'" >') ;
                             }
                         </script>
                     </div>
@@ -230,13 +269,13 @@
                 </div>
                 <div class="fila2_col3">
                     <div class="fila2_col4_col-1">
-                        <input type="number" name="" >
-                        <input type="number" name="" >
+                        <input type="number" name=""  placeholder="0" >
+                        <input type="number" name=""  placeholder="0" >
 
                     </div>
                     <div class="fila2_col4_col-2">
-                        <input type="number" name="" >
-                        <input type="number" name="" >
+                        <input type="number" name=""  placeholder="0" >
+                        <input type="number" name=""  placeholder="0" >
 
                     </div>
                     <div class="fila2_col4_col-3">
@@ -309,16 +348,105 @@
             <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
         </label>
     </h5>
+    <div class="contenedor_pregunta_7-3">
+        <div class="dos_columnas">
+            <div class="col col_1">
+                <div class="seis_filas">
+                    <label for=""> En el atractivo</label>
+                    <div class="_3col">
+                        <div class="3col_a" for="hospital">Hospital o Clínica</div>
+                        <div class="3col_b">
+                            <input type="checkbox" name="" id="hospital">
+                        </div>
+                        <div class="_3col_c">
+                            <input type="text" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Puesto / Centro de salud</div>
+                        <div class="3col_b">
+                            <input type="checkbox" name="" id="">
+                        </div>
+                        <div class="_3col_c">
+                            <input type="text" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Dispensario médico</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="_3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Botiquín de primeros auxilios</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="_3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Otros</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="_3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col col_2">
+                <div class="seis_filas">
+                    <label for=""> En la cuidad o pueblo mas cercano</label>
+                    <div class="_3col">
+                        <div class="3col_a">Hospital o Clínica</div>
+                        <div class="3col_b">
+                            <input type="checkbox" name="" id="">
+                        </div>
+                        <div class="3col_c">
+                            <input type="text" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Puesto / Centro de salud</div>
+                        <div class="3col_b">
+                            <input type="checkbox" name="" id="">
+                        </div>
+                        <div class="3col_c">
+                            <input type="text" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Dispensario médico</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Botiquín de primeros auxilios</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+                    <div class="_3col">
+                        <div class="3col_a">Otros</div>
+                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_c">
+                            <input type="text" name="" placeholder="0" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <h5>
         <label for="pregunta_3-2" class='nombre_pregunta'>Seguridad (M)
             <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
         </label>
     </h5>
-    <h5>
-        <label for="pregunta_3-2" class='nombre_pregunta'>Servicio de comuncación de uso público
-            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
-        </label>
-    </h5>
+    
     <div>
         @if (isset($data_6))
         <script>
@@ -354,6 +482,9 @@
                 e.preventDefault();
             }
         });
+        
+    </script>
+    <script>
         
     </script>
     
