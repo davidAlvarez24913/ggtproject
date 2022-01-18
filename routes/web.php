@@ -3,8 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\InicioController;
-use App\Http\Controllers\PonderacionController;
+use App\Http\Controllers\GadController;
 use App\Http\Controllers\VisualizadorController;
+use App\Models\Encuesta;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -12,14 +13,19 @@ Route::get('/',[InicioController::class, 'index'])->name('inicio');
 
 Route::get('/visualizador', [VisualizadorController::class, 'index'])->name('visualizador');
 
+
+
+Route::get('/encuesta/configUser', [EncuestaController::class, 'perfil'])->name('encuesta.configUser')->middleware('auth');
+Route::get('/gad/configUser', [GadController::class, 'perfil'])->name('gad.configUser')->middleware(['auth','gad']);
+Route::get('/admin/configUser', [AdminController::class, 'perfil'])->name('admin.configUser')->middleware(['auth','admin']);
+
+
+
 Route::get('/visualizador/coordenadas', [VisualizadorController::class, 'coordenadas']);
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');
-
-// Route::get('/encuesta',[EncuestaController::class, 'home'])->name('encuesta.home')->middleware('auth');
-Route::get('/encuesta',[EncuestaController::class, 'home'])->name('encuesta.home');
+Route::get('/encuesta',[EncuestaController::class, 'home'])->name('encuesta.home')->middleware('auth');
 
 
 Route::get('/encuesta/accesibilidad',[EncuestaController::class, 'accesibilidad'])->name('encuesta.accesibilidad')->middleware('auth');
@@ -55,11 +61,10 @@ Route::get('encuesta/guardar',[EncuestaController::class, 'guardar'])->name('enc
 
 Route::post('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
 
-// Route::get('/gad/home',[PonderacionController::class, 'index'])->name('gad.home')->middleware(['auth','gad','admin']);
-Route::get('/gad/home',[PonderacionController::class, 'index'])->name('gad.home');
+Route::get('/gad/home',[GadController::class, 'index'])->name('gad.home');
 
-Route::get('/gad/validacion_gad',[PonderacionController::class, 'validacion'])->name('gad.validacion')->middleware('auth');
-Route::get('/gad/ponderacion',[PonderacionController::class, 'ponderacion'])->name('gad.ponderacion')->middleware('auth');
+Route::get('/gad/validacion_gad',[GadController::class, 'validacion'])->name('gad.validacion')->middleware('auth');
+Route::get('/gad/ponderacion',[GadController::class, 'ponderacion'])->name('gad.ponderacion')->middleware('auth');
 
 Route::get('/admin/home',[AdminController::class, 'index'])->name('admin.home')->middleware(['auth','admin']);
 

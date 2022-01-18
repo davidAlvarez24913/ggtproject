@@ -11,50 +11,46 @@
 
 @section('content')
 <div class="contenedor_formularios">
-    <div class="titulo">
-        <h2><b class ="homeencuesta"> Formularios de atractivos turísticos</b></h2>
+    <h2><b class ="homeencuesta"> Modulos para Administrador</b></h2>
+
+    <div class="sub_contenedor">
 
         <div class="tarjeta">
             <div class="titulo">
-                <h2> <a href="{{route('encuesta.seccion1_2')}}">Ficha técnica Entidad Turística</a></h2>
+                <h2> <a href="{{route('encuesta.seccion1_2')}}">Llenar - Ficha técnica Entidad Turística</a></h2>
             </div>
             
         </div>
         <div class="tarjeta">
             <div class="titulo">
-                <h2> <a href="{{route('encuesta.accesibilidad')}}">Ficha técnica de Accesibilidad De la Entidad Turística</a></h2>
+                <h2> <a href="{{route('encuesta.accesibilidad')}}">LLenar -Ficha técnica de Accesibilidad De la Entidad Turística</a></h2>
             </div>
             
         </div>
         <div class="tarjeta">
             <div class="titulo">
-                <h2> <a href="">Validacion GAD</a></h2>
+                <h2> <a href="">Llenar - Validación GAD</a></h2>
             </div>
             
         </div>
-        <div class="tarjeta">
+    </div>
+
+    <div class="sub_contenedor">
+
+        <div class="tarjeta_small">
             <div class="titulo">
                 <h2> <a href="{{route('gad.ponderacion')}}">Ponderación y Jerarquización</a></h2>
             </div>
             
         </div>
-        <div class="tarjeta">
+        <div class="tarjeta_small">
             <div class="titulo">
-                <h2> <a href="">Gestion de Usuarios</a></h2>
+                <h2> <a href="">Gestión de Usuarios</a></h2>
             </div>
             
         </div>
         
     </div>
-    <script>
-        Swal.fire({
-            title: 'Bienvenido {{ Auth::user()->name }}',
-            text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
-            confirmButtonColor:'#26ae31',
-            confirmButtonText: 'OK'
-        
-        });
-    </script>
 
 </div>
     

@@ -1,17 +1,58 @@
 .contenedor_formularios{
     padding: 3em;
     text-align: center;
+    
 }
-
+.sub_contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .tarjeta{
     background: rgba(254, 205, 7, 0.59);
     margin: 2em;
     border-radius: 10px;
-    height: 29px;
-    /* width: 1000px; */
+    height: 15vh;
+    width: 30vw;
     text-align: center;
     align-items: center;
+    box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
+    
+}
+.tarjeta_normal{
+    background: rgba(254, 205, 7, 0.59);
+    margin: 2em;
+    border-radius: 10px;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
+}
+.tarjeta_gad{
+    background: rgba(254, 205, 7, 0.59);
+    margin: 2em;
+    border-radius: 10px;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
 }
 .titulo a{
     color: black;
+}
+.titulo{
+    padding-top: 1em;
+}
+.tarjeta_small{
+    background: rgba(254, 205, 7, 0.59);
+    margin: 2em;
+    border-radius: 10px;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
+
 }

@@ -8,6 +8,10 @@
     <!-- Latest compiled Font Awesome -->
     <script src="https://kit.fontawesome.com/8b6b495fb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('/css/inicio.css')}}">
+    {{-- Sweet Alert CDN --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- JQuery CDN --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
@@ -37,10 +41,24 @@
                     @endif
                 @else
                     <li class="desplegable">
-                        <a class='menu anchor' href="#" >
-                            {{ Auth::user()->name }}
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        @if (Auth::user()->rol == 'admin')
+                            <a class='menu anchor' href="{{route('admin.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif
+                        @if (Auth::user()->rol == 'gad')
+                            <a class='menu anchor' href="{{route('gad.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif
+                        @if (Auth::user()->rol == 'normal')
+                            <a class='menu anchor' href="{{route('encuesta.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif       
                         <ul class="menu_vertical">
                             <li class="auxiliar_li"><a href="#">
                                 <i class="fas fa-cog"></i>
@@ -62,6 +80,24 @@
                         </ul>
                         
                     </li>
+                    <script>
+                        var x ='{{ Auth::user()->rol }}';
+                        if ( x !=null){
+                            $(document).ready(()=>{
+                                
+                                console.log(x);
+                                Swal.fire({
+                                    title: 'Bienvenido {{ Auth::user()->name }}',
+                                    text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
+                                    confirmButtonColor:'#26ae31',
+                                    confirmButtonText: 'OK'
+                                
+                                });
+                            });
+                            
+                        }
+                        
+                    </script>
                 @endguest
 
             </ul>
@@ -123,13 +159,7 @@
         </div>
     </main>
 
-
-
-
-
     <div style='padding: 2em 0;'> </div>
-
-
 
     {{-- footer --}}
     <footer>
@@ -158,7 +188,10 @@
                 <strong>Observatorio Turístico<br>Región Sur del Ecuador</strong>
                 
             </div>
+            
         </div>
+        
+        
     </footer>
 </body>
 </html>

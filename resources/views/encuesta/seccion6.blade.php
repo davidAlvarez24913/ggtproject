@@ -33,17 +33,17 @@
           </div>
         
     </div>
-    <div class="contenedor_seccion6_fila" >
+    <div class="contenedor_seccion6_fila s6_aux" >
         <label for="literales_seccion6">Conservado
-            <input type="checkbox" name="literales_seccion6" id="conservado" >
+            <input type="checkbox" name="literales_seccion6" id="conservado" value='false'>
         </label>
 
         <label for="literales_seccion6">Alterado
-            <input type="checkbox" name="literales_seccion6" id="alterado" >
+            <input type="checkbox" name="literales_seccion6" id="alterado" value='false'>
         </label>
 
         <label for="literales_seccion6">En proceso de deterioro
-            <input type="checkbox" name="literales_seccion6" id="deteriorado" >
+            <input type="checkbox" name="literales_seccion6" id="deteriorado" value='false'>
         </label>
 
         <label for="observaciones">Observaciones
@@ -65,38 +65,38 @@
 
     {{-- matriz 4 columnas --}}
 
-    <div class="contenedor_seccion6_4cols">
+    <div class="contenedor_seccion6_4cols s6_aux2">
         
 
         {{-- columna 1 --}}
         <div class='col col_aux'>
             <div class="subcolumna_par">
                 <label for="">Actividades forestales</label>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="" value='false'>
             </div>
 
             <div class="subcolumna_par">
                 <label for="">Negligencia / abandono</label>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="uso_exposicion">Condiciones de uso y exposición </label>
-                <input type="checkbox" name="uso_exposicion" id="uso_exposicion">
+                <input type="checkbox" name="uso_exposicion" id="uso_exposicion" value='false'>
             </div>
             <div class="subcolumna_par">
                 <label for="residuos">Generación de residuos</label>
-                <input type="checkbox" name="residuos" id="residuos">
+                <input type="checkbox" name="residuos" id="residuos" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="industrial_comercial">Desarrollo industrial / comercial </label>
-                <input type="checkbox" name="industrial_comercial" id="industrial_comercial">
+                <input type="checkbox" name="industrial_comercial" id="industrial_comercial" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="otro">Otro</label>
-                <input type="checkbox" name="otro" id="otro">
+                <input type="checkbox" name="otro" id="otro" value='false'>
             </div>
 
         </div>
@@ -106,36 +106,36 @@
             <div class="sucolumna_par_2">
                 <label for="erocion">Eroción
                 </label>
-                <input type="checkbox" name="erocion" id="erocion">
+                <input type="checkbox" name="erocion" id="erocion" value='false'>
 
             </div>
             <div class="sucolumna_par_2">
 
                 <label for="humead">Humedad
                 </label>
-                <input type="checkbox" name="humead" id="humead">
+                <input type="checkbox" name="humead" id="humead" value='false'>
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="desastres_naturales">Desastres Naturales 
                 </label>
-                <input type="checkbox" name="desastres_naturales" id="desastres_naturales">
+                <input type="checkbox" name="desastres_naturales" id="desastres_naturales" value='false'>
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="flora_fauna">Flora y Fauna
                 </label>
-                <input type="checkbox" name="flora_fauna" id="flora_fauna">
+                <input type="checkbox" name="flora_fauna" id="flora_fauna" value='false'>
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="clima">Clima
                 </label>
-                <input type="checkbox" name="clima" id="clima">
+                <input type="checkbox" name="clima" id="clima" value='false'>
 
             </div>
             <label for="especifique">Especifique
-                <input type="text" name="especifique" id="especifique">
+                <input type="text" name="especifique" id="especifique" value='false'>
             </label>
             
         </div>
@@ -144,31 +144,31 @@
         <div class='col'>
             <div class="subcolumna_par3">
                 <label for="agricolas_ganaderas">Actividades agrícolas y ganaderas</label>
-                <input type="checkbox" name="agricolas_ganaderas" id="agricolas_ganaderas">
+                <input type="checkbox" name="agricolas_ganaderas" id="agricolas_ganaderas" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="industriales">Actividades  industriales </label>
-                <input type="checkbox" name="industriales" id="industriales">
+                <input type="checkbox" name="industriales" id="industriales" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="conflicto">Conflicto de tenencia</label>
-                <input type="checkbox" name="conflicto" id="conflicto">
+                <input type="checkbox" name="conflicto" id="conflicto" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="cantaminacion">Contaminación del ambiente </label>
-                <input type="checkbox" name="cantaminacion" id="cantaminacion">
+                <input type="checkbox" name="cantaminacion" id="cantaminacion" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="politico_social">Conflicto político / social </label>
-                <input type="checkbox" name="politico_social" id="politico_social">
+                <input type="checkbox" name="politico_social" id="politico_social" value='false'>
 
             </div>
             <label for="observaciones">Observaciones
-                <input type="text" name="observaciones" id="observaciones">
+                <input type="text" name="observaciones" id="observaciones" value='false'>
             </label>
 
         </div>
@@ -177,27 +177,27 @@
         <div class='col'>
             <div class="subcolumna_par4">
                 <label for="mineria">Actividades extractivas / minería</label>
-                <input type="checkbox" name="mineria" id="mineria" >
+                <input type="checkbox" name="mineria" id="mineria"  value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="huaqueria">Huaquearía</label>
-                <input type="checkbox" name="huaqueria" id="huaqueria" >
+                <input type="checkbox" name="huaqueria" id="huaqueria"  value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="falta_mantenimiento"> Falta de mantenimiento </label>
-                <input type="checkbox" name="falta_mantenimiento" id="falta_mantenimiento" >
+                <input type="checkbox" name="falta_mantenimiento" id="falta_mantenimiento"  value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="expansion">Expansión urbana</label>
-                <input type="checkbox" name="expansion" id="expansion" >
+                <input type="checkbox" name="expansion" id="expansion"  value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="vandalismo">Vandalismo</label>
-                <input type="checkbox" name="vandalismo" id="vandalismo" >
+                <input type="checkbox" name="vandalismo" id="vandalismo" value='false' >
             </div>
 
         </div>
@@ -206,21 +206,21 @@
 
     <h5>
         <label for="subtitulo_seccion_2" class='nombre_pregunta'>Entorno
-            <input type="checkbox" name="subtitulo_seccion_2" id="subtitulo_seccion_2" >    
+            <input type="checkbox" name="subtitulo_seccion_2" id="subtitulo_seccion_2"  value='false'>
         </label>
     </h5>
 
-    <div class="contenedor_seccion6_fila" >
+    <div class="contenedor_seccion6_fila s6_aux3" >
         <label for="literales_seccion6">Conservado
-            <input type="checkbox" name="literales_seccion6" id="conservado">
+            <input type="checkbox" name="literales_seccion6" id="conservado" value='false'>
         </label>
 
         <label for="literales_seccion6">Alterado
-            <input type="checkbox" name="literales_seccion6" id="alterado">
+            <input type="checkbox" name="literales_seccion6" id="alterado" value='false'>
         </label>
 
         <label for="literales_seccion6">En proceso de deterioro
-            <input type="checkbox" name="literales_seccion6" id="deteriorado">
+            <input type="checkbox" name="literales_seccion6" id="deteriorado" value='false'>
         </label>
 
         <label for="observaciones">Observaciones
@@ -242,38 +242,38 @@
 
     {{-- matriz 4 columnas Entorno--}}
 
-    <div class="contenedor_seccion6_4cols">
+    <div class="contenedor_seccion6_4cols s6_aux4">
         
 
         {{-- columna 1 --}}
         <div class='col col_aux'>
             <div class="subcolumna_par">
                 <label for="forestales">Actividades forestales</label>
-                <input type="checkbox" name="forestales" id="forestales">
+                <input type="checkbox" name="forestales" id="forestales" value='false'>
             </div>
 
             <div class="subcolumna_par">
                 <label for="abandono">Negligencia / abandono</label>
-                <input type="checkbox" name="abandono" id="abandono">
+                <input type="checkbox" name="abandono" id="abandono" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="uso_exposicion">Condiciones de uso y exposición </label>
-                <input type="checkbox" name="uso_exposicion" id="uso_exposicion">
+                <input type="checkbox" name="uso_exposicion" id="uso_exposicion" value='false'>
             </div>
             <div class="subcolumna_par">
                 <label for="residuos">Generación de residuos</label>
-                <input type="checkbox" name="residuos" id="residuos">
+                <input type="checkbox" name="residuos" id="residuos" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="entorno_indus_comercial">Desarrollo industrial / comercial </label>
-                <input type="checkbox" name="entorno_indus_comercial" id="entorno_indus_comercial">
+                <input type="checkbox" name="entorno_indus_comercial" id="entorno_indus_comercial" value='false'>
 
             </div>
             <div class="subcolumna_par">
                 <label for="entorno_observaciones">Otro</label>
-                <input type="checkbox" name="entorno_observaciones" id="entorno_observaciones">
+                <input type="checkbox" name="entorno_observaciones" id="entorno_observaciones" value='false'>
             </div>
 
         </div>
@@ -283,36 +283,36 @@
             <div class="sucolumna_par_2">
                 <label for="erocion">Eroción
                 </label>
-                <input type="checkbox" name="erocion" id="erocion" >
+                <input type="checkbox" name="erocion" id="erocion" value='false' >
 
             </div>
             <div class="sucolumna_par_2">
 
                 <label for="humead">Humedad
                 </label>
-                <input type="checkbox" name="humead" id="humead" >
+                <input type="checkbox" name="humead" id="humead" value='false' >
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="desastres_naturales">Desastres Naturales 
                 </label>
-                <input type="checkbox" name="desastres_naturales" id="desastres_naturales" >
+                <input type="checkbox" name="desastres_naturales" id="desastres_naturales" value='false' >
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="flora_fauna">Flora y Fauna
                 </label>
-                <input type="checkbox" name="flora_fauna" id="flora_fauna" >
+                <input type="checkbox" name="flora_fauna" id="flora_fauna" value='false' >
 
             </div>
             <div class="sucolumna_par_2">
                 <label for="clima">Clima
                 </label>
-                <input type="checkbox" name="clima" id="clima" >
+                <input type="checkbox" name="clima" id="clima" value='false' >
 
             </div>
             <label for="entorno_especifique">Especifique
-                <input type="text" name="entorno_especifique" id="entorno_especifique" >
+                <input type="text" name="entorno_especifique" id="entorno_especifique" value='false' >
             </label>
             
         </div>
@@ -321,27 +321,27 @@
         <div class='col'>
             <div class="subcolumna_par3">
                 <label for="eentorno_agricolas">Actividades agrícolas y ganaderas</label>
-                <input type="checkbox" name="entorno_agricolas" id="entorno_agricolas">
+                <input type="checkbox" name="entorno_agricolas" id="entorno_agricolas" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="entorno_industriales">Actividades  industriales </label>
-                <input type="checkbox" name="entorno_industril" id="entorno_industriales">
+                <input type="checkbox" name="entorno_industril" id="entorno_industriales" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="entorno_conflicto">Conflicto de tenencia</label>
-                <input type="checkbox" name="entorno_conflicto" id="entorno_conflicto">
+                <input type="checkbox" name="entorno_conflicto" id="entorno_conflicto" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="entorno_contminacion">Contaminación del ambiente </label>
-                <input type="checkbox" name="entorno_contminacion" id="entorno_contminacion">
+                <input type="checkbox" name="entorno_contminacion" id="entorno_contminacion" value='false'>
             </div>
 
             <div class="subcolumna_par3">
                 <label for="entorno_politico_social">Conflicto político / social </label>
-                <input type="checkbox" name="entorno_politico_social" id="entorno_politico_social">
+                <input type="checkbox" name="entorno_politico_social" id="entorno_politico_social" value='false'>
 
             </div>
             <label for="entorno_observacione">Observaciones
@@ -354,27 +354,27 @@
         <div class='col'>
             <div class="subcolumna_par4">
                 <label for="entorno_mineria">Actividades extractivas / minería</label>
-                <input type="checkbox" name="entorno_mineria" id="entorno_mineria">
+                <input type="checkbox" name="entorno_mineria" id="entorno_mineria" value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="entorno_huaqueria">Huaquearía</label>
-                <input type="checkbox" name="entorno_huaqueria" id="entorno_huaqueria">
+                <input type="checkbox" name="entorno_huaqueria" id="entorno_huaqueria" value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="entorno_falta_mantenimiento"> Falta de mantenimiento </label>
-                <input type="checkbox" name="entorno_falta_mantenimiento" id="entorno_falta_mantenimiento">
+                <input type="checkbox" name="entorno_falta_mantenimiento" id="entorno_falta_mantenimiento" value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="entorno_expansion">Expansión urbana</label>
-                <input type="checkbox" name="entorno_expansion" id="entorno_expansion">
+                <input type="checkbox" name="entorno_expansion" id="entorno_expansion" value='false'>
             </div>
 
             <div class="subcolumna_par4">
                 <label for="entorno_vandalismo">Vandalismo</label>
-                <input type="checkbox" name="entorno_vandalismo" id="entorno_vandalismo">
+                <input type="checkbox" name="entorno_vandalismo" id="entorno_vandalismo" value='false'>
             </div>
 
         </div>
@@ -383,13 +383,13 @@
 
     <h5>
         <label for="subtitulo_seccion_3" class='nombre_pregunta'>Declaratoria del espacio turístico asociado al atractivo
-            <input type="checkbox" name="subtitulo_seccion_3" id="subtitulo_seccion_3" required>    
+            <input type="checkbox" name="subtitulo_seccion_3" id="subtitulo_seccion_3"  value='false'>    
         </label>
     </h5>
 
     {{-- 6.3. Declaratoria del espacio turístico asociado al atractivo --}}
 
-    <div class='contenedor_seccion6_fila'>
+    <div class='contenedor_seccion6_fila s6_aux5'>
         <label for="declarante">Declarante
             <input type="text" name="declarante" id="declarante" required>
         </label>
@@ -432,6 +432,13 @@
 <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 @endsection
 @section('scripts')
+    <script>
+        chk_to_validate('.s6_aux');
+        chk_to_validate('.s6_aux2');
+        chk_to_validate('.s6_aux3');
+        chk_to_validate('.s6_aux4');
+        chk_to_validate('.s6_aux5');
+    </script>
     <script>
         var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
         console.log(errores);

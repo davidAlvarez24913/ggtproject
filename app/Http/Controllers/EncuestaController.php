@@ -15,13 +15,24 @@ class EncuestaController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('normal',['only'=>['home'] ]);
+        $this->middleware('normal',['only'=>['index'] ]);
         
     }
+
+    public function index(){
+        
+        // return view('encuesta.home');
+    }
+
     public function home(){
         
         return view('encuesta.home');
     }
+    public function perfil(){
+        
+        return view('encuesta.configUser');
+    }
+
 
     public function accesibilidad(){
         
@@ -161,10 +172,11 @@ class EncuestaController extends Controller
         $encuesta->pregunta6 = $request->data6__;
         $encuesta->pregunta7 = $request->data7__;
         $encuesta->save();
-        $respuesta = 'ok';
+        // $respuesta = 'ok';
         // redirigir al visualizador geografico
         // al devolver ok , pedir confirmacion y desactivar boton
-        return view('encuesta.guardar',compact('respuesta'));
+        // return view('encuesta.guardar',compact('respuesta'));
+        return redirect()->route('visualizador');
     }
     
 }

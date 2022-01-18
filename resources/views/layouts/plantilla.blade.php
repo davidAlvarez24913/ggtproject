@@ -28,19 +28,10 @@
                 {{-- <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li> --}}
                 <li><a class='anchor'  href="{{route('inicio')}}" title="Inicio"><i class="fas fa-home"></i></a> </li>
                 {{-- <li><a  class='anchor' href="{{route('encuesta.seccion1_2')}}">Encuesta</a> </li> --}}
-                {{-- @if (Auth::user()->rol =='normal')
-                <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
-                @endif
-
-                @if (Auth::user()->rol =='gad')
-                <li><a  class='anchor' href="{{route('gad.home')}}">Formularios</a> </li>
-                @endif
-                @if (Auth::user()->rol =='admin')
-                <li><a  class='anchor' href="{{route('admin.home')}}">Formularios</a> </li>
-                @endif --}}
+                
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
                 
-                <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>
+                <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geográfico</a> </li>
                 
                 
                 {{-- autentificacion --}}
@@ -59,14 +50,54 @@
                     @endif
                 @else
                     <li class="desplegable">
-                        <a class='menu anchor' href="{{route('encuesta.home')}}" >
-                            {{ Auth::user()->name }}
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        {{-- Aqui debo validar rutas del nombre del usuario --}}
+                        @if (Auth::user()->rol == 'admin')
+                            <a class='menu anchor' href="{{route('admin.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif
+                        @if (Auth::user()->rol == 'gad')
+                            <a class='menu anchor' href="{{route('gad.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif
+                        @if (Auth::user()->rol == 'normal')
+                            <a class='menu anchor' href="{{route('encuesta.home')}}" >
+                                {{ Auth::user()->name }}
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        @endif
+                        
                         <ul class="menu_vertical">
-                            <li class="auxiliar_li"><a href="#">
-                                <i class="fas fa-cog"></i>
-                                Configuracion</a></li>
+                            <li class="auxiliar_li">
+                                @if (Auth::user()->rol == 'admin')
+                                    <a class='menu anchor' href="{{route('admin.configUser')}}" >
+                                        <i class="fas fa-cog"></i>
+                                        Configuracion
+                                        
+                                    </a>
+                                @endif
+                                @if (Auth::user()->rol == 'gad')
+                                    <a class='menu anchor' href="{{route('gad.configUser')}}" >
+                                        <i class="fas fa-cog"></i>
+                                        Configuracion
+                                        
+                                    </a>
+                                @endif
+                                @if (Auth::user()->rol == 'normal')
+                                    <a class='menu anchor' href="{{route('encuesta.configUser')}}" >
+                                        <i class="fas fa-cog"></i>
+                                        Configuracion
+                                        
+                                    </a>
+                                @endif
+                                {{-- <a href="#">
+                                    <i class="fas fa-cog"></i>
+                                    Configuracion
+                                </a> --}}
+                            </li>
                             <li class="auxiliar_li">
                                 <a  href="{{ route('logout') }}"
                                     onclick="event.preventDefault();

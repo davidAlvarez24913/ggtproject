@@ -22,7 +22,7 @@
     
     <h4>Ponderacion Y Jerarquizacion</h4>
     <div>
-        {{$rec}}
+        {{$rec[2]}}
     </div>
 
 @endsection

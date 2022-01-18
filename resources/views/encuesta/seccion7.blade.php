@@ -11,7 +11,7 @@
 <h4>7. Higiene y Seguridad Turística</h4>
 <h5>
     <label for="" class='nombre_pregunta'>Servicios Básicos
-        <input type="checkbox" name="" id="" required>
+        <input type="checkbox" name="" id="" >
     </label>
 </h5>
 <form id='form6' action="{{route('encuesta.retrieve_7')}}" method="POST">
@@ -40,8 +40,8 @@
                 <label for="energia">Energía eléctrica:</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="p7_1-a_agua" id="agua">
-                <input type="checkbox" name="p7_1-a_energia" id="energia">
+                <input type="checkbox" name="p7_1-a_agua" id="agua" value='false'>
+                <input type="checkbox" name="p7_1-a_energia" id="energia" value='false'>
             </div>
             <div class="col_3_aux">
                 <input type="text" name="p7_1-a_especifique_agua" placeholder=" Especifique">
@@ -52,8 +52,8 @@
                 <label for="">Disposición de desechos</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="p7_1-a_saneamiento" id="">
-                <input type="checkbox" name="p7_1-a_desechos" id="">
+                <input type="checkbox" name="p7_1-a_saneamiento" id="" value='false'>
+                <input type="checkbox" name="p7_1-a_desechos" id="" value='false'>
         
             </div>
             <div class="col_3_aux">
@@ -79,8 +79,8 @@
                 <label for="p7_1-b_energia">Energía eléctrica:</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="p7_1-b_agua" id="p7_1-b_agua">
-                <input type="checkbox" name="p7_1-b_energia" id="p7_1-b_energia">
+                <input type="checkbox" name="p7_1-b_agua" id="p7_1-b_agua" value='false'>
+                <input type="checkbox" name="p7_1-b_energia" id="p7_1-b_energia" value='false'>
             </div>
             <div class="col_3_aux">
                 <input type="text" name="p7_1-b_observacion1" id="p7_1-b_observacion1" placeholder=" Especifique">
@@ -91,8 +91,8 @@
                 <label for="p7_1-b_desechos">Disposición de desechos</label>
             </div>
             <div class="col_2">
-                <input type="checkbox" name="p7_1-b_saneamiento" id="p7_1-b_saneamiento">
-                <input type="checkbox" name="p7_1-b_desechos" id="p7_1-b_desechos">
+                <input type="checkbox" name="p7_1-b_saneamiento" id="p7_1-b_saneamiento" value='false'>
+                <input type="checkbox" name="p7_1-b_desechos" id="p7_1-b_desechos" value='false'>
         
             </div>
             <div class="col_3_aux">
@@ -109,7 +109,7 @@
 
     <h5>
         <label for="pregunta_3_2" class='nombre_pregunta'>Señaléctica en el atractivo
-            <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" required>    
+            <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_5filas">
@@ -152,7 +152,7 @@
                         <script>
                             let count = document.querySelector('.col2_fila2').childElementCount;
                             for (var i = 0; i < count; i++) {
-                                document.write('<input type="number" placeholder="0" name="'+'au_madera_inp_'+String(i)+'" >') ;
+                                document.write('<input type="number"  placeholder="0" name="'+'au_madera_inp_'+String(i)+'" >') ;
                             }
                         </script>
                         
@@ -348,7 +348,7 @@
     </div>
     <h5>
         <label for="pregunta_3-2" class='nombre_pregunta'>Salud ( Más Cercano )
-            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" required>    
+            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_pregunta_7-3">
@@ -359,7 +359,7 @@
                     <div class="_3col">
                         <div class="3col_a" for="hospital">Hospital o Clínica</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="hospital">
+                            <input type="checkbox" name="" id="hospital" value='false'>
                         </div>
                         <div class="_3col_c">
                             <input type="text" name="" id="" placeholder="0">
@@ -368,7 +368,7 @@
                     <div class="_3col">
                         <div class="3col_a">Puesto / Centro de salud</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="" value='false'>
                         </div>
                         <div class="_3col_c">
                             <input type="text" name="" id="" placeholder="0">
@@ -376,21 +376,21 @@
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Dispensario médico</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="_3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Botiquín de primeros auxilios</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="_3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Otros</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="_3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
@@ -404,7 +404,7 @@
                     <div class="_3col">
                         <div class="3col_a">Hospital o Clínica</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="" value='false'>
                         </div>
                         <div class="3col_c">
                             <input type="text" name="" id="" placeholder="0">
@@ -413,7 +413,7 @@
                     <div class="_3col">
                         <div class="3col_a">Puesto / Centro de salud</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="" value='false'>
                         </div>
                         <div class="3col_c">
                             <input type="text" name="" id="" placeholder="0">
@@ -421,21 +421,21 @@
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Dispensario médico</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Botiquín de primeros auxilios</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Otros</div>
-                        <div class="3col_b"><input type="checkbox" name="" id=""></div>
+                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
                         <div class="3col_c">
                             <input type="text" name="" placeholder="0" id="">
                         </div>
@@ -474,6 +474,13 @@
 @endsection
 @section('scripts')
     <script>
+        chk_to_validate('.pregunta7-1-a');
+        chk_to_validate('.pregunta7-1-b');
+        chk_to_validate('.contenedor_pregunta_7-3');
+
+
+    </script>
+    <script>
         var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
         console.log(errores);
         document.querySelector('#form6').addEventListener('submit',(e)=>{
@@ -483,6 +490,7 @@
         });
         
     </script>
+    <script src="{{asset('/js/deshabilitarPreguntas.js')}}"></script>
     <script src="{{asset('/js/respuestas7.js')}}"></script>
     
 @endsection

@@ -35,11 +35,7 @@ function respondio(nombreContenedor){
     return flag;
 }
 
-var r = document.createElement("input");
-r.type ='hidden';
-r.value = respondio('.fila2_col');
-r.name = 'respuesta7_1a';
-contenedor.appendChild(r);
+
 
 // Debeo quemar todos los inputs a responder
 
@@ -49,3 +45,4 @@ contenedor.appendChild(r);
 // recuperar para cargar a la base de datos.
 // haccer calculo de ponderacion
 // mostrar calificacion
+$().one

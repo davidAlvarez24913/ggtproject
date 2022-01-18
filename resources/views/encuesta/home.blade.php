@@ -11,16 +11,17 @@
 
 @section('content')
 <div class="contenedor_formularios">
-    <div class="titulo">
-        <h2><b class ="homeencuesta"> Formularios de atractivos turísticos</b></h2>
+    <h2><b class ="homeencuesta"> Formularios de atractivos turísticos</b></h2>
 
-        <div class="tarjeta">
+    <div class="sub_contenedor">
+
+        <div class="tarjeta_normal">
             <div class="titulo">
                 <h2> <a href="{{route('encuesta.seccion1_2')}}">Ficha técnica Entidad Turística</a></h2>
             </div>
             
         </div>
-        <div class="tarjeta">
+        <div class="tarjeta_normal">
             <div class="titulo">
                 <h2> <a href="{{route('encuesta.accesibilidad')}}">Ficha técnica de Accesibilidad De la Entidad Turística</a></h2>
             </div>
@@ -28,7 +29,7 @@
         </div>
         
     </div>
-    <script>
+    {{-- <script>
         Swal.fire({
             title: 'Bienvenido {{ Auth::user()->name }}',
             text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
@@ -36,7 +37,7 @@
             confirmButtonText: 'OK'
         
         });
-    </script>
+    </script> --}}
 
 </div>
     
