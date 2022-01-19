@@ -33,7 +33,7 @@
     </div>
     <div class="contenedor_seccion4">
         <label for="distancia_km">Distancia desde la cuidad o poblado mas cercano</label>
-        <input type="number" name="distancia_km" id="distancia_km" required>
+        <input type="number" name="distancia_km" id="distancia_km" required min="0">
         <label for="tiempo_en_auto">Tiempo estimado de desplazamiento en auto</label>
         <input type="datetime" name="tiempo_en_auto" id="tiempo_en_auto" required>
     </div>
@@ -63,11 +63,16 @@
             <label for="coordenada_fin">Coordenada de fin</label>
             <input type="text" name="coordenada_fin" id="coordenada_fin" >
             <label for="distancia">Distancia (km)</label>
-            <input type="number" name="distancia" id="distancia" >
+            <input type="number" name="distancia" id="distancia" min="0">
             <label for="tipo_material">Tipo de material</label>
-            <input type="text" name="tipo_material" id="tipo_material" >
-            <label for="estado">Estado</label>
-            <input type="text" name="estado" id="estado" >
+            <input type="text" name="tipo_material" id="tipo_material" placeholder="Ejm: Asfalto.">
+            <label for="select_estado_4_2">Estado</label>
+            <select name="select_estado_4_2">
+                <option value=""  default>Seleccione estado</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
         </div>
         <div class="contenedor_seccion4_2">
             <div class='titulo_seccion4_subpregunta'>
@@ -78,23 +83,33 @@
             <hr>
             <label for="subtipo_acuatico">Subtipo acuático</label>
             <select name="subtipo_acuatico" id="subtipo_acuatico">
-                <option disable default>subtipo</option>
-                <option value="maritimo">maritimo</option>
-                <option value="lacustre">lacustre</option>
-                <option value="fluvial">fluvial</option>
+                <option value="" default>Subtipo</option>
+                <option value="maritimo">Maritimo</option>
+                <option value="lacustre">Lacustre</option>
+                <option value="fluvial">Fluvial</option>
 
             </select>
             <label for="puerto_muelle_partida">Puerto / Muelle de partida</label>
-            <input type="text" name="puerto_muelle_partida" id="puerto_muelle_partida">
+            <input type="text" name="puerto_muelle_partida" id="puerto_muelle_partida" placeholder="Nombre del Puerto">
 
             <label for="estado_puerto_partida">Estado Puerto Partida</label>
-            <input type="text" name="estado_puerto_partida" id="estado_puerto_partida">
+            <select name="estado_puerto_partida">
+                <option value="" default>Seleccione estado</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
 
             <label for="puerto_muelle_llegada">Puerto / Muelle de llegada</label>
-            <input type="text" name="puerto_muelle_llegada" id="puerto_muelle_llegada">
+            <input type="text" name="puerto_muelle_llegada" id="puerto_muelle_llegada" placeholder="Nombre del Puerto">
 
             <label for="estado_puerto_llegada">Estado Puerto Llegada</label>
-            <input type="text" name="estado_puerto_llegada" id="estado_puerto_llegada">
+            <select name="estado_puerto_llegada">
+                <option value="" default>Seleccione estado</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
 
             <label for="observaciones_acuatico">Observaciones</label>
             <input type="text" name="observaciones_acuatico" id="observaciones_acuatico">
@@ -118,7 +133,7 @@
             </div>
             
 
-            <label for="observaciones_aereo">observaciones</label>
+            <label for="observaciones_aereo">Observaciones</label>
             <input type="text" name="observaciones_aereo" id="observaciones_aereo">
         </div>
         
@@ -183,9 +198,9 @@
     <div class="contenedor_seccion4_3filas">
         <div class="row row_1 ">
             <label for="">Nombre de la cooperatia o asociacion que presta el servicio</label>
-            <input type="text">
+            <input type="text" name="name_coop">
             <label for="">Estacion - Terminal</label>
-            <input type="text">
+            <input type="text" name="estacion">
         </div>
         <div class="row row_2 ">
             <label >Frecuencia:</label>

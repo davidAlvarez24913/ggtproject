@@ -26,50 +26,38 @@ var map = L.map('map').setView([-1.548, -78.027], 7);
         .bindPopup(element[0])
         .openPopup();
     });
+// --------------** Marker Rojo **-------------------------------------------
+var redIcon = new L.Icon({
+    iconUrl: 'images/marker-icon-2x-red.png',
+    shadowUrl: 'images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+// --------------** Obtner geolocalizacion API Navigator **-------------------
 
+var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+  
+  function success(pos) {
+    var crd = pos.coords;
+    L.marker([crd.latitude, crd.longitude],{icon: redIcon}).addTo(map)
+        .bindPopup('Aqui estas')
+        .openPopup();
     
-
-
-// map.on('click', function(e) {
-//     alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
-// });
-// https://gis.stackexchange.com/questions/39055/getting-lat-long-of-clicked-location-using-leaflet-api
-
-const csrfToken = document.head.querySelector('[name~=csrf-token][content]').content;
-const getCoordenadas =async()=>{
-    let peticion =  await fetch("/visualizador",{
-        method: 'GET',
-            // body: JSON.stringify({ id: event.target.value}),
-            headers:{
-                'Content-Type': 'application/json; charset=UTF-8',
-                "X-CSRF-Token": csrfToken
-            }
-    });
-    console.log(peticion);
-
-    let resultado = await JSON.parse(peticion) ;
-};
-
-// getCoordenadas();
-
-// fetch("/visualizador/coordenadas",{
-//     method: 'POST',
-//         // body: JSON.stringify({ id: event.target.value}),
-//         headers:{
-//             'Content-Type': 'application/json; charset=UTF-8',
-//             "X-CSRF-Token": csrfToken
-//         }
-// }).then( response =>{
-//     // x = response.json()
-//     // console.log(response);
-//     // console.log(x);
-//     return response;
-// }).then( data =>{
-//     console.log(data);
-    
-// }).catch(error =>console.error(error));
-// const respuestasJs= JSON.parse('{{!!$respuesta1!!}}'.slice(16,-4));
-            // console.log(respuestasJs);
-            // console.log(typeof JSON.parse(texto));
-
-            // JSON.parse(arr[0].slice(15,-3))
+    // console.log('Your current position is:');
+    // console.log(`Latitude : ${crd.latitude}`);
+    // console.log(`Longitude: ${crd.longitude}`);
+    // console.log(`More or less ${crd.accuracy} meters.`);
+  }
+  
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+  
+// navigator.geolocation.getCurrentPosition(success, error, options);
+// typeof (navigator.geolocation.watchPosition(success, error, options)); 

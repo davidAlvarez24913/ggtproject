@@ -25,7 +25,10 @@
     <div id="map"></div>    
 </div>
 
-<script src="/js/mapa.js"></script>
+<script src="/js/mapa.js">
+    document.addEventListener("DOMContentLoaded", funcionInit);
+
+</script>
 @endsection
 
 {{-- https://norfipc.com/web/como-insertar-mostrar-mapas-open-street-maps-paginas-web.html --}}

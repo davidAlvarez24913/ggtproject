@@ -32,5 +32,25 @@ document.querySelector('.lat_long').addEventListener('click',(e)=>{
         inp_long.value = e.latlng.lng;
     });
 
+    // --------------** Obtner geolocalizacion API Navigator **-------------------
+
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+            };
+    
+        function success(pos) {
+            var crd = pos.coords;
+            L.marker([crd.latitude, crd.longitude]).addTo(map)
+                .bindPopup('Te encuentras aquí!')
+                .openPopup();
+    
+        }
+        function error(err) {
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+        }
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
 });
 
