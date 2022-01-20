@@ -66,3 +66,10 @@
     
 </div>
 @endsection
+@section('scripts')
+    <script>
+        const log = location.href ;
+        console.log(log);
+    </script>
+    
+@endsection

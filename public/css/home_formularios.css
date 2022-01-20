@@ -38,7 +38,19 @@
     text-align: center;
     align-items: center;
     box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
+    cursor: pointer;
+
 }
+.tarjeta_normal:hover{
+    cursor: pointer;
+    transform: scale(0.92);
+}
+.tarjeta_gad:hover{
+    cursor: pointer;
+    transform: scale(0.92);
+}
+
+
 .titulo a{
     color: black;
 }

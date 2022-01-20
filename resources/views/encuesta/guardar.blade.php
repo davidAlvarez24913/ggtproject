@@ -11,26 +11,32 @@
     <h4> 
         Felicitaciones has llenado el 50% del formulario
     </h4>
+    <div class="menu_lateral ">
+        <i class="fas fa-bars _menu"></i>
+        <div class="contenido">
+            <label for="">Menu Secciones</label>
+            <hr>
+            <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
+            <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
+            <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
+            <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
+            <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
+            <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
+          </div>
+        
+    </div>
+    <div>
+        <p> Seccion 1 y 2:</p>
+        <p>Seccion 3: </p>
+        <p>Seccion 4: </p>
+        <p>Seccion 5: </p>
+        <p>Seccion 6: </p>
+        <p>Seccion 7: </p>
+    </div>
     <div class="contenedor_guardar">
         <form id="form7" action="{{route('encuesta.store')}}" method="POST">
             @csrf
-            <div class="menu_lateral ">
-                <i class="fas fa-bars _menu"></i>
-                <div class="contenido">
-                    <label for="">Menu Secciones</label>
-                    <hr>
-                    <a href="{{route('encuesta.seccion1_2')}}">Seccion 1 y 2</a>
-                    <a href="{{route('encuesta.seccion3')}}">Seccion 3</a>
-                    <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
-                    <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
-                    <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
-                    <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
-                  </div>
-                
-            </div>
             <div >
-                <p> Se guardaran los datos de las 7 primeras secciones del formulario.</p>
-                
                 <input type="hidden" name="data1__"  class="data1__">
                 <input type="hidden" name="data3__"  class="data3__">
                 <input type="hidden" name="data4__"  class="data4__">
@@ -50,9 +56,11 @@
                 @endif
                 
             </div>
-            <button type="submit" class="atras" >Guardar Secciones LLenadas</button>
+            <button type="submit" class="atras" >Guardar Ficha</button>
             
         </form>
+        <button type="submit" class="atras" >Editar Ficha</button>
+
     </div>
     
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Encuesta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GadController extends Controller
 {
@@ -29,7 +30,8 @@ class GadController extends Controller
         return view('gad.validacion');
     }
     public function ponderacion()
-    {
+    {   
+        
         $recuperado4 = Encuesta::all($columns=['pregunta4']);
         $long = count($recuperado4) -1; //longitud
 
@@ -77,9 +79,10 @@ class GadController extends Controller
 
         }
 
-        dump($respuestas4);
-        dump($aux);
-
+        // dump($respuestas4);
+        // dump($aux);
+        // json_encode(session()->all())
+        // dump(session()->all()['_previous']['url']);
         return view('gad.ponderacion')->with('rec',$recuperado4);
     }
 

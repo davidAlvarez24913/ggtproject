@@ -80,7 +80,7 @@
                         </ul>
                         
                     </li>
-                    <script>
+                    {{-- <script>
                         var x ='{{ Auth::user()->rol }}';
                         if ( x !=null){
                             $(document).ready(()=>{
@@ -97,7 +97,7 @@
                             
                         }
                         
-                    </script>
+                    </script> --}}
                 @endguest
 
             </ul>
@@ -157,6 +157,22 @@
                 <h3>Rafting</h3>
             </div>
         </div>
+        @if ( isset(session()->all()['_previous']))
+            @if (session()->all()['_previous']['url'] == 'http://127.0.0.1:8000/login' && Auth::check() == 1 )
+            <script>
+                console.log('bienvenido');
+                Swal.fire({
+                    title: 'Bienvenido {{ Auth::user()->name }}',
+                    text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
+                    confirmButtonColor:'#26ae31',
+                    confirmButtonText: 'OK'
+                
+                });
+            </script>
+            
+        @endif
+        @endif
+        
     </main>
 
     <div style='padding: 2em 0;'> </div>

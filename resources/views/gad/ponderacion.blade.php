@@ -23,6 +23,12 @@
     <h4>Ponderacion Y Jerarquizacion</h4>
     <div>
         {{$rec[2]}}
+        <br>
+        {{Auth::check()}}
+        <br>
+        {{ json_encode(session()->all()) }}
+
+
     </div>
 
 @endsection

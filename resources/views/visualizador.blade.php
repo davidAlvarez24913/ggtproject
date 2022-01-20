@@ -23,8 +23,8 @@
         
     @endif
     <div id="map"></div>    
-</div>
 
+</div>
 <script src="/js/mapa.js">
     document.addEventListener("DOMContentLoaded", funcionInit);
 
