@@ -72,12 +72,12 @@
         <div class='col col_aux'>
             <div class="subcolumna_par">
                 <label for="">Actividades forestales</label>
-                <input type="checkbox" name="" id="" value='false'>
+                <input type="checkbox" name="forestal" id="" value='false'>
             </div>
 
             <div class="subcolumna_par">
                 <label for="">Negligencia / abandono</label>
-                <input type="checkbox" name="" id="" value='false'>
+                <input type="checkbox" name="negligencia" id="" value='false'>
 
             </div>
             <div class="subcolumna_par">
@@ -135,7 +135,7 @@
 
             </div>
             <label for="especifique">Especifique
-                <input type="text" name="especifique" id="especifique" value='false'>
+                <input type="text" name="especifique" id="especifique" >
             </label>
             
         </div>
@@ -168,7 +168,7 @@
 
             </div>
             <label for="observaciones">Observaciones
-                <input type="text" name="observaciones" id="observaciones" value='false'>
+                <input type="text" name="observaciones" id="observaciones">
             </label>
 
         </div>
@@ -449,6 +449,7 @@
         });
         
     </script>
+    <script src="{{asset('js/pre_load_sec6.js')}}"></script>
     
 @endsection
     

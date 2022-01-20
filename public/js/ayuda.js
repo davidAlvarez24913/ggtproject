@@ -8,6 +8,6 @@ if(document.querySelector('.data') !== null){
 
     sessionStorage.setItem('data',data); 
 }else{
-    console.log('Algo salio mal');
+    console.log('Algo salio mal ejemplo data, puedes seguir trabajando');
 }
 

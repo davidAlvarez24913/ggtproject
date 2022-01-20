@@ -26,7 +26,7 @@
     margin: 7px 0;
 }
 .olvidar{
-    color: rgb(0, 0, 0);
+    color: rgb(21, 20, 20);
 }
 
 .card_head{
@@ -35,6 +35,7 @@
     padding: 9px 0;
     background-color: rgba(201, 207, 209, 0.7);
 }
+
 .btn-login, .btn-registrar{
     background: rgba(37, 116, 30, 0.7);
     padding: 1vh 1vw;
@@ -43,13 +44,20 @@
     color: var(--color-letra-btn);
     cursor: pointer;
 }
+.estilo_registrar{
+    /* margin: 2em 16em; */
+    border: 1px solid rgb(228, 227, 227);
+    text-align: center;
+    box-shadow: 1px 6px 8px rgb(216, 212, 212);
+    border-radius: 12px;
+}
 .contenedor_registrar{
     display: flex;
     flex-direction: column;
-    padding: 10vh 25vw;
+    margin: 14vh 23vw 6.5vh 23vw;
     align-items: center;
 }
-.contenedor_registrar  input,#select,.btn-registrar,.btn-login, input[type="password"],input[type="email"]{
+.contenedor_registrar  input,#select,.btn-registrar,.btn-login, input[type="password"],input[type="email"], #name{
     height: 35px;
     width: 250px;
 }

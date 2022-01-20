@@ -150,7 +150,7 @@
             <label for="email">Email</label>
             <input type="email" name="email" id="email" value="{{ old('email')}}" required>
             <label for="celular">Celular</label>
-            <input type="number" name="celular" id="celular" value="{{ old('celular')}}" required>
+            <input type="number" name="celular" id="celular" value="{{ old('celular')}}" required min="10">
             <label for="observaciones">Observaciones</label>
             <input type="text" name="observaciones" id="observaciones" value="{{ old('observaciones')}}">
         </div>
@@ -186,6 +186,8 @@
 @section('scripts')
 
     <script src="{{asset('js/selectDinamico.js')}}"></script>
+    <script src="{{asset('js/pre_load_sec1y2.js')}}"></script>
+
     <script src="{{asset('/js/swal_map.js')}}"></script>
     <script src="{{asset('/js/botoncontinuar.js')}}"></script>
     <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>

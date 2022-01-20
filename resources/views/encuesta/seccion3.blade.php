@@ -161,10 +161,7 @@
             <input type="checkbox" name="deposito_bancario" id="deposito_bancario" >
         </label>
     
-       
     </div>
-    
-    
     
     <div class="contenedor_2">
         <label for="meses">Meses recomendables de visita:</label>
@@ -206,7 +203,7 @@
     
 </script>
 
-
+<script src="{{asset('js/pre_load_sec3.js')}}"></script>
 <script src="{{asset('js/deshabilitarPreguntasSeccion3.js')}}"></script>
 <script src="{{asset('js/ayuda.js')}}"></script>
 

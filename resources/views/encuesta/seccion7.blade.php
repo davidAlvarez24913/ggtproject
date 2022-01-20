@@ -490,6 +490,7 @@
         });
         
     </script>
+    <script src="{{asset('js/pre_load_sec7.js')}}"></script>
     <script src="{{asset('/js/deshabilitarPreguntas.js')}}"></script>
     <script src="{{asset('/js/respuestas7.js')}}"></script>
     

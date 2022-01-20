@@ -574,5 +574,6 @@
         });
         
     </script>
+    <script src="{{asset('js/pre_load_sec5.js')}}"></script>
     
 @endsection

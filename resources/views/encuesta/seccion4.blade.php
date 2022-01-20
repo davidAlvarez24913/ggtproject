@@ -316,4 +316,6 @@
         chk_to_validate('.condiciones_accesibilidad');
 
     </script>
+    <script src="{{asset('js/pre_load_sec4.js')}}"></script>
+
 @endsection
