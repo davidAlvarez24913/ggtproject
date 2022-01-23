@@ -62,6 +62,8 @@ Route::get('encuesta/guardar',[EncuestaController::class, 'guardar'])->name('enc
 Route::post('/encuesta/store', [EncuestaController::class, 'store'])->name('encuesta.store');
 
 Route::get('/gad/home',[GadController::class, 'index'])->name('gad.home');
+Route::get('/gad/fichasRegistradas',[GadController::class, 'verFichas'])->name('gad.fichasRegistradas');
+
 
 Route::get('/gad/validacion_gad',[GadController::class, 'validacion'])->name('gad.validacion')->middleware('auth');
 Route::get('/gad/ponderacion',[GadController::class, 'ponderacion'])->name('gad.ponderacion')->middleware('auth');

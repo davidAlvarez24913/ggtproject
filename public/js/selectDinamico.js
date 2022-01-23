@@ -20,14 +20,13 @@ selectProvincia.addEventListener("change",(event)=>{
         return x = response.json();
     }).then( data =>{
         console.log(data);
-
         var opciones =`<option >==Canton==</option>`;
         for (let i in data.lista) {
             opciones += '<option value="'+data.lista[i].id+'" >'+data.lista[i].canton+'</option>';
-            
         }
-        
         selectCanton.innerHTML = opciones;
+        selectParroquia.innerHTML = `<option >==Parroquia==</option>`;
+
     }).catch(error =>console.error(error));
 });
 

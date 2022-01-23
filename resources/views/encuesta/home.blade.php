@@ -23,9 +23,15 @@
         </div>
         <div class="tarjeta_normal">
             <div class="titulo">
-                <h2> <a href="{{route('encuesta.accesibilidad')}}">Ficha técnica de Accesibilidad De la Entidad Turística</a></h2>
+                <h2> <a href="{{route('encuesta.accesibilidad')}}">Ficha técnica de Accesibilidad</a></h2>
             </div>
             
+        </div>
+
+        <div class="tarjeta_normal">
+            <div class="titulo">
+                <h2> <a href="{{ route('gad.fichasRegistradas')}}"> Ver Fichas Registradas</a></h2>
+            </div>
         </div>
         
     </div>

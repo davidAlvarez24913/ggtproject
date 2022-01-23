@@ -80,24 +80,7 @@
                         </ul>
                         
                     </li>
-                    {{-- <script>
-                        var x ='{{ Auth::user()->rol }}';
-                        if ( x !=null){
-                            $(document).ready(()=>{
-                                
-                                console.log(x);
-                                Swal.fire({
-                                    title: 'Bienvenido {{ Auth::user()->name }}',
-                                    text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
-                                    confirmButtonColor:'#26ae31',
-                                    confirmButtonText: 'OK'
-                                
-                                });
-                            });
-                            
-                        }
-                        
-                    </script> --}}
+                    
                 @endguest
 
             </ul>
@@ -170,7 +153,7 @@
                 });
             </script>
             
-        @endif
+            @endif
         @endif
         
     </main>

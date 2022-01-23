@@ -1,0 +1,11 @@
+
+.contenedor_datatable{
+    margin: 2rem 4rem;
+    /* display: grid;
+    grid-template-columns: auto-fill, minmax( 25rem, 1fr); */
+}
+.title_head{
+    margin-top: 10px ;
+    background-color: rgba(89, 86, 86, 0.782);
+    color: white;
+}

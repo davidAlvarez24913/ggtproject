@@ -24,6 +24,10 @@ class GadController extends Controller
         return view('gad.configUser');
     }
 
+    public function verFichas()
+    {
+        return view('gad.fichasRegistradas');
+    }
 
     public function validacion()
     {

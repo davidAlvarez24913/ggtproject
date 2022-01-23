@@ -64,16 +64,16 @@
 
                     if(event.target.value == 'atracciones_naturales'){
                         opciones += `
-                        <option value='' > Montañas</option>
-                        <option value='' >Desiertos</option>
-                        <option value='' >Rios</option>
-                        <option value='' >Bosques</option>
-                        <option value='' >Aguas Subterraneas</option>
-                        <option value='' >Fenómenos Espeleológicos</option>
-                        <option value='' >Fenómenos Geológicos</option>
-                        <option value='' >Costas o Litorales</option>
-                        <option value='' > Ambientes Marinos</option>
-                        <option value='' >Tierras Insulares</option>`;
+                        <option value='montanas' > Montañas</option>
+                        <option value='desiertos' >Desiertos</option>
+                        <option value='rios' >Rios</option>
+                        <option value='bosques' >Bosques</option>
+                        <option value='subterraneas' >Aguas Subterraneas</option>
+                        <option value='espeleologicos' >Fenómenos Espeleológicos</option>
+                        <option value='geologios' >Fenómenos Geológicos</option>
+                        <option value='costas_litorales' >Costas o Litorales</option>
+                        <option value='ambientes_marinos' > Ambientes Marinos</option>
+                        <option value='tierras_insulares' >Tierras Insulares</option>`;
                     }else{
                         opciones += `
                         <option value='arquitectura' >Arquitectura</option>
@@ -187,9 +187,7 @@
 
     <script src="{{asset('js/selectDinamico.js')}}"></script>
     <script src="{{asset('js/pre_load_sec1y2.js')}}"></script>
-
     <script src="{{asset('/js/swal_map.js')}}"></script>
     <script src="{{asset('/js/botoncontinuar.js')}}"></script>
-    <script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 
 @endsection

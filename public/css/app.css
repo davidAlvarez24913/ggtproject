@@ -195,7 +195,8 @@ footer{
     background-color: var(--colorfooter);
     font-family: 'Cairo', sans-serif;
     display: inline-flex;
-    width: 98.5vw;
+    width: 100%;
+    /* width: 98.7vw; */
 }
 .contenedor_footer strong{
     color: white;
