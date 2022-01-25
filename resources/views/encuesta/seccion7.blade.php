@@ -11,7 +11,7 @@
 <h4>7. Higiene y Seguridad Turística</h4>
 <h5>
     <label for="" class='nombre_pregunta'>Servicios Básicos
-        <input type="checkbox" name="" id="" >
+        {{-- <input type="checkbox" name="" id="" > --}}
     </label>
 </h5>
 <form id='form6' action="{{route('encuesta.retrieve_7')}}" method="POST">
@@ -109,7 +109,7 @@
 
     <h5>
         <label for="pregunta_3_2" class='nombre_pregunta'>Señaléctica en el atractivo
-            <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" value='false'>    
+            {{-- <input type="checkbox" name="pregunta_3_2" id="pregunta_3_2" value='false'>     --}}
         </label>
     </h5>
     <div class="contenedor_5filas">
@@ -181,7 +181,7 @@
                         for (var i = 0; i < count3; i++) {
                             document.write(`
                                             <select name="select_estado_`+String(i)+`">
-                                                <option value="">Seleccione estado</option>
+                                                <option default value="">Seleccione estado</option>
                                                 <option value="bueno">Bueno</option>
                                                 <option value="regular">Regular</option>
                                                 <option value="malo">Malo</option>
@@ -203,18 +203,18 @@
                 <div class="col2_fila2 aux1">
                     <label for="">En áreas naturales</label>
         
-                    <label for="">Pictograma de atractivos naturales</label>
-                    <label for="">Pictograma de atractivos culturales</label>
-                    <label for="">Pictograma de actividades turísticas</label>
-                    <label for="">Pictograma de servicios de apoyo</label>
-                    <label for="">Pictogramas de restricción</label>
-                    <label for="">Señales turísticas de aproximación</label>
-                    <label for="">Tótems de sitio</label>
-                    <label for="">Tótems direccionamientos</label>
-                    <label for="">Panel informativo de atractivos</label>
-                    <label for="">Mesas interpretativas</label>
-                    <label for="">Paneles de direccionamiento hacia  atractivos</label>
-                    <label for="">Panel informativo de direccionamiento hacia atractivos, servicios y actividades</label>
+                    <label>Pictograma de atractivos naturales</label>
+                    <label>Pictograma de atractivos culturales</label>
+                    <label>Pictograma de actividades turísticas</label>
+                    <label>Pictograma de servicios de apoyo</label>
+                    <label>Pictogramas de restricción</label>
+                    <label>Señales turísticas de aproximación</label>
+                    <label>Tótems de sitio</label>
+                    <label>Tótems direccionamientos</label>
+                    <label>Panel informativo de atractivos</label>
+                    <label>Mesas interpretativas</label>
+                    <label>Paneles de direccionamiento hacia  atractivos</label>
+                    <label>Panel informativo de direccionamiento hacia atractivos, servicios y actividades</label>
 
                 </div>
                 <div class="fila2_col3">
@@ -251,7 +251,7 @@
                         for (var i = 0; i < count8; i++) {
                             document.write(`
                                             <select name="an_select_estado_`+String(i)+`">
-                                                <option value="">Seleccione estado</option>
+                                                <option default value="">Seleccione estado</option>
                                                 <option value="bueno">Bueno</option>
                                                 <option value="regular">Regular</option>
                                                 <option value="malo">Malo</option>
@@ -272,18 +272,18 @@
                 </div>
                 <div class="fila2_col3">
                     <div class="fila2_col4_col-1">
-                        <input type="number" name=""  placeholder="0" >
-                        <input type="number" name=""  placeholder="0" >
+                        <input type="number" name="info_botanica_madera"  placeholder="0" >
+                        <input type="number" name="normativas_madera"  placeholder="0" >
 
                     </div>
                     <div class="fila2_col4_col-2">
-                        <input type="number" name=""  placeholder="0" >
-                        <input type="number" name=""  placeholder="0" >
+                        <input type="number" name="info_botanica_al"  placeholder="0" >
+                        <input type="number" name="normativas_al"  placeholder="0" >
 
                     </div>
                     <div class="fila2_col4_col-3">
-                        <input type="text" name=""  placeholder="Especifique">
-                        <input type="text" name=""  placeholder="Especifique">
+                        <input type="text" name="info_botanica_e"  placeholder="Especifique">
+                        <input type="text" name="normativas_e"  placeholder="Especifique">
 
                     </div>
 
@@ -291,16 +291,16 @@
                 <div class="fila_2_col4">
                     <select name="" id="">
                         <option value="">Seleccione estado</option>
-                        <option value="">Bueno</option>
-                        <option value="">Regular</option>
-                        <option value="">Malo</option>
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                        <option value="malo">Malo</option>
         
                     </select>
                     <select name="" id="">
                         <option value="">Seleccione estado</option>
-                        <option value="">Bueno</option>
-                        <option value="">Regular</option>
-                        <option value="">Malo</option>
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                        <option value="malo">Malo</option>
         
                     </select>
                 </div>
@@ -318,22 +318,22 @@
                 </div>
                 <div class="fila2_col3">
                     <div class="fila2_col4_col-1">
-                        <input type="number" name="" id="">
+                        <input type="number" name="seguridad_madera" >
                     </div>
                     <div class="fila2_col4_col-2">
-                        <input type="number" name="" id="">
+                        <input type="number" name="seguridad_al" >
                     </div>
                     <div class="fila2_col4_col-3">
-                        <input type="text" name="" id="" placeholder="Especifique">
+                        <input type="text" name="seguridad_e"  placeholder="Especifique">
                     </div>
                     
                 </div>
                 <div class="fila_2_col4">
                     <select name="" id="">
-                        <option value="">Seleccione estado</option>
-                        <option value="">Bueno</option>
-                        <option value="">Regular</option>
-                        <option value="">Malo</option>
+                        <option default value="">Seleccione estado</option>
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                        <option value="malo">Malo</option>
         
                     </select>
                 </div>
@@ -348,7 +348,7 @@
     </div>
     <h5>
         <label for="pregunta_3-2" class='nombre_pregunta'>Salud ( Más Cercano )
-            <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" value='false'>    
+            {{-- <input type="checkbox" name="pregunta_3-2" id="pregunta_3-2" value='false'>     --}}
         </label>
     </h5>
     <div class="contenedor_pregunta_7-3">
@@ -359,40 +359,40 @@
                     <div class="_3col">
                         <div class="3col_a" for="hospital">Hospital o Clínica</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="hospital" value='false'>
+                            <input type="checkbox" name="hospital_atrac" id="hospital_atrac" value='false'>
                         </div>
                         <div class="_3col_c">
-                            <input type="text" name="" id="" placeholder="0">
+                            <input type="text" name="nro_h_atrac" id="nro_h_atrac" placeholder="0">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Puesto / Centro de salud</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="" value='false'>
+                            <input type="checkbox" name="ctrsalud_atrac" id="ctrsalud_atrac" value='false'>
                         </div>
                         <div class="_3col_c">
-                            <input type="text" name="" id="" placeholder="0">
+                            <input type="text" name="nro_cs_atrac" id="nro_cs_atrac" placeholder="0">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Dispensario médico</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="dispensario_atrac" id="dispensario_atrac" value='false'></div>
                         <div class="_3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="text" name="nro_dis_atrac" placeholder="0" id="nro_dis_atrac">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Botiquín de primeros auxilios</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="botiquin_atrac" id="botiquin_atrac" value='false'></div>
                         <div class="_3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="text" name="nro_botiquin_atrac" placeholder="0" id="nro_botiquin_atrac">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Otros</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="otros_atrac" id="otros_atrac" value='false'></div>
                         <div class="_3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="text" name="nro_otros_atrac" placeholder="0" id="nro_otros_atrac">
                         </div>
                     </div>
 
@@ -404,40 +404,40 @@
                     <div class="_3col">
                         <div class="3col_a">Hospital o Clínica</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="" value='false'>
+                            <input type="checkbox" name="hospital_cuidad" id="hospital_cuidad" value='false'>
                         </div>
                         <div class="3col_c">
-                            <input type="text" name="" id="" placeholder="0">
+                            <input type="number" name="nro_hosp_cuidad" id="nro_hosp_cuidad" placeholder="0">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Puesto / Centro de salud</div>
                         <div class="3col_b">
-                            <input type="checkbox" name="" id="" value='false'>
+                            <input type="checkbox" name="centrsalud_cuidad" id="centrsalud_cuidad" value='false'>
                         </div>
                         <div class="3col_c">
-                            <input type="text" name="" id="" placeholder="0">
+                            <input type="number" name="nro_cs_cuidad" id="nro_cs_cuidad" placeholder="0">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Dispensario médico</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="dispensario_cuidad" id="dispensario_cuidad" value='false'></div>
                         <div class="3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="number" name="nro_dispensario_cuidad" placeholder="0" id="">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Botiquín de primeros auxilios</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="botiquin_cuidad" id="botiquin_cuidad" value='false'></div>
                         <div class="3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="number" name="nro_botiquin_cuidad" placeholder="0" id="nro_botiquin_cuidad">
                         </div>
                     </div>
                     <div class="_3col">
                         <div class="3col_a">Otros</div>
-                        <div class="3col_b"><input type="checkbox" name="" id="" value='false'></div>
+                        <div class="3col_b"><input type="checkbox" name="otros_cuidad" id="otros_cuidad" value='false'></div>
                         <div class="3col_c">
-                            <input type="text" name="" placeholder="0" id="">
+                            <input type="number" name="nro_otros_cuidad" placeholder="0" id="nro_otros_cuidad">
                         </div>
                     </div>
                 </div>
@@ -469,17 +469,9 @@
     Atras
 </button>
 
-
-<script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 @endsection
 @section('scripts')
-    <script>
-        chk_to_validate('.pregunta7-1-a');
-        chk_to_validate('.pregunta7-1-b');
-        chk_to_validate('.contenedor_pregunta_7-3');
-
-
-    </script>
+    
     <script>
         var errores = JSON.parse('{{!!$errors!!}}'.slice(1,-1));
         console.log(errores);
@@ -490,9 +482,13 @@
         });
         
     </script>
+
+    <script src="{{asset('js/checkbox_change_value_boolean.js')}}"></script>
+    <script>
+        chk_to_validate('.pregunta7-1-a');
+        chk_to_validate('.pregunta7-1-b');
+        chk_to_validate('.contenedor_pregunta_7-3');
+    </script>
     <script src="{{asset('js/pre_load_sec7.js')}}"></script>
-    <script src="{{asset('/js/deshabilitarPreguntas.js')}}"></script>
-    <script src="{{asset('/js/respuestas7.js')}}"></script>
-    
 @endsection
     

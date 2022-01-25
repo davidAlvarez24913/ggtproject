@@ -45,4 +45,3 @@ function respondio(nombreContenedor){
 // recuperar para cargar a la base de datos.
 // haccer calculo de ponderacion
 // mostrar calificacion
-$().one

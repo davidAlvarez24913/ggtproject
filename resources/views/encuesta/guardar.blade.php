@@ -56,10 +56,13 @@
                 @endif
                 
             </div>
-            <button type="submit" class="atras" >Guardar Ficha</button>
+            <button type="submit" class="guardar" >Guardar Ficha Técnica</button>
             
         </form>
-        <button type="submit" class="atras" >Editar Ficha</button>
+        <button  class="atras" onclick="location.href = `{{route('encuesta.seccion7')}}` " >
+            <i class="fas fa-arrow-left"></i>
+            Atras
+        </button>
 
     </div>
     
@@ -74,6 +77,9 @@
         document.querySelector('.data6__').value = sessionStorage.data6__
         document.querySelector('.data7__').value = sessionStorage.data7__        
         // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+        document.querySelector('.guardar').addEventListener('click',()=>{
+            sessionStorage.clear();
+        });
     </script>
     
 @endsection

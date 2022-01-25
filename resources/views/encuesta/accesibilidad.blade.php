@@ -50,7 +50,6 @@
                 </div>
                 <div class="col col-2">
                     <input type="checkbox" name="si_no_general_2" >
-                    
                 </div>
                 <div class="col col-3">
                     <input type="checkbox" name="si_no_general_2" >

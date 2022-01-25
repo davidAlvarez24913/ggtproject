@@ -14,7 +14,7 @@
 <form id='form3'action="{{route('encuesta.retrieve_4')}}" method="post">
      @csrf
     <div class="contenedor_seccion4">
-        <label for="poblado_cercano">a. Nombre de la cuidad o pobaldo mas cercano (que presente condiciones minimas de servicios)</label>
+        <label for="poblado_cercano">Nombre de la cuidad o pobaldo mas cercano (que presente condiciones minimas de servicios)</label>
         <input type="text" name="poblado_cercano" id="poblado_cercano">
     </div>
     <div class="menu_lateral ">
@@ -39,7 +39,6 @@
     </div>
     <h5>
         <label for="pregunta_4_2" class='nombre_pregunta'>Vias de Acceso (M)
-            <input type="checkbox" name="pregunta_4_2" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_seccion4_3">
@@ -140,7 +139,6 @@
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Servicio de Transporte (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2"  value='false'> 
         </label>
     </h5>
     <div class="transportes">
@@ -192,7 +190,6 @@
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Detalle de transporte hacia el atractivo (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="contenedor_seccion4_3filas">
@@ -231,7 +228,6 @@
 
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Condicciones de Accesibilidad del atractivo turistico al medio fisico para personas con discapacidad (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
         </label>
     </h5>
     <div class="aux condiciones_accesibilidad">
@@ -251,7 +247,7 @@
     </div>
     <h5>
         <label for="pregunta_4_3" class='nombre_pregunta'> Señalización (M)
-            <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>    
+            {{-- <input type="checkbox" name="pregunta_4_3" id="pregunta_3_2" value='false'>     --}}
         </label>
     </h5>
     <div class="aux">
@@ -275,7 +271,7 @@
             </script>
             
         @else
-            <script> console.error("Algo muy malo ocurrio!"); </script>
+            <script> console.error("data3__ no se lleno!"); </script>
         @endif
         
     </div>
@@ -291,9 +287,7 @@
     <i class="fas fa-arrow-left"></i>
     Atras
 </button>
-<script></script>
 
-<script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
 @endsection
 @section('scripts')
     <script>
@@ -306,6 +300,7 @@
         });
 
     </script>
+    <script src="{{asset('js/checkbox_change_value_boolean.js')}}"></script>
     <script>
         chk_to_validate('.contenedor_seccion4_3');
         chk_to_validate('.contenedor_seccion4');
@@ -314,8 +309,6 @@
         chk_to_validate('.row_2');
         chk_to_validate('.aux');
         chk_to_validate('.condiciones_accesibilidad');
-
     </script>
     <script src="{{asset('js/pre_load_sec4.js')}}"></script>
-
 @endsection

@@ -13,38 +13,38 @@
 <div class="contenedor_formularios">
     <h2><b class ="homeencuesta"> Modulos para Administrador</b></h2>
 
-    <div class="sub_contenedor">
+    <div class="sub_contenedor_admin">
 
         <div class="tarjeta">
-            <div class="titulo">
-                <h2> <a href="{{route('encuesta.seccion1_2')}}">Llenar - Ficha técnica Entidad Turística</a></h2>
+            <div class="titulo_admin">
+                <h2> <a href="{{route('encuesta.seccion1_2')}}">Ficha técnica Entidad Turística</a></h2>
             </div>
             
         </div>
         <div class="tarjeta">
-            <div class="titulo">
-                <h2> <a href="{{route('encuesta.accesibilidad')}}">LLenar -Ficha técnica de Accesibilidad De la Entidad Turística</a></h2>
+            <div class="titulo_admin">
+                <h2> <a href="{{route('encuesta.accesibilidad')}}">Llenar -Ficha técnica de Accesibilidad</a></h2>
             </div>
             
         </div>
         <div class="tarjeta">
-            <div class="titulo">
+            <div class="titulo_admin">
                 <h2> <a href="">Llenar - Validación GAD</a></h2>
             </div>
             
         </div>
-    </div>
+    {{-- </div>
 
-    <div class="sub_contenedor">
+    <div class="sub_contenedor"> --}}
 
-        <div class="tarjeta_small">
-            <div class="titulo">
+        <div class="tarjeta">
+            <div class="titulo_admin">
                 <h2> <a href="{{route('gad.ponderacion')}}">Ponderación y Jerarquización</a></h2>
             </div>
             
         </div>
-        <div class="tarjeta_small">
-            <div class="titulo">
+        <div class="tarjeta">
+            <div class="titulo_admin">
                 <h2> <a href="">Gestión de Usuarios</a></h2>
             </div>
             

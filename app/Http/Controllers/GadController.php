@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Encuesta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class GadController extends Controller
 {
@@ -26,8 +27,40 @@ class GadController extends Controller
 
     public function verFichas()
     {
-        return view('gad.fichasRegistradas');
+        $encuestas =  DB::table('encuestas')
+                        ->select('id','pregunta1','created_at')
+                        ->where('id_usuario','=',Auth::user()->id)
+                        ->get();
+        
+        
+        $arr_mostrar =[];
+        foreach($encuestas as $e){
+            $aux =[];
+            $aux_json= json_decode($e->pregunta1);
+            $name_prov = DB::table('provincias')
+                        ->select('provincia')
+                        ->where('id','=',$aux_json->provincia)
+                        ->get();
+            array_push($aux,Auth::user()->name ,$aux_json->nombre,$aux_json->categoria , $name_prov[0]->provincia, substr($e->created_at,0,10) ,$e->id);
+            array_push($arr_mostrar,$aux);
+        }
+        // dump($arr_mostrar);
+        return view('gad.fichasRegistradas')->with('arreglo',$arr_mostrar);
     }
+
+
+    
+    public function eliminar(Request $request){
+        $id = (int)$request->id_eliminar;
+        var_dump($id);
+        $result = DB::delete('delete from encuestas where id = ?', [$id]);
+        // dump($result);
+        // return view('gad.fichasRegistradas');
+        return  redirect()->route('gad.fichasRegistradas')->with('result',$result);
+    }
+
+
+
 
     public function validacion()
     {
@@ -90,11 +123,5 @@ class GadController extends Controller
         return view('gad.ponderacion')->with('rec',$recuperado4);
     }
 
-
-    // var x = document.querySelector('.transportes').getElementsByTagName('input');
-    // var x = document.querySelector('.transportes').getElementsByTagName('select');
-
-    // var arr = [... x];
-    // arr.map( _ => _.name);
     
 }

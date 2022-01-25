@@ -55,42 +55,10 @@
             <select name="tipo" id="tipo" required >
                 <option default value="">Selecione Tipo</option>
             </select>
-            <script>
-                const category = document.querySelector('#categoria');
-                const selectTipo = document.querySelector('#tipo');
-
-                category.addEventListener('change',(event)=>{
-                    var opciones =`<option default >Selecione Tipo</option>`;
-
-                    if(event.target.value == 'atracciones_naturales'){
-                        opciones += `
-                        <option value='montanas' > Montañas</option>
-                        <option value='desiertos' >Desiertos</option>
-                        <option value='rios' >Rios</option>
-                        <option value='bosques' >Bosques</option>
-                        <option value='subterraneas' >Aguas Subterraneas</option>
-                        <option value='espeleologicos' >Fenómenos Espeleológicos</option>
-                        <option value='geologios' >Fenómenos Geológicos</option>
-                        <option value='costas_litorales' >Costas o Litorales</option>
-                        <option value='ambientes_marinos' > Ambientes Marinos</option>
-                        <option value='tierras_insulares' >Tierras Insulares</option>`;
-                    }else{
-                        opciones += `
-                        <option value='arquitectura' >Arquitectura</option>
-                        <option value='acervo' >Acervo cultural y Popular</option>
-                        <option value='cientificas' >Realizaciones Técnicas y Científicas</option>
-                        <option value='acontecimientos' >Acontecimientos Programados</option>`;
-                    }
-                    selectTipo.innerHTML = opciones;
-
-                });
-            </script>
-            
         
             <label for="subtipo">Subtipo:</label>
-            <select name="subtipo" id="subtipo"  >
-                <option default>selcciona subtipo</option>
-                <option value="pruebasubtipo">pruebasubtipo</option>
+            <select name="subtipo" id="subtipo">
+                <option default value="">Selccione Subtipo</option>
             </select>
             
         </div>
@@ -184,7 +152,7 @@
 @endsection
 
 @section('scripts')
-
+    <script src="{{asset('js/tipoysubtipo.js')}}"></script>
     <script src="{{asset('js/selectDinamico.js')}}"></script>
     <script src="{{asset('js/pre_load_sec1y2.js')}}"></script>
     <script src="{{asset('/js/swal_map.js')}}"></script>

@@ -14,7 +14,7 @@
     @csrf
     <h5>
         <label for="subtitulo_seccion" class='nombre_pregunta'>Atractivo
-            <input type="checkbox" name="subtitulo_seccion" id="subtitulo_seccion" >
+            {{-- <input type="checkbox" name="subtitulo_seccion" id="subtitulo_seccion" > --}}
         </label>
     </h5>
     <div class="menu_lateral ">
@@ -206,7 +206,7 @@
 
     <h5>
         <label for="subtitulo_seccion_2" class='nombre_pregunta'>Entorno
-            <input type="checkbox" name="subtitulo_seccion_2" id="subtitulo_seccion_2"  value='false'>
+            {{-- <input type="checkbox" name="subtitulo_seccion_2" id="subtitulo_seccion_2"  value='false'> --}}
         </label>
     </h5>
 
@@ -312,7 +312,7 @@
 
             </div>
             <label for="entorno_especifique">Especifique
-                <input type="text" name="entorno_especifique" id="entorno_especifique" value='false' >
+                <input type="text" name="entorno_especifique" id="entorno_especifique">
             </label>
             
         </div>
@@ -383,7 +383,7 @@
 
     <h5>
         <label for="subtitulo_seccion_3" class='nombre_pregunta'>Declaratoria del espacio turístico asociado al atractivo
-            <input type="checkbox" name="subtitulo_seccion_3" id="subtitulo_seccion_3"  value='false'>    
+            {{-- <input type="checkbox" name="subtitulo_seccion_3" id="subtitulo_seccion_3"  value='false'>     --}}
         </label>
     </h5>
 
@@ -449,6 +449,7 @@
         });
         
     </script>
+    <script src="{{asset('js/checkbox_change_value_boolean.js')}}"></script>
     <script src="{{asset('js/pre_load_sec6.js')}}"></script>
     
 @endsection

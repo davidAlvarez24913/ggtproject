@@ -9,12 +9,22 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
 }
+.sub_contenedor_gad{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr ));
+}
+.sub_contenedor_admin{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 30vw ));
+}
 .tarjeta{
     background: rgba(254, 205, 7, 0.59);
     margin: 2em;
     border-radius: 10px;
-    height: 15vh;
-    width: 22vw;
+    height: 10vh; 
+    width: 22vw; 
     text-align: center;
     align-items: center;
     box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);
@@ -32,9 +42,9 @@
 }
 .tarjeta_gad{
     background: rgba(254, 205, 7, 0.59);
-    margin: 2em;
+    margin: 2em auto;
     border-radius: 10px;
-    height: 10vh;
+    /* height: 15vh; */
     width: 30vw;
     text-align: center;
     align-items: center;
@@ -52,14 +62,27 @@
 }
 
 
-.titulo a{
+.titulo a, .titulo_gad a, .titulo_admin a{
     color: black;
 }
 .titulo{
     padding-top : 1.5rem;
 }
+.titulo_admin{
+    margin: .5rem;
+    padding: .5rem;
+}
+.titulo_gad{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+
+}
+.titulo_gad h2{
+    margin: .7rem ;
+}
 .tarjeta_small{
-    background: rgba(254, 205, 7, 0.59);
+      background: rgba(254, 205, 7, 0.59);
     margin: 2em;
     border-radius: 10px;
     height: 10vh;

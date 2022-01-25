@@ -125,38 +125,53 @@ class EncuestaController extends Controller
     // formdata me genera un error no pasa los datos al sig vista
             
         $request->validate(["email" => 'required|email',]);
-        $data = json_encode( $request->except(['_token']) );
+        $data_aux =  array_filter( $request->except(['_token']) );
+        $data = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
         return view('encuesta.seccion3',compact('data'));
 
     }
     
     
     public function retrieve_3(Request $request){ // original sin $id
-        $data3 = json_encode($request->except(['_token','data']) );
+        // $data3 = json_encode($request->except(['_token','data']) );
+        $data_aux =  array_filter( $request->except(['_token']) );
+        $data3 =  json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
+        // dump($data3);
         // return view('encuesta.seccion4',compact('data3'));
         return view('encuesta.seccion4')->with('data3',$data3);
 
     }
     
     public function retrieve_4(Request $request){
-        $data_4 = json_encode( $request->except(['_token']) );
+
+        $data_aux =  array_filter( $request->except(['_token']) );
+        $data_4 = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
+        // $data_4 = json_encode( $request->except(['_token']) );
         // dump($request->all());
         return view('encuesta.seccion5')->with('data_4',$data_4);
     }
 
 
     public function retrieve_5(Request $request){
-        $data_5 = json_encode( $request->except(['_token']) );
+        $data_aux =  array_filter( $request->except(['_token']) );
+        $data_5 = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
+        // $data_5 = json_encode( $request->except(['_token']) );
         return view('encuesta.seccion6',compact('data_5'));
 
     }
     public function retrieve_6(Request $request){
-        $data_6 = json_encode( $request->except(['_token']) );
+        $data_aux =  array_filter( $request->except(['_token']) );
+        $data_6 = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
+
+        // $data_6 = json_encode( $request->except(['_token']) );
         return view('encuesta.seccion7',compact('data_6'));
 
     }
     public function retrieve_7(Request $request){
-        $data_7 = json_encode( $request->except(['_token']) );
+        $data_aux =  array_filter( $request->except(['_token']) );
+        dump($data_aux);
+        $data_7 = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
+        // $data_7 = json_encode( $request->except(['_token']) );
         return view('encuesta.guardar',compact('data_7'));
 
     }
