@@ -49,13 +49,14 @@
             <th>{{ $item[3] }} </th>
             <th>{{ $item[4] }} </th>
             <th class="botones">
-              <form action="#" id='form_editar' method="">
+              <form action="{{ route('gad.editar')}}" id='form_editar' method="post">
                   @csrf
                   <input type="hidden" name='id_editar' value="{{$item[5]}}">
                   <button class="btn_editar" type="submit" >Editar <i class="fas fa-edit"></i> </button>
               </form>
               <form action="{{ route('gad.eliminar')}}" method="post" id='form_eliminar'>
                   @csrf
+                  <script>sessionStorage.clear();</script>
                   <input type="hidden" name='id_eliminar' value="{{$item[5]}}">
                   <button class="btn_eliminar" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
               </form>
@@ -117,14 +118,14 @@
     } );
 </script>
 <script>
-  document.querySelector('.btn_eliminar').addEventListener('click',(e)=>{
-    e.preventDefault();
+  // document.querySelector('.btn_eliminar').addEventListener('click',(e)=>{
+  //   e.preventDefault();
     
-  });
-  document.querySelector('.btn_editar').addEventListener('click',(e)=>{
-    e.preventDefault();
+  // });
+  // document.querySelector('.btn_editar').addEventListener('click',(e)=>{
+  //   e.preventDefault();
     
-  });
+  // });
 </script>
     
 @endsection

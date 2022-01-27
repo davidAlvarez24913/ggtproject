@@ -56,8 +56,6 @@ class EncuestaController extends Controller
         // dump(gettype($provincias));
         // dump($provincias);
         return view('encuesta.seccion1_2',compact('provincias')); 
-        // return view('encuesta.seccion1_2',compact('provincias','respuesta1')); 
-
     }
     
     public function cantones(Request $request){

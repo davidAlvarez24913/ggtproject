@@ -21,6 +21,8 @@
     @include("encuesta.titulo")
     
     <h4>1. Datos Generales</h4>
+    
+    {{-- formulario 1  --}}
     <form  id='form1' action="{{route('encuesta.retrieve_1_2')}}" method="post">
         @csrf
         <div class="menu_lateral ">
@@ -34,7 +36,7 @@
                 <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
                 <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
                 <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
-                <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
+                <a href="{{ route('encuesta.guardar')}}">Panel de Progreso</a>
 
               </div>
             
@@ -42,7 +44,7 @@
         
         <div class="contenedor">
             <label for="nombre">Nombre del Atractivo turistico:</label>
-            <input type="text" name="nombre" class="in-name"  value="{{old('nombre')}}"  required>
+            <input type="text" name="nombre" class="in-name"   required>
         
             <label for="categoria">Categoría:</label>
             <select name="categoria" id="categoria"  required >
@@ -85,17 +87,17 @@
                 <option default>==Parroquia==</option>
             </select>
             <label for="barrio">Barrio, sector o comuna</label>
-            <input type="text" name="barrio" class="barrio" value = "{{ old('barrio') }}"  required>
+            <input type="text" name="barrio" class="barrio"   required>
             <label for="c_principal">Calle principal</label>
-            <input type="text" name="c_principal" class="inp-c_principal" value = "{{ old('c_principal') }}"  required>
+            <input type="text" name="c_principal" class="inp-c_principal"   required>
             <label for="">Número</label>
-            <input type="number" name="numero" class="inp-numero" value = "{{ old('numero') }}"  required>
+            <input type="number" name="numero" class="inp-numero"  required>
             <label for="transversal">Transversal</label>
-            <input type="text" name="transversal" class="inp-transversal" value = "{{ old('transversal') }}"  required>
+            <input type="text" name="transversal" class="inp-transversal"  required>
             <label for="latitud">Latitud</label>
-            <input type="double" name="latitud" class="inp-latitud" value = "{{ old('latitud') }}"  required>
+            <input type="double" name="latitud" class="inp-latitud"   required>
             <label for="longitud">Longitud</label>
-            <input type="double" name="longitud" class="inp-longitud" value = "{{ old('longitud') }}"  required>
+            <input type="double" name="longitud" class="inp-longitud"   required>
 
             <button class="lat_long">
                 Ver Latitud y Longuitud
@@ -108,19 +110,19 @@
         <div class="contenedor">
             
             <label for="administrador">Tipo de administrador</label>
-            <input type="text" name="administrador"  class="@error('password') is-invalid @enderror" id="administrador" value="{{old('administrador')}}" autocomplete>
+            <input type="text" name="administrador"  class="@error('password') is-invalid @enderror" id="administrador" required>
             <label for="nombre_admin">Nombre del administrador</label>
-            <input type="text" name="nombre_admin" id="nombre_admin" value="{{ old('nombre_admin')}}" required>
+            <input type="text" name="nombre_admin" id="nombre_admin"  required>
             <label for="nombre_institucion">Nombre institucion</label>
-            <input type="text" name="nombre_institucion" id="nombre_institucion" value="{{ old('nombre_institucion')}}" required>
+            <input type="text" name="nombre_institucion" id="nombre_institucion"  required>
             <label for="cargo">Cargo</label>
-            <input type="text" name="cargo" id="cargo" value="{{ old('cargo')}}" required>
+            <input type="text" name="cargo" id="cargo"  required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="{{ old('email')}}" required>
+            <input type="email" name="email" id="email"  required>
             <label for="celular">Celular</label>
-            <input type="number" name="celular" id="celular" value="{{ old('celular')}}" required min="10">
+            <input type="number" name="celular" id="celular"  required min="10">
             <label for="observaciones">Observaciones</label>
-            <input type="text" name="observaciones" id="observaciones" value="{{ old('observaciones')}}">
+            <input type="text" name="observaciones" id="observaciones" >
         </div>
        
         {{-- botones atras guardar y continuar --}}
@@ -148,14 +150,48 @@
             }
         });
     </script>
+    
 
 @endsection
 
 @section('scripts')
     <script src="{{asset('js/tipoysubtipo.js')}}"></script>
     <script src="{{asset('js/selectDinamico.js')}}"></script>
-    <script src="{{asset('js/pre_load_sec1y2.js')}}"></script>
     <script src="{{asset('/js/swal_map.js')}}"></script>
-    <script src="{{asset('/js/botoncontinuar.js')}}"></script>
+    {{-- <script src="{{asset('/js/botoncontinuar.js')}}"></script> --}}
+
+    {{-- validacion de datos recuperados para editar --}}
+    @if (isset($data_to_edit[0]))
+        
+        {{-- {{$data_to_edit[0]->pregunta1}} --}}
+        <script >
+            var data1 =  `{{!!$data_to_edit[0]->pregunta1!!}}`.slice(1,-1) ;
+            var data3 =  `{{!!$data_to_edit[0]->pregunta3!!}}`.slice(1,-1) ;
+            var data4 =  `{{!!$data_to_edit[0]->pregunta4!!}}`.slice(1,-1) ;
+            var data5 =  `{{!!$data_to_edit[0]->pregunta5!!}}`.slice(1,-1) ;
+            var data6 =  `{{!!$data_to_edit[0]->pregunta6!!}}`.slice(1,-1) ;
+            var data7 =  `{{!!$data_to_edit[0]->pregunta7!!}}`.slice(1,-1) ;
+            var id_to_edit = `{{!!$data_to_edit[0]->id!!}}`.slice(1,-1);
+            console.log(' data retrieved successfull / proviene del gad controller edit');
+            console.log(id_to_edit);
+            console.log(data1);
+
+            sessionStorage.setItem('data1__', data1 );
+            sessionStorage.setItem('data3__', data3 );
+            sessionStorage.setItem('data4__', data4 );
+            sessionStorage.setItem('data5__', data5 );
+            sessionStorage.setItem('data6__', data6 );
+            sessionStorage.setItem('data7__', data7 );
+            sessionStorage.setItem('data7__', data7 );
+            sessionStorage.setItem('data7__', data7 );
+        </script>
+        
+    @else 
+        <script> console.log(' data retrieved error');</script>
+
+    @endif
+    
+    <script src="{{asset('js/pre_load_sec1y2.js')}}"></script>
+
 
 @endsection

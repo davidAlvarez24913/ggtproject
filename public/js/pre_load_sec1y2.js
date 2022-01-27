@@ -11,9 +11,9 @@ if (sessionStorage.getItem('data1__') !== null){
         if( i.name != '_token'){ 
             if( x_keys.includes(i.name)){ 
                 let aux = i.name;
-                console.log(aux);
+                // console.log(aux);
                 i.value = x[aux];
-                console.log(i);
+                // console.log(i);
 
             }
         }
@@ -28,10 +28,9 @@ if (sessionStorage.getItem('data1__') !== null){
         }
 
     }).then( response =>{
-        console.log(response);
+        // console.log(response);
         return x = response.json();
     }).then( data =>{
-        console.log(data);
         var opciones =`<option >==Canton==</option>`;
         for (let i in data.lista) {
             opciones += '<option value="'+data.lista[i].id+'" >'+data.lista[i].canton+'</option>';
@@ -39,7 +38,7 @@ if (sessionStorage.getItem('data1__') !== null){
         
         document.querySelector('#canton').innerHTML = opciones;
         document.querySelector('#canton')[0].removeAttribute('default');
-        console.log('valor:'+aux_canton_value);
+        // console.log('valor:'+aux_canton_value);
         document.querySelector('#canton').value = aux_canton_value;
     }).catch(error =>console.error(error));
     
@@ -63,9 +62,8 @@ if (sessionStorage.getItem('data1__') !== null){
         }
         document.querySelector('#parroquia').innerHTML = opcionesP;
         document.querySelector('#parroquia')[0].removeAttribute('default');
-        console.log(`valor:${aux_parroquia_value}`);
         document.querySelector('#parroquia').value = aux_parroquia_value;
     }).catch(error =>console.error(error));
 }else{
-    console.log('todo correcto');
+    console.log('todo correcto para editar');
 }

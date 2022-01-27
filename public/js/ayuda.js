@@ -11,3 +11,4 @@ if(document.querySelector('.data') !== null){
     console.log('Algo salio mal ejemplo data, puedes seguir trabajando');
 }
 
+document.querySelector('.sec1')

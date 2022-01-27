@@ -28,7 +28,7 @@
             <a href="{{route('encuesta.seccion5')}}">Seccion 5</a>
             <a href="{{route('encuesta.seccion6')}}">Seccion 6</a>
             <a href="{{route('encuesta.seccion7')}}">Seccion 7</a>
-            <a href="{{ route('encuesta.guardar')}}">Guardar Datos</a>
+            <a href="{{ route('encuesta.guardar')}}">Panel de Progreso</a>
 
           </div>
         
