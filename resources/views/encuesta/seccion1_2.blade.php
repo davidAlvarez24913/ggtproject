@@ -182,8 +182,7 @@
             sessionStorage.setItem('data5__', data5 );
             sessionStorage.setItem('data6__', data6 );
             sessionStorage.setItem('data7__', data7 );
-            sessionStorage.setItem('data7__', data7 );
-            sessionStorage.setItem('data7__', data7 );
+            sessionStorage.setItem('id_to_edit', id_to_edit );
         </script>
         
     @else 

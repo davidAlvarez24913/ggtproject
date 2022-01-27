@@ -72,7 +72,7 @@
     <div class="contenedor_guardar">
         <form id="form7" action="{{route('encuesta.store')}}" method="POST">
             @csrf
-            <div >
+            <div>
                 <input type="hidden" name="data1__"  class="data1__">
                 <input type="hidden" name="data3__"  class="data3__">
                 <input type="hidden" name="data4__"  class="data4__">
@@ -120,7 +120,17 @@
         document.querySelector('.data4__').value = sessionStorage.data4__
         document.querySelector('.data5__').value = sessionStorage.data5__
         document.querySelector('.data6__').value = sessionStorage.data6__
-        document.querySelector('.data7__').value = sessionStorage.data7__        
+        document.querySelector('.data7__').value = sessionStorage.data7__
+        
+        // si esxiste el id para editar , agregar input 
+        if( sessionStorage.getItem('id_to_edit') !== null ){
+            let input_id = document.createElement('input');
+            input_id.name = "id_to_edit";
+            input_id.type = 'hidden';
+            input_id.value = sessionStorage.getItem('id_to_edit');
+            document.querySelector('#form7').children[1].appendChild(input_id);
+
+        }        
         // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
         document.querySelector('.guardar').addEventListener('click',()=>{
             sessionStorage.clear();

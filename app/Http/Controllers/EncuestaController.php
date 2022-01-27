@@ -8,7 +8,9 @@ use App\Models\Encuesta;
 use App\Models\Parroquia;
 use Illuminate\Http\Request;
 use App\Models\Provincia;
+use Facade\Ignition\DumpRecorder\Dump;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class EncuestaController extends Controller
 {
@@ -167,7 +169,7 @@ class EncuestaController extends Controller
     }
     public function retrieve_7(Request $request){
         $data_aux =  array_filter( $request->except(['_token']) );
-        dump($data_aux);
+        // dump($data_aux);
         $data_7 = json_encode(array_filter($data_aux, function($k){ return $k != 'false';})) ;
         // $data_7 = json_encode( $request->except(['_token']) );
         return view('encuesta.guardar',compact('data_7'));
@@ -176,20 +178,39 @@ class EncuestaController extends Controller
 
 
     public function store(Encuesta $encuesta,Request $request){
+        
+        if(isset($request->id_to_edit)){
+            $id_encuesta = $request->id_to_edit;
+            $p1 = $request->data1__;
+            $p3 = $request->data3__;
+            $p4 = $request->data4__;
+            $p5 = $request->data5__;
+            $p6 = $request->data6__;
+            $p7 = $request->data7__;
+            // update
+            $query_update = DB::update('update encuestas set pregunta1 = ?,
+                pregunta3 = ?, pregunta4 = ?, pregunta5 = ?, pregunta6 = ?, pregunta7 = ? 
+                where id = ?', [$p1, $p3, $p4, $p5, $p6, $p7,$id_encuesta]);
+            // dump($query_update);
+            return redirect()->route('visualizador');
 
-        $encuesta->pregunta1 = $request->data1__;
-        $encuesta->id_usuario = Auth::user()->id;
-        $encuesta->pregunta3 = $request->data3__;
-        $encuesta->pregunta4 = $request->data4__;
-        $encuesta->pregunta5 = $request->data5__;
-        $encuesta->pregunta6 = $request->data6__;
-        $encuesta->pregunta7 = $request->data7__;
-        $encuesta->save();
+        }else{
+            $encuesta->pregunta1 = $request->data1__;
+            $encuesta->id_usuario = Auth::user()->id;
+            $encuesta->pregunta3 = $request->data3__;
+            $encuesta->pregunta4 = $request->data4__;
+            $encuesta->pregunta5 = $request->data5__;
+            $encuesta->pregunta6 = $request->data6__;
+            $encuesta->pregunta7 = $request->data7__;
+            $encuesta->save();
+            return redirect()->route('visualizador');
+
+        }
+        
         // $respuesta = 'ok';
         // redirigir al visualizador geografico
         // al devolver ok , pedir confirmacion y desactivar boton
         // return view('encuesta.guardar',compact('respuesta'));
-        return redirect()->route('visualizador');
     }
     
 }
