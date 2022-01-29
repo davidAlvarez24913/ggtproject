@@ -8,6 +8,7 @@ use App\Models\Encuesta;
 use App\Models\Parroquia;
 use Illuminate\Http\Request;
 use App\Models\Provincia;
+use App\Models\Result;
 use Facade\Ignition\DumpRecorder\Dump;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -192,17 +193,33 @@ class EncuestaController extends Controller
                 pregunta3 = ?, pregunta4 = ?, pregunta5 = ?, pregunta6 = ?, pregunta7 = ? 
                 where id = ?', [$p1, $p3, $p4, $p5, $p6, $p7,$id_encuesta]);
             // dump($query_update);
+            // dump($)
             return redirect()->route('visualizador');
 
         }else{
-            $encuesta->pregunta1 = $request->data1__;
             $encuesta->id_usuario = Auth::user()->id;
+            $encuesta->pregunta1 = $request->data1__;
             $encuesta->pregunta3 = $request->data3__;
             $encuesta->pregunta4 = $request->data4__;
             $encuesta->pregunta5 = $request->data5__;
             $encuesta->pregunta6 = $request->data6__;
             $encuesta->pregunta7 = $request->data7__;
             $encuesta->save();
+            
+
+            // saludar();
+            // dd(var_dump(json_decode($encuesta,true)['pregunta4']));
+            // $recuperado = json_decode($encuesta,true);
+            $aux_ponderacion_arr =  jerarquizarPonderizar($encuesta);   
+            
+            $resultadoc = new Result();
+            $resultadoc->id_encuesta = $aux_ponderacion_arr[0];
+            $resultadoc->ponderacion4 = $aux_ponderacion_arr[1];
+            $resultadoc->ponderacion5 = $aux_ponderacion_arr[2]; 
+            $resultadoc->ponderacion6 = $aux_ponderacion_arr[3];
+            $resultadoc->ponderacion7 = $aux_ponderacion_arr[4];
+            $resultadoc->save();
+            
             return redirect()->route('visualizador');
 
         }

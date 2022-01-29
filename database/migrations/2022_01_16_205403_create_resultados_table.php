@@ -15,12 +15,11 @@ class CreateResultadosTable extends Migration
     {
         Schema::create('resultados', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_usuario');
-            $table->integer('respuesta4');
-            $table->integer('respuesta5');
-            $table->integer('respuesta6');
-            $table->integer('respuesta7');
-            $table->timestamps();
+            $table->integer('id_encuesta');
+            $table->double('ponderacion4');
+            $table->double('ponderacion5');
+            $table->double('ponderacion6');
+            $table->double('ponderacion7');
         });
     }
 
