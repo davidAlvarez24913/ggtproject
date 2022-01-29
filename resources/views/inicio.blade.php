@@ -146,7 +146,7 @@
                 console.log('bienvenido');
                 Swal.fire({
                     title: 'Bienvenido {{ Auth::user()->name }}',
-                    text: 'Has iniciado sesión con rol :{{ Auth::user()->rol }}',
+                    text: 'Has iniciado sesión con el rol de:{{ (Auth::user()->rol == "admin")? "Administrador" : ((Auth::user()->rol == "gad")? "GAD": "Normal"); }}',
                     confirmButtonColor:'#26ae31',
                     confirmButtonText: 'OK'
                 

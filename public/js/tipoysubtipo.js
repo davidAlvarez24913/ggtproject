@@ -25,11 +25,12 @@ category.addEventListener('change',(event)=>{
         <option value='acontecimientos' >Acontecimientos Programados</option>`;
     }
     selectTipo.innerHTML = opciones;
+    selectSubtipo.innerHTML = `<option default value="">Seleccione Subtipo</option>`;
 
 });
 
 selectTipo.addEventListener('change',(e)=>{
-    var opcionesSubtipo =`<option default >Selecione Subtipo</option>`;
+    var opcionesSubtipo =`<option default value="">Seleccione Subtipo</option>`;
 
     if(e.target.value == 'montanas'){
         opcionesSubtipo += `
