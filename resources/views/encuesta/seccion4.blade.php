@@ -51,7 +51,7 @@
             <hr>
             <label for="tipo_via">Tipo de via</label>
             <select name="tipo_via" id="tipo_via">
-                <option default disabled value="">Selecione orden de via</option>
+                <option default value="">Selecione orden de via</option>
                 <option value="primer_orden">Primer orden</option>
                 <option value="segundo_orden">Segundo orden</option>
                 <option value="tercer_orden"> Terer orden</option>
@@ -123,11 +123,11 @@
             <hr>
             <div class="seccion4_row">
                 <label for="nacional"> Nacional </label>
-                <input type="checkbox" name="nacional" id="nacional" value='false'>
+                <input type="radio" name="inter_nacional" id="nacional" >
 
         
                 <label for="Internacional">Internacional</label>
-                <input type="checkbox" name="Internacional" id="Internacional" value='false'>
+                <input type="radio" name="inter_nacional" id="Internacional" >
 
             </div>
             
@@ -254,11 +254,11 @@
         <label for="">Estado de la Señalizacion de aproximacion al atractivo:</label>
         
         <label for="estado_4-5">Bueno</label>
-        <input type="checkbox" name="estado_4-5" id="bueno" value='false'>
+        <input type="radio" name="estado_4-5" id="bueno" value="3">
         <label for="">Regular</label>
-        <input type="checkbox" name="estado_4-5" id="regular" value='false'>
+        <input type="radio" name="estado_4-5" id="regular" value="2">
         <label for="">Malo</label>
-        <input type="checkbox" name="estado_4-5" id="malo" value='false'>
+        <input type="radio" name="estado_4-5" id="malo" value="1">
     </div>
 
     <div>

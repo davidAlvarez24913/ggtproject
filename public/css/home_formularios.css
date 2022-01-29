@@ -35,7 +35,9 @@
     margin: 2em;
     border-radius: 10px;
     height: 5rem;
-    width: 25vw;
+    font-size: 1rem;
+    /* width: 25vw; */
+    border: none;
     /* text-align: center; */
     /* align-items: center; */
     box-shadow: 5px 5px 5px rgba(133, 130, 130, 0.837);

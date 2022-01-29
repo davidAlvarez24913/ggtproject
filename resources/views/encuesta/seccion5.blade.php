@@ -161,6 +161,7 @@
         </div>
         
         <div class="contenedor_pregunta5-1 c_a">
+            
             <label for="mayoristas">Mayoristas
                 <input type="checkbox" name="mayoristas" id="mayoristas" value='false' >
             </label>
@@ -176,6 +177,17 @@
             <label for="agencias_establecimientos_registrados">Establecimientos registrados
                 <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados"  >
             </label>
+        </div>
+        <div class="contenedor_pregunta5-1 c_a aux_guia">
+            <label for="guia">Guía </label>
+            <input type="checkbox" name="guia" id="guia" value="false">
+
+            <label for="local">Local <input type="number" name="local" id="local" placeholder="0"></label>
+            <label for="nacional">Nacional <input type="number" name="nacional" id="nacional" placeholder="0"></label>
+            <label for="especializado">Nacional Especializado <input type="number" name="especializado" id="especializado" placeholder="0"></label>
+            <label for="cultura">Cultura <input type="number" name="cultura" id="cultura" placeholder="0"></label>
+            <label for="aventura">Aventura <input type="number" name="aventura" id="aventura" placeholder="0"></label>
+
         </div>
        
     </div>
@@ -195,46 +207,46 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="hotel">
                 Hotel
-                <input type="checkbox" name="hotel" id="hotel" value='false' >
+                <input type="checkbox" name="hotel_b" id="hotel_b" value='false' >
     
             </label>
             <label for="hostal">
                 Hostal
-                <input type="checkbox" name="hostal" id="hostal" value='false' >
+                <input type="checkbox" name="hostal_b" id="hostal_b" value='false' >
                 
             </label>
             <label for="hosteria">
                 Hosteria
-                <input type="checkbox" name="hosteria" id="hosteria" value='false' >
+                <input type="checkbox" name="hosteria_b" id="hosteria_b"_b value='false' >
                 
             </label>
             <label for="hacienda_turistica">
                 Hacienda Turistica
-                <input type="checkbox" name="hacienda_turistica" id="hacienda_turistica" value='false' >
+                <input type="checkbox" name="hacienda_turistica_b" id="hacienda_turistica_b" value='false' >
                 
             </label>
             <label for="lodge">
                 Lodge
-                <input type="checkbox" name="lodge" id="lodge" value='false' >
+                <input type="checkbox" name="lodge_b" id="lodge_b" value='false' >
                 
             </label>
             <label for="resort">
                 Resort
-            <input type="checkbox" name="resort" id="resort" value='false' >
+            <input type="checkbox" name="resort_b" id="resort_b" value='false' >
                 
             </label>
             <label for="refugio">
                 Refugio
-                <input type="checkbox" name="refugio" id="refugio" value='falsvalue='false'e' >
+                <input type="checkbox" name="refugio_b" id="refugio_b" value='false' >
                 
             </label>
             <label for="campamento_turistico">
                 Campamento Turistico
-                <input type="checkbox" name="campamento_turistico" id="campamento_turistico" value='falsvalue='false'e' >
+                <input type="checkbox" name="campamento_turistico_b" id="campamento_turistico_b" value='false' >
             </label>
             <label for="casa_huespedes">
                 Casa de Huespedes
-                <input type="checkbox" name="casa_huespedes" id="casa_huespedes" value='falsvalue='false'e' >
+                <input type="checkbox" name="casa_huespedes_b" id="casa_huespedes_b" value='false' >
                 
             </label>
             
@@ -243,17 +255,17 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'  >
+                <input type="number" name='establecimientos_registrados_b' id ='establecimientos_registrados_b'  >
             </label>
     
             <label for="numero_habitaciones">
                 Número de habitaciones
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'  >
+                <input type="number" name='numero_habitaciones_b' id ='numero_habitaciones_b'  >
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'  >
+                <input type="number" name='numero_plazas_b' id ='numero_plazas_b'  >
             </label>
     
         </div>
@@ -269,35 +281,35 @@
         <div class="contenedor_pregunta5-1 c_a">
             <label for="">
                 Restaurantes
-                <input type="checkbox" name="restaurantres" id="restaurantres" value='false' >
+                <input type="checkbox" name="restaurantres_b" id="restaurantres_b" value='false' >
             </label>
             <label for="cafeterias">cafeterias
-                <input type="checkbox" name="cafeterias" id="cafeterias" value='false' >
+                <input type="checkbox" name="cafeterias_b" id="cafeterias_b" value='false' >
             </label>
             <label for="bares">bares
-                <input type="checkbox" name="bares" id="bares" value='false' >
+                <input type="checkbox" name="bares_b" id="bares_b" value='false' >
             </label>
             <label for="fuentes_soda">fuentes_soda
-                <input type="checkbox" name="fuentes_soda" id="fuentes_soda" value='false' >
+                <input type="checkbox" name="fuentes_soda_b" id="fuentes_soda_b" value='false' >
             </label>
             <label for="observaciones_alim_bebi">observaciones
-                <input type="text" name="observaciones_alim_bebi" id="observaciones_alim_bebi"  >
+                <input type="text" name="observaciones_alim_bebi_b" id="observaciones_alim_bebi_b"  >
             </label>
         </div>
         <div class="contenedor_pregunta5-1 c_a">
             <label for="establecimientos_registrados">
                 Establecimientos registrados
-                <input type="number" name='establecimientos_registrados' id ='establecimientos_registrados'  >
+                <input type="number" name='establecimientos_registrados_b' id ='establecimientos_registrados_b'  >
             </label>
     
             <label for="numero_habitaciones">
                 Número de Mesas
-                <input type="number" name='numero_habitaciones' id ='numero_habitaciones'  >
+                <input type="number" name='numero_habitaciones_b' id ='numero_habitaciones_b'  >
             </label>
             
             <label for="numero_plazas">
                 Número de Plazas
-                <input type="number" name='numero_plazas' id ='numero_plazas'  >
+                <input type="number" name='numero_plazas_b' id ='numero_plazas_b'  >
             </label>
     
         </div>
@@ -312,20 +324,31 @@
         
         <div class="contenedor_pregunta5-1 c_a">
             <label for="mayoristas">Mayoristas
-                <input type="checkbox" name="mayoristas" id="mayoristas"  value='false'>
+                <input type="checkbox" name="mayoristas_b" id="mayoristas_b"  value='false'>
             </label>
 
             <label for="internacionales">Internacionales
-                <input type="checkbox" name="internacionales" id="internacionales"  value='false'>
+                <input type="checkbox" name="internacionales_b" id="internacionales_b"  value='false'>
             </label>
             
             <label for="operadores">Operadores
-                <input type="checkbox" name="operadores" id="operadores"  value='false'>
+                <input type="checkbox" name="operadores_b" id="operadores_b"  value='false'>
             </label>
             <label for="agencias_establecimientos_registrados">Establecimientos registrados
-                <input type="number" name="agencias_establecimientos_registrados" id="agencias_establecimientos_registrados"  >
+                <input type="number" name="agencias_establecimientos_registrados_b" id="agencias_establecimientos_registrados_b"  >
 
             </label>
+        </div>
+        <div class="contenedor_pregunta5-1 c_a aux_guia">
+            <label for="guia">Guía </label>
+            <input type="checkbox" name="guia_b" id="guia_b" value="false">
+
+            <label for="local">Local <input type="number" name="local_b" id="local_b" placeholder="0"></label>
+            <label for="nacional">Nacional <input type="number" name="nacional_b" id="naciona_bl" placeholder="0"></label>
+            <label for="especializado">Nacional Especializado <input type="number" name="especializado_b" id="especializado_b" placeholder="0"></label>
+            <label for="cultura">Cultura <input type="number" name="cultura_b" id="cultura_b" placeholder="0"></label>
+            <label for="aventura">Aventura <input type="number" name="aventura_b" id="aventura_b" placeholder="0"></label>
+
         </div>
     </div>
     
@@ -346,7 +369,7 @@
             <label for="l-tur">l-tur
                 <input type="checkbox" name="l-tur" id="l-tur" value='false'>
             </label>
-            <label for="centro_interpretacion"> centro interpretacion
+            <label for="centro_interpretacion">Centro interpretacion
                 <input type="checkbox" name="centro_interpretacion" id="centro_interpretacion" value='false'>
             </label>
             <label for="facilitacion_turistica"> Centro de faciltacion turistica
@@ -367,10 +390,10 @@
             <label for="administrador">Administrador
                 <input type="text" name="administrador" id="administrador">
             </label>
-            <label for="5-2_select_estado">
+            <label for="5-2_select_estado_a">
                 Estado(U)
-                <select name="5-2_select_estado" id="5-2_select_estado">
-                    <option >Seleccione estado</option>
+                <select name="5-2_select_estado_a" id="5-2_select_estado_a">
+                    <option value="">Seleccione estado</option>
                     <option value="bueno">Bueno</option>
                     <option value="regular">Regular</option>
                     <option value="malo">Malo</option>
@@ -402,10 +425,10 @@
             <label for="administrador">Administrador
                 <input type="text" name="administrador" id="administrador">
             </label>
-            <label for="5-2_select_estado">
+            <label for="5-2_select_estado_b">
                 Estado(U)
-                <select name="5-2_select_estado" id="5-2_select_estado">
-                    <option >Seleccione estado</option>
+                <select name="5-2_select_estado_b" id="5-2_select_estado_b">
+                    <option value="">Seleccione estado</option>
                     <option value="bueno">Bueno</option>
                     <option value="regular">Regular</option>
                     <option value="malo">Malo</option>
@@ -441,10 +464,48 @@
             <label for="administrador">Administrador
                 <input type="text" name="administrador" id="administrador">
             </label>
-            <label for="5-2_select_estado">
+            <label for="5-2_select_estado_c">
                 Estado(U)
-                <select name="5-2_select_estado" id="5-2_select_estado">
-                    <option >Seleccione Estado</option>
+                <select name="5-2_select_estado_c" id="5-2_select_estado_c">
+                    <option value="" >Seleccione Estado</option>
+                    <option value="bueno">Bueno</option>
+                    <option value="regular">Regular</option>
+                    <option value="malo">Malo</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="contenedor_padre aux_chk5555">
+        <label for="" class="enunciado">De recorrido y descanso</label>
+        <hr>
+        <div class="contenedor_pregunta5-1 c_a">
+            <label for="senderos">Senderos
+                <input type="checkbox" name="senderos" id="senderos" value='false'>
+            </label>
+            <label for="sombra">Estaciones de descanso y sombra
+                <input type="checkbox" name="sombra" id="sombra" value='false'>
+            </label>
+            <label for="acampar">Áreas de acampar
+                <input type="checkbox" name="acampar" id="acampar" value='false'>
+            </label>
+            <label for="refugios">Refugios de Alta montaña
+                <input type="checkbox" name="refugios" id="refugios" value='false'>
+            </label>
+        </div>
+        <div class="contenedor_pregunta5-1 c_a">
+            <label for="cantidad">Cantidad
+                <input type="number" name="cantidad_d" id="cantidad_d">
+            </label>
+            <label for="corrdenadas">Coordenadas
+                <input type="number" name="corrdenadas_d" id="corrdenadas_d">
+            </label>
+            <label for="administrador">Administrador
+                <input type="text" name="administrador_d" id="administrador_d">
+            </label>
+            <label for="5-2_select_estado_c">
+                Estado(U)
+                <select name="5-2_select_estado_d" id="5-2_select_estado_d">
+                    <option value="">Seleccione Estado</option>
                     <option value="bueno">Bueno</option>
                     <option value="regular">Regular</option>
                     <option value="malo">Malo</option>
@@ -456,19 +517,19 @@
         <label for="" class="enunciado">Otros</label>
         <hr>
         <div class="contenedor_pregunta5-1 c_a">
-            <label for="cantidad"> Cantidad
-                <input type="number" name="cantidad" id="cantidad">
+            <label for="cantidad_e"> Cantidad
+                <input type="number" name="cantidad_e" id="cantidad_e">
             </label>
             <label for="corrdenadas"> Coordenadas
-                <input type="number" name="corrdenadas" id="corrdenadas">
+                <input type="number" name="corrdenadas_e" id="corrdenadas_e">
             </label>
             <label for="administrador">Administrador
-                <input type="text" name="administrador" id="administrador">
+                <input type="text" name="administrador_e" id="administrador_e">
             </label>
-            <label for="5-2_select_estado">
+            <label for="5-2_select_estado_e">
                 Estado(U)
-                <select name="5-2_select_estado" id="5-2_select_estado">
-                    <option >Seleccione estado</option>
+                <select name="5-2_select_estado_e" id="5-2_select_estado_e">
+                    <option value="" >Seleccione estado</option>
                     <option value="bueno">Bueno</option>
                     <option value="regular">Regular</option>
                     <option value="malo">Malo</option>
@@ -479,7 +540,7 @@
     </div>
 
     <h5>
-        <label class='nombre_pregunta'>Complementarios a ala activida turistica (M)
+        <label class='nombre_pregunta'>Complementarios a la actividad turística (M)
             {{-- <input type="checkbox"  >     --}}
         </label>
     </h5>
@@ -489,7 +550,7 @@
             <label for="equipamiento_atrac">Alquiler y venta de equipo especializado
                 <input type="checkbox" name="equipamiento_atrac" id="equipamiento_atrac" value='false'>
             </label>
-            <label for="artesanias_atrac">Venta de artesanoas y merchandising
+            <label for="artesanias_atrac">Venta de artesanías y merchandising
                 <input type="checkbox" name="artesanias_atrac" id="artesanias_atrac" value='false'>
             </label>
             <label for="casa_cambio_atrac">Casa de cambio
@@ -510,17 +571,17 @@
             <label for="equipamiento_cui">Alquiler y venta de equipo especializado
                 <input type="checkbox" name="equipamiento_cui" id="equipamiento_cui" value='false'>
             </label>
-            <label for="artesanias_cui">Venta de artesanos y merchandising
-                <input type="checkbox" name="artesanias_cui" id="artesanias_cui" value='false'>
+            <label for="artesanias_mas_cercano">Venta de artesanías y merchandising
+                <input type="checkbox" name="artesanias_mas_cercano" id="artesanias_mas_cercano" value='false'>
             </label>
             <label for="casa_cambio_cui">Casa de cambio
-                <input type="checkbox" name="casa_cambio_cui" id="casa_cambio_cui" value='false'>
+                <input type="checkbox" name="casa_cambio_mas_cercano" id="casa_cambio_mas_cercano" value='false'>
             </label>
-            <label for="cajero_cui">Cajero automático
-                <input type="checkbox" name="cajero_cui" id="cajero_cui" value='false'>
+            <label for="cajero_mas_cercano">Cajero automático
+                <input type="checkbox" name="cajero_mas_cercano" id="cajero_mas_cercano" value='false'>
             </label>
             <label for="otro_cui">Otro
-                <input type="checkbox" name="otro_cui" id="otro_cui" value='false'>
+                <input type="checkbox" name="otro_mas_cercano" id="otro_mas_cercano" value='false'>
             </label>
         </div>
         
@@ -572,6 +633,8 @@
         chk_to_validate('.aux_chk4');
         chk_to_validate('.aux_chk5');
         chk_to_validate('.aux_chk6');
+        chk_to_validate('.aux_chk5555');
+
 
     </script>
     <script src="{{asset('js/pre_load_sec5.js')}}"></script>

@@ -15,7 +15,7 @@
 
     <div class="sub_contenedor">
 
-        <div class="tarjeta_normal">
+        {{-- <div class="tarjeta_normal">
             <div class="titulo">
                 <h2> <a href="{{route('encuesta.seccion1_2')}}">Ficha técnica Entidad Turística</a></h2>
             </div>
@@ -32,7 +32,16 @@
             <div class="titulo">
                 <h2> <a href="{{ route('gad.fichasRegistradas')}}"> Ver Fichas Registradas</a></h2>
             </div>
-        </div>
+        </div> --}}
+        <button class="tarjeta_normal" onclick="location.href = `{{route('encuesta.seccion1_2')}}`">
+            Ficha técnica Entidad Turística
+        </button>
+        <button class="tarjeta_normal" onclick="location.href = `{{route('encuesta.accesibilidad')}}`">
+            Ficha técnica de Accesibilidad
+        </button>
+        <button class="tarjeta_normal" onclick="location.href = `{{route('gad.fichasRegistradas')}}`">
+            Ver Fichas Registradas
+        </button>
         
     </div>
    

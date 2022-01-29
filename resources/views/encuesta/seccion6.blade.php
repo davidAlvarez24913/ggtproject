@@ -34,21 +34,21 @@
         
     </div>
     <div class="contenedor_seccion6_fila s6_aux" >
-        <label for="literales_seccion6">Conservado
-            <input type="checkbox" name="literales_seccion6" id="conservado" value='false'>
+        <label for="conservado">Conservado
+            <input type="radio" name="pregunta6_2_a" id="conservado" value='7'>
         </label>
 
-        <label for="literales_seccion6">Alterado
-            <input type="checkbox" name="literales_seccion6" id="alterado" value='false'>
+        <label for="alterado">Alterado
+            <input type="radio" name="pregunta6_2_a" id="alterado" value='5'>
         </label>
 
-        <label for="literales_seccion6">En proceso de deterioro
-            <input type="checkbox" name="literales_seccion6" id="deteriorado" value='false'>
+        <label for="proceso_deterioro">En proceso de deterioro
+            <input type="radio" name="pregunta6_2_a" id="proceso_deterioro" value='3'>
         </label>
-
-        <label for="observaciones">Observaciones
-            <input type="text" name="observaciones" id="observaciones" >
+        <label for="deteriorado">Deteriorado
+            <input type="radio" name="pregunta6_2_a" id="deteriorado" value='1'>
         </label>
+        
     </div>
     {{-- pregunta 6.1.1 Factores de alteracion y deterioro (M) --}}
     <label class="enunciado">Factores de alteracion y deterioro (M)</label>
@@ -211,21 +211,21 @@
     </h5>
 
     <div class="contenedor_seccion6_fila s6_aux3" >
-        <label for="literales_seccion6">Conservado
-            <input type="checkbox" name="literales_seccion6" id="conservado" value='false'>
+        <label for="conservado_b">Conservado
+            <input type="radio" name="pregunta6_2_b" id="conservado_b" value='7'>
         </label>
 
-        <label for="literales_seccion6">Alterado
-            <input type="checkbox" name="literales_seccion6" id="alterado" value='false'>
+        <label for="alterado_b">Alterado
+            <input type="radio" name="pregunta6_2_b" id="alterado_b" value='5'>
         </label>
 
-        <label for="literales_seccion6">En proceso de deterioro
-            <input type="checkbox" name="literales_seccion6" id="deteriorado" value='false'>
+        <label for="proceso_deteriorado_b">En proceso de deterioro
+            <input type="radio" name="pregunta6_2_b" id="proceso_deteriorado_b" value='3'>
         </label>
-
-        <label for="observaciones">Observaciones
-            <input type="text" name="observaciones" id="observaciones">
+        <label for="deteriorado_b">Deteriorado
+            <input type="radio" name="pregunta6_2_b" id="deteriorado_b" value='1'>
         </label>
+  
     </div>
     {{-- pregunta 6.1.1 Factores de alteracion y deterioro (M) Entorno --}}
     <label class="enunciado">Factores de alteracion y deterioro (M)</label>
@@ -429,7 +429,7 @@
     <i class="fas fa-arrow-left"></i>
     Atras
 </button>
-<script src="{{asset('js/deshabilitarPreguntas.js')}}"></script>
+<script src="{{asset('js/checkbox_change_value_boolean.js')}}"></script>
 @endsection
 @section('scripts')
     <script>

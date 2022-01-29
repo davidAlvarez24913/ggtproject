@@ -25,26 +25,25 @@ var pregunta4_4 = ['general', 'discapacidad_fisica', 'discapacidad_visual', 'dis
 var pregunta4_5 = ['estado_4-5', 'estado_4-5', 'estado_4-5'];
 
 //  ----------------Sección 5 ------------------
-var seccion5_1_1 = ['atractivo', 'hotel', 'hostal', 'hosteria', 'hacienda_turistica', 'lodge', 'resort', 'refugio', 'campamento_turistico', 'casa_huespedes', 
-                'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas', 'alimentos_bebidas', 'restaurantres', 'cafeterias', 'bares', 'fuentes_soda',
-                 'observaciones_alim_bebi', 'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas', 'agencias', 'mayoristas', 'internacionales', 'operadores', 'agencias_establecimientos_registrados'];
+var seccion5_1_1_atractivo = ['hotel', 'hostal', 'hosteria', 'hacienda_turistica', 'lodge', 'resort', 'refugio', 'campamento_turistico', 'casa_huespedes', 'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas', 'restaurantres', 'cafeterias', 'bares', 'fuentes_soda', 'observaciones_alim_bebi', 'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas', 'mayoristas', 'internacionales', 'operadores', 'agencias_establecimientos_registrados'];
+var seccion5_1_1_cuidadmascercana = ['hotel_b', 'hostal_b', 'hosteria_b', 'hacienda_turistica_b', 'lodge_b', 'resort_b', 'refugio_b', 'campamento_turistico_b', 'casa_huespedes_b', 'establecimientos_registrados_b', 'numero_habitaciones_b', 'numero_plazas_b', 'restaurantres_b', 'cafeterias_b', 'bares_b', 'fuentes_soda_b', 'observaciones_alim_bebi_b', 'establecimientos_registrados_b', 'numero_habitaciones_b', 'numero_plazas_b', 'mayoristas_b', 'internacionales_b', 'operadores_b', 'agencias_establecimientos_registrados_b']
 
 var seccion5_1_2 = ['5_1_b', 'hotel', 'hostal', 'hosteria', 'hacienda_turistica', 'lodge', 'resort', 'refugio', 'campamento_turistico', 'casa_huespedes', 'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas',
      'alimentos_bebidas', 'restaurantres', 'cafeterias', 'bares', 'fuentes_soda', 'observaciones_alim_bebi', 'establecimientos_registrados', 'numero_habitaciones', 'numero_plazas', 'agencias', 'mayoristas', 'internacionales', 'operadores', 'agencias_establecimientos_registrados']
 
-var seccion5_2_1 = ['punto_informacion', 'l-tur', 'centro_interpretacion', 'facilitacion_turistica', 'recepcion', 'cantidad', 'corrdenadas', 'administrador','5-2_select_estado'];
+var seccion5_2_1 = ['punto_informacion', 'l-tur', 'centro_interpretacion', 'facilitacion_turistica', 'recepcion', 'cantidad', 'corrdenadas', 'administrador','5-2_select_estado_a'];
 
-var seccion5_2_2 = ['baterias_sanitarias', 'estacionamientos', 'cantidad', 'corrdenadas', 'administrador', '5-2_select_estado'];
+var seccion5_2_2 = ['baterias_sanitarias', 'estacionamientos', 'cantidad', 'corrdenadas', 'administrador', '5-2_select_estado_b'];
 
-var seccion5_2_3 = ['guardiania', 'miradores', 'torres_aves', 'torres_salvavidas', 'cantidad', 'corrdenadas', 'administrador', '5-2_select_estado'];
+var seccion5_2_3 = ['guardiania', 'miradores', 'torres_aves', 'torres_salvavidas', 'cantidad', 'corrdenadas', 'administrador', '5-2_select_estado_c'];
 
-var seccion5_2_4 = ['cantidad', 'corrdenadas', 'administrador', '5-2_select_estado'];
+var seccion5_2_4 = ['cantidad', 'corrdenadas', 'administrador', '5-2_select_estado_d'];
  
 var seccion5_3_1 = ['equipamiento', 'artesanias', 'casa_cambio', 'cajero', 'otro'];
 
-var seccion5_3_2 = ['equipamiento', 'artesanias', 'casa_cambio', 'cajero', 'otro'];
+var seccion5_3_2 = ['equipamiento_mas_cercano', 'artesanias_mas_cercano', 'casa_cambio_mas_cercano', 'cajero_mas_cercano', 'otro_mas_cercano'];
 
-//  ----------------Sección 5 ------------------
+//  ----------------Sección 6 ------------------
 
 var seccion6_1_1 = ['literales_seccion6', 'literales_seccion6', 'literales_seccion6', 'observaciones'];
 var seccion6_1_2 = ['foresstal', 'negligencia', 'uso_exposicion', 'residuos', 'industrial_comercial', 'otro', 'erocion', 'humead', 'desastres_naturales', 'flora_fauna', 'clima', 'especifique', 'agricolas_ganaderas', 'industriales', 'conflicto', 'cantaminacion', 'politico_social', 'observaciones', 'mineria', 'huaqueria', 'falta_mantenimiento', 'expansion', 'vandalismo']
@@ -53,11 +52,14 @@ var seccion6_2_1 = ['literales_seccion6', 'literales_seccion6', 'literales_secci
 var seccion6_2_2 = ['forestales', 'abandono', 'uso_exposicion', 'residuos', 'entorno_indus_comercial', 'entorno_observaciones', 'erocion', 'humead', 'desastres_naturales', 'flora_fauna', 'clima', 'entorno_especifique', 'entorno_agricolas', 'entorno_industril', 'entorno_conflicto', 'entorno_contminacion', 'entorno_politico_social', 'entorno_observacione', 'entorno_mineria', 'entorno_huaqueria', 'entorno_falta_mantenimiento', 'entorno_expansion', 'entorno_vandalismo'];
 
 var seccion6_3 = ['declarante', 'denomincacion', 'fecha_declaracion', 'alcance', 'declaratoria_observacion'];
-//  ----------------Sección 6 ------------------
+//  ----------------Sección 67 ------------------
 
-//  ----------------Sección 6 ------------------
+// var x = document.querySelector('.contenedor_padre').getElementsByTagName('input'); x
 
-//  ----------------Sección 6 ------------------
+
+
+
+
 
 var x = JSON.parse(sessionStorage.getItem('data1__'));
 // de aqui quiero los valores

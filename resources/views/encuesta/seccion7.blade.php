@@ -455,7 +455,7 @@
         </script>
         
         @else
-            <script> console.error("Algo muy malo ocurrio!"); </script>
+            <script> console.error("no se recupero la dat6, para no perder datos mientras se navega en el form!"); </script>
 
         @endif
     </div>
