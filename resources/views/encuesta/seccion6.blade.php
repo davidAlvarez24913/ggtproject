@@ -391,16 +391,16 @@
 
     <div class='contenedor_seccion6_fila s6_aux5'>
         <label for="declarante">Declarante
-            <input type="text" name="declarante" id="declarante" required>
+            <input type="text" name="declarante" id="declarante">
         </label>
         <label for="denomincacion">Denomincación
-            <input type="text" name="denomincacion" id="denomincacion" required>
+            <input type="text" name="denomincacion" id="denomincacion">
         </label>
         <label for="fecha_declaracion">Fecha Declaración
-            <input type="text" name="fecha_declaracion" id="fecha_declaracion" required>
+            <input type="text" name="fecha_declaracion" id="fecha_declaracion">
         </label>
         <label for="alcance">Alcance
-            <input type="text" name="alcance" id="alcance" required>
+            <input type="text" name="alcance" id="alcance">
         </label>
         <label for="declaratoria_observacion">Observaciones
             <input type="text" name="declaratoria_observacion" id="declaratoria_observacion" >

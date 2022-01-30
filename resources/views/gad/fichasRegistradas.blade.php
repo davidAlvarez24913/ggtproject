@@ -28,7 +28,7 @@
     <table id="table_id">
       <thead class="title_head">
         <tr>
-          <th>#</th>
+          <th>Nro. de Ficha Técnica</th>
           <th>Usuario</th>
           <th>Nombre</th>
           <th>Categoría</th>
@@ -39,10 +39,10 @@
         </tr>
       </thead>
       <tbody class="tbody_style">
-        <?php $index = 1 ?>
+        
         @foreach ($arreglo as $item)
           <tr>
-            <td>{{ $index++ }}</td>
+            <th>{{ $item[5] }}</th>
             <th>{{ $item[0] }}</th>
             <th>{{ $item[1] }} </th>
             <th>{{ $item[2] == 'atracciones_naturales'? 'Atracciones Naturales': 'Manifestaciones Culturales'}} </th>

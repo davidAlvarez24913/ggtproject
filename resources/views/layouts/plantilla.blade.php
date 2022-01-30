@@ -20,9 +20,9 @@
     {{-- navbar --}}
     {{-- <img class='img_fondo' src="{{asset('images/navbar.jpg')}}" alt="logo"> --}}
     <header>
-        
         <nav >
-            
+        <img src="{{asset('/images/lgo.jpeg')}}" alt="logo">
+                
             <ul class='nav__links'>
                 
                 {{-- <li><a class='anchor'  href="{{route('encuesta.home')}}">Inicio</a> </li> --}}

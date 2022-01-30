@@ -189,11 +189,24 @@ class EncuestaController extends Controller
             $p6 = $request->data6__;
             $p7 = $request->data7__;
             // update
+            // dump($id_encuesta);
             $query_update = DB::update('update encuestas set pregunta1 = ?,
                 pregunta3 = ?, pregunta4 = ?, pregunta5 = ?, pregunta6 = ?, pregunta7 = ? 
                 where id = ?', [$p1, $p3, $p4, $p5, $p6, $p7,$id_encuesta]);
-            // dump($query_update);
-            // dump($)
+
+           
+            $aux = array( "id"=>$id_encuesta , "pregunta4"=>$p4, "pregunta5"=>$p5, "pregunta6"=>$p6, "pregunta7"=> $p7);
+
+            $aux2 = jerarquizarPonderizar($aux);
+            // dump('valor funcion jerarquizar');
+            // dump($aux);
+            // $arrx_update_p = jerarquizarPonderizar($aux);
+            // dd($aux2);
+
+            $actualizar_p = DB::update('update resultados set  ponderacion4 = ?, ponderacion5 = ?, ponderacion6 = ?, ponderacion7 = ? 
+                where id_encuesta = ?',[$aux2[1], $aux2[2], $aux2[3], $aux2[4], (int) $aux2[0]]);
+
+            // return [$actualizar_p, $aux2];
             return redirect()->route('visualizador');
 
         }else{
@@ -219,7 +232,7 @@ class EncuestaController extends Controller
             $resultadoc->ponderacion6 = $aux_ponderacion_arr[3];
             $resultadoc->ponderacion7 = $aux_ponderacion_arr[4];
             $resultadoc->save();
-            
+
             return redirect()->route('visualizador');
 
         }

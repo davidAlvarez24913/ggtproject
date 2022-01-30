@@ -33,9 +33,9 @@
     </div>
     <div class="contenedor_seccion4">
         <label for="distancia_km">Distancia desde la cuidad o poblado mas cercano</label>
-        <input type="number" name="distancia_km" id="distancia_km" required min="0">
+        <input type="number" name="distancia_km" id="distancia_km"  min="0" placeholder="0">
         <label for="tiempo_en_auto">Tiempo estimado de desplazamiento en auto</label>
-        <input type="datetime" name="tiempo_en_auto" id="tiempo_en_auto" required>
+        <input type="datetime" name="tiempo_en_auto" id="tiempo_en_auto" min="0" placeholder="0">
     </div>
     <h5>
         <label for="pregunta_4_2" class='nombre_pregunta'>Vias de Acceso (M)

@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title','Pondercion')
+@section('title','Ponderación')
     
 @section('head')
     <meta name="csrf-token" content="{{ csrf_token()}}">
@@ -21,39 +21,48 @@
 @section('content')
 
     <h4>Ponderacion Y Jerarquizacion</h4>
-    @if (isset($ponderaciones))
+    {{-- @if (isset($ponderaciones))
     {{$ponderaciones}}
     @else   
     {{'no hay datos'}}
-    @endif    
+    @endif     --}}
     <div class="contenedor_datatable_ponderacion">
         <table id="table_id">
-        <thead class="title_head">
-            <tr>
-                <th># registro Encuesta</th>
-                <th>Seccion 4</th>
-                <th>Seccion 5</th>
-                <th>Seccion 6</th>
-                <th>Seccion 7</th>
-            </tr>
-        </thead>
-        <tbody class="tbody_style">
-            @foreach ($ponderaciones as $p)
-            <tr>
-                <th>{{ $p[0] }}</th>
-                <th>{{ $p[1] }} </th>
-                <th>{{ $p[3] }} </th>
-                <th>{{ $p[4] }} </th>
-                <th>{{ $p[5] }} </th>
+            <thead class="title_head">
+                <tr>
+                    <th>Nro. de Ficha</th>
+                    <th>Accesibilidad al Atractivo</th>
+                    <th>Planta Turística y Complementarios</th>
+                    <th>Conservación e Integración Atractivo</th>
+                    <th>Higiene y Seguridad Turítica</th>
+                    <th>Total (Sec: 4-7)</th>
 
+                </tr>
+                <tr>
+                    <th><i class="fas fa-sort-numeric-down"></i></th>
+                    <th> Seccion 4</th>
+                    <th> Seccion 5</th>
+                    <th> Seccion 6</th>
+                    <th> Seccion 7</th>
+                    <th><i class="fas fa-calculator"></i></th>
 
-            </tr>
-            @endforeach
-            
-        </tbody>
-            
+                </tr>
+            </thead>
+            <tbody class="tbody_style">
+                @foreach ($ponderaciones as $p)
+                <tr>
+                    <th>{{ $p['id_encuesta'] }}  </th>
+                    <th>{{ $p['ponderacion4'] }} </th>
+                    <th>{{ $p['ponderacion5'] }} </th>
+                    <th>{{ $p['ponderacion6'] }} </th>
+                    <th>{{ $p['ponderacion7'] }} </th>
+                    <th>{{ $p['ponderacion4'] + $p['ponderacion5'] + $p['ponderacion6'] + $p['ponderacion7'] }} </th>
+
+                </tr>
+                @endforeach
+            </tbody>
         </table>
-</div>
+    </div>
 
 @endsection
 

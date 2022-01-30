@@ -113,7 +113,7 @@ class GadController extends Controller
 
     public function ponderacion(){   
         $ponderaciones = Result::all(['id_encuesta','ponderacion4' ,'ponderacion5' ,'ponderacion6' ,'ponderacion7']);
-        dump( json_decode($ponderaciones, true ));
+            // dump( json_decode($ponderaciones, true ));
                 
         return view('gad.ponderacion',compact('ponderaciones'));
     }

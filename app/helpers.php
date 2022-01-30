@@ -11,8 +11,11 @@ function saludar($arr): array {
         //  funcion recibe un arreglo
         // para recuperar cadenas y tranformaslas en arreglo asociativos
         $max_id = max(array_values(json_decode(Encuesta::all(['id']),true)));
+        // dump($max_id);
+        // dump($recuperado['id']);
+        // dd($recuperado);
 
-        $id_registro_ficha = ($recuperado['id'] != null)? $recuperado['id']: $max_id['id']+1;
+        $id_registro_ficha = ($recuperado['id'] != null)? $recuperado["id"]: $max_id['id']+1;
         $recuperado4 = $recuperado['pregunta4'];
         $recuperado5 = $recuperado['pregunta5'];
         $recuperado6 = $recuperado['pregunta6'];
