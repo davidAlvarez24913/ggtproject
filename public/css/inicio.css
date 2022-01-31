@@ -374,7 +374,17 @@ footer{
     font-size: 18px;
     font-family: 'Cairo', sans-serif;
 }
-
+.div_lgo{
+    margin-left: -32rem;
+    padding: 5px;
+    margin-top: -12px;
+}
+.lgo{
+    width: 100%;
+    height: 46px;
+    object-fit: scale-down;
+    
+}
 .col_2, .col_1{
     display: flexbox;
     flex-direction: column;

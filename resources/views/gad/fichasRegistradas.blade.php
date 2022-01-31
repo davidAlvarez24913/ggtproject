@@ -2,18 +2,22 @@
 
 @section('title','Fichas Registradas')
 @section('head')
- <link rel="stylesheet" href="{{ asset('/css/verFichas.css') }}">
-{{-- ESTILOS DATATABLE --}}
-{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> --}}
-{{-- CDN DATATABLE --}}
-<link rel="stylesheet" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-{{-- CDN JQUERY --}}
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-{{-- Sweet Alert CDN --}}
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-{{-- JQuery CDN --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <link rel="stylesheet" href="{{ asset('/css/verFichas.css') }}">
+  {{-- ESTILOS DATATABLE --}}
+  {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> --}}
+  {{-- CDN DATATABLE --}}
+  <link rel="stylesheet" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+  {{-- CDN JQUERY --}}
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  {{-- Sweet Alert CDN --}}
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  {{-- JQuery CDN --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  {{-- XLSX CDN--}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js" integrity="sha512-BMIFH0QGwPdinbGu7AraCzG9T4hKEkcsbbr+Uqv8IY3G5+JTzs7ycfGbz7Xh85ONQsnHYrxZSXgS1Pdo9r7B6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  {{-- savAs JS --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
 
 @section('content')
@@ -34,7 +38,7 @@
           <th>Categoría</th>
           <th>Provincia</th>
           <th>Fecha creación</th>
-          <th>Acciones</th>   
+          <th>Acciones</th>
 
         </tr>
       </thead>
@@ -69,6 +73,8 @@
         
       </table>
 </div>
+
+
 
     @if (isset($result))
         
@@ -117,15 +123,6 @@
         
     } );
 </script>
-<script>
-  // document.querySelector('.btn_eliminar').addEventListener('click',(e)=>{
-  //   e.preventDefault();
-    
-  // });
-  // document.querySelector('.btn_editar').addEventListener('click',(e)=>{
-  //   e.preventDefault();
-    
-  // });
-</script>
+
     
 @endsection

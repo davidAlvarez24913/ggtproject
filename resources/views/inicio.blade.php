@@ -15,11 +15,11 @@
 </head>
 <body>
     <header>
-        
+        <div class="div_lgo">
+            <img src="{{asset('/images/principal.png')}}" alt="logo" class="lgo">
+        </div>
         <nav >
-            
             <ul class='nav__links'>
-                
                 <li><a class='anchor'  href="{{route('inicio')}}" title="Inicio"><i class="fas fa-home"></i></a> </li>
                 <li><a  class='anchor' href="{{route('encuesta.home')}}">Formularios</a> </li>
                 <li><a  class='anchor' href="{{route('visualizador')}}">Visualizador Geografico</a> </li>

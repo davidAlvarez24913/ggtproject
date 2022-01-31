@@ -44,6 +44,17 @@ header{
     float: right;
     font-family: 'Cairo', sans-serif;
 }
+.div_lgo{
+    margin-left: -32rem;
+    padding: 5px;
+    margin-top: -12px;
+}
+.lgo{
+    width: 100%;
+    height: 46px;
+    object-fit: cover;
+    
+}
 /* .nav__links li{ */
 .nav__links li{
     display: inline-block;

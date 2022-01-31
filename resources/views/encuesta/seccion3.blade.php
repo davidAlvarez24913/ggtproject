@@ -200,7 +200,8 @@
             e.preventDefault();
         }
     });
-    
+    const percent1 =Object.keys(JSON.parse( sessionStorage.data1__)).length;
+    localStorage.setItem('percent1',percent1);
 </script>
 
 <script src="{{asset('js/pre_load_sec3.js')}}"></script>

@@ -480,6 +480,8 @@
                 e.preventDefault();
             }
         });
+        const percent6 =Object.keys(JSON.parse( sessionStorage.data6__)).length;
+        localStorage.setItem('percent6',percent6);
         
     </script>
 

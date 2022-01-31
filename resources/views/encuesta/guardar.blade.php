@@ -35,7 +35,7 @@
             </li>
         </div>
         <div class="barra">
-            <p> ACCESIBILIDAD Y CONECTIVIDAD AL ATRACTIVO</p>
+            <p> CARACTERISTICAS DEL ATRACTIVO</p>
             <li>
                 <span class="bar">
                     <span class="generico sec3"></span>
@@ -43,7 +43,7 @@
             </li>
         </div>
         <div class="barra">
-            <p>  PLANTA TURÍSTICA / COMPLEMENTARIOS</p>
+            <p>  ACCESIBILIDAD Y CONECTIVIDAD AL ATRACTIVO</p>
             <li>
                 <span class="bar">
                     <span class="generico sec4"></span>
@@ -51,7 +51,7 @@
             </li>
         </div>
         <div class="barra">
-            <p>ESTADO DE CONSERVACIÓN E INTEGRACIÓN ATRACTIVO / ENTORNO</p>
+            <p>PLANTA TURÍSTICA / COMPLEMENTARIOS</p>
             <li>
                 <span class="bar">
                     <span class="generico sec5"></span>
@@ -59,10 +59,18 @@
             </li>
         </div>
         <div class="barra">
-            <p>HIGIENE Y SEGURIDAD TURÍSTICA</p>
+            <p>ESTADO DE CONSERVACIÓN E INTEGRACIÓN ATRACTIVO / ENTORNO</p>
             <li>
                 <span class="bar">
                     <span class="generico sec6"></span>
+                </span>
+            </li>
+        </div>
+        <div class="barra">
+            <p>HIGIENE Y SEGURIDAD TURÍSTICA</p>
+            <li>
+                <span class="bar">
+                    <span class="generico sec7"></span>
                 </span>
             </li>
         </div>
@@ -106,12 +114,29 @@
 @endsection
 @section('scripts')
     <script>
-        document.querySelector('.sec1').style.width = "80%";
-        document.querySelector('.sec3').style.width = "70%";
-        document.querySelector('.sec4').style.width = "60%";
-        document.querySelector('.sec5').style.width = "50%";
-        document.querySelector('.sec6').style.width = "40%";
-        document.querySelector('.sec7').style.width = "30%";
+        // 20 --> 100 cuantas preguntas o inputs son el 100% por cada seccion
+        // 3 --> x
+
+        const percent7 =Object.keys(JSON.parse( sessionStorage.data7__ )).length;
+        localStorage.setItem('percent7',percent7);
+
+        if(sessionStorage.getItem('data1__')){
+            var per1 = (localStorage.getItem('percent1')*100)/20;
+            var per3 = (localStorage.getItem('percent3')*100)/15;
+            var per4 = (localStorage.getItem('percent4')*100)/16;
+            var per5 = (localStorage.getItem('percent5')*100)/16;
+            var per6 = (localStorage.getItem('percent6')*100)/15;
+            var per7 = (localStorage.getItem('percent7')*100)/12;
+            
+
+            document.querySelector('.sec1').style.width = per1.toString()+"%";
+            document.querySelector('.sec3').style.width = per3.toString()+"%";
+            document.querySelector('.sec4').style.width = per4.toString()+"%";
+            document.querySelector('.sec5').style.width = per5.toString()+"%";
+            document.querySelector('.sec6').style.width = per6.toString()+"%";
+            document.querySelector('.sec7').style.width = per7.toString()+"%";
+            
+        }
 
     </script>
     <script>

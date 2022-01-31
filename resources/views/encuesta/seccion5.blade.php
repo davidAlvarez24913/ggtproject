@@ -592,6 +592,9 @@
                 var data4 = '{{!!$data_4!!}}'.slice(1,-1);
                 console.log(data4);
                 sessionStorage.setItem('data4__',data4);
+                const percent4 =Object.keys(JSON.parse( sessionStorage.data4__)).length;
+                localStorage.setItem('percent4',percent4);
+
             </script>
         @else
             <script> console.error("Dta4__ no fue agregada!"); </script>

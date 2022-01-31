@@ -35,6 +35,7 @@ class GadController extends Controller
         // dump($max_id['id']);
 
         if(Auth::user()->rol == 'admin'){
+
             $enc_admin = Encuesta::all($columns = ['id_usuario','pregunta1','created_at','id']);
             $arr_mostrar_admin =[];
             foreach($enc_admin as $e){
@@ -72,7 +73,7 @@ class GadController extends Controller
             }
             // dump($arr_mostrar);
 
-            return view('gad.fichasRegistradas')->with('arreglo',$arr_mostrar);
+            return view('gad.fichasRegistradas')->with('arreglo',$arr_mostrar) ;
         }
         
     }
@@ -81,7 +82,7 @@ class GadController extends Controller
     
     public function eliminar(Request $request){
         $id = (int)$request->id_eliminar;
-        var_dump($id);
+        // var_dump($id);
         $result = DB::delete('delete from encuestas where id = ?', [$id]);
         // dump($result);
         // return view('gad.fichasRegistradas');

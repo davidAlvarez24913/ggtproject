@@ -447,6 +447,9 @@
                 e.preventDefault();
             }
         });
+        const percent5 =Object.keys(JSON.parse( sessionStorage.data5__)).length;
+        localStorage.setItem('percent5',percent5);
+
         
     </script>
     <script src="{{asset('js/checkbox_change_value_boolean.js')}}"></script>
